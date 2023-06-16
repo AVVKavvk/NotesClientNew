@@ -27,7 +27,7 @@ function Sem2() {
       </div>
       <div class="relative flex flex-col justify-center items-center text-center  w-full sm:h-[250px] space-x-16  px-5 ">
         <div>
-        <Link to="/user/unavail" style={{ textDecoration: "none" }}>
+        {/* <Link to="/user/unavail" style={{ textDecoration: "none" }}>
             <div>
               <img
                 src={llll}
@@ -37,7 +37,18 @@ function Sem2() {
                 width="170px"
               />
             </div>
-          </Link>
+          </Link> */}
+          <a href="https://drive.google.com/drive/folders/1qZ6ug0GYhzmTTzJM0d3Y97iSmY0nbMMp?usp=sharing" target="_blank">
+            <div>
+              <img
+                src={llll}
+                alt=""
+                class="hover:scale-110 rounded-lg transition-all duration-500"
+                height="170px"
+                width="170px"
+              />
+            </div>
+          </a>
 
           <h1 class=" z-10 top-[60px] left-[80px] text-4xl mt-3 ">DLD</h1>
         </div>
