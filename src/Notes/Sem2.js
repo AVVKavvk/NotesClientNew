@@ -2,7 +2,7 @@ import React from "react";
 import ll from "../image/logo3.svg";
 function Sem2() {
   return (
-    <div class=" lg:w-[1200px] grid sm:grid-cols-3 grid-cols-2 space-y-5 lg:space-y-0 ml-6 lg:mx-auto lg:grid-cols-7 relative  justify-evenly  mt-8 overflow-hidden">
+    <div class=" lg:w-[1200px] grid sm:grid-cols-3 grid-cols-2 space-y-5 pb-12 lg:space-y-0 ml-6 lg:mx-auto lg:grid-cols-7 relative  justify-evenly  mt-8 overflow-hidden">
       <div class="relative flex p-0 mt-[20px] lg:mt-0 flex-col space-x-6 ">
         <div class="h-[120px]">
           <svg
@@ -31,7 +31,26 @@ function Sem2() {
           <h1 class="absolute z-10 top-[30px] left-[40px] text-2xl  ">EM2</h1>
         </div>
         <a
-          href="https://drive.google.com/drive/folders/1qgdYNOvhJ9a-RuXgUOr1EZkYyK-rVFFx?usp=sharing"
+          href="https://drive.google.com/drive/folders/1qgdYNOvhJ9a-RuXgUOr1EZkYyK-rVFFx?usp=drive_link"
+          rel="noreferrer"
+          target="_blank"
+          class=""
+        >
+          <div class="group relative mb-6 ">
+            <img
+              src={ll}
+              alt=""
+              class="hover:scale-110 transition-all duration-500"
+              height="100px"
+              width="100px"
+            />
+            <div class="sm:group-hover:block -top-3 bg-yellow-300 p-1  rounded-lg -left-3 absolute hidden">
+              Sir
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1rjnE5ocVyT3YQ6TqEXPR5YLct1qxUHMc/view?usp=sharing"
           rel="noreferrer"
           target="_blank"
         >
