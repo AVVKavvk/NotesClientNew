@@ -2,7 +2,7 @@ import React from 'react'
 import ll from '../image/logo4.svg'
 function Sem5() {
   return (
-    <div class="lg:w-[600px] grid sm:grid-cols-3 grid-cols-2 space-y-5 lg:space-y-0 ml-6 lg:mx-auto lg:grid-cols-3 relative  justify-evenly  mt-8 overflow-hidden">
+    <div class="lg:w-[600px] grid pb-10 sm:grid-cols-3 grid-cols-2 space-y-5 lg:space-y-0 ml-6 lg:mx-auto lg:grid-cols-3 relative  justify-evenly  mt-8 overflow-hidden">
       <div class="relative flex flex-col  p-0 mt-[20px] lg:mt-0 space-x-6 ">
         <div class="h-[120px]">
           <svg

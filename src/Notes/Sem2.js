@@ -1,5 +1,6 @@
 import React from "react";
 import ll from "../image/logo3.svg";
+import llv from "../image/videoLOGO.svg";
 function Sem2() {
   return (
     <div class=" lg:w-[1200px] grid sm:grid-cols-3 grid-cols-2 space-y-5 pb-12 lg:space-y-0 ml-6 lg:mx-auto lg:grid-cols-7 relative  justify-evenly  mt-8 overflow-hidden">
@@ -31,6 +32,25 @@ function Sem2() {
           <h1 class="absolute z-10 top-[30px] left-[40px] text-2xl  ">EM2</h1>
         </div>
         <a
+          href="https://drive.google.com/drive/folders/1GAi1IN2wfCzo7r6KsrpCjsRxtSKw0Amc?usp=drive_link"
+          rel="noreferrer"
+          target="_blank"
+          class=""
+        >
+          <div class="group relative mb-6 ">
+            <img
+              src={ll}
+              alt=""
+              class="hover:scale-110 transition-all duration-500"
+              height="100px"
+              width="100px"
+            />
+            <div class="sm:group-hover:block -top-3 px-2 bg-yellow-300 p-1  rounded-lg -left-3 absolute hidden">
+              Jatin Sir
+            </div>
+          </div>
+        </a>
+        <a
           href="https://drive.google.com/drive/folders/1qgdYNOvhJ9a-RuXgUOr1EZkYyK-rVFFx?usp=drive_link"
           rel="noreferrer"
           target="_blank"
@@ -44,7 +64,7 @@ function Sem2() {
               height="100px"
               width="100px"
             />
-            <div class="sm:group-hover:block -top-3 bg-yellow-300 p-1  rounded-lg -left-3 absolute hidden">
+            <div class="sm:group-hover:block -top-3 px-2 bg-yellow-300 p-1  rounded-lg -left-3 absolute hidden">
               Sir
             </div>
           </div>
@@ -62,8 +82,26 @@ function Sem2() {
               height="100px"
               width="100px"
             />
-            <div class="sm:group-hover:block -top-3 bg-green-300 p-1  rounded-lg -left-3 absolute hidden">
+            <div class="sm:group-hover:block px-2 -top-3 bg-green-300 p-1  rounded-lg -left-3 absolute hidden">
               Adarsh
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://drive.google.com/drive/folders/1Opv7mlf-vHhUGBbl7UEpxgsnM4LwzMcf?usp=sharing"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div class="group relative mb-5 mt-5">
+            <img
+              src={llv}
+              alt=""
+              class="hover:scale-110 transition-all duration-500"
+              height="100px"
+              width="100px"
+            />
+            <div class="sm:group-hover:block -top-3 px-2 bg-blue-400 p-1  rounded-lg -left-3 absolute hidden">
+              Lecture
             </div>
           </div>
         </a>
@@ -96,6 +134,25 @@ function Sem2() {
           <h1 class="absolute z-10 top-[30px] left-[40px] text-2xl  ">DLD</h1>
         </div>
         <a
+          href="https://drive.google.com/drive/folders/1WLxXjbY45jllaNvy5IBKVfcD5hBOXZlm?usp=drive_link"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div class="group relative mb-6">
+            <img
+              src={ll}
+              alt=""
+              class="hover:scale-110 transition-all duration-500"
+              height="100px"
+              width="100px"
+            />
+            <div class="sm:group-hover:block -top-3 px-2 bg-yellow-300 p-1  rounded-lg -left-3 absolute hidden">
+              Sir
+            </div>
+          </div>
+        </a>
+       
+        <a
           href="https://drive.google.com/file/d/1j-CiGJV4BsmMOUBXhzR-nPxsymIDut3X/view?usp=share_link"
           rel="noreferrer"
           target="_blank"
@@ -108,8 +165,26 @@ function Sem2() {
               height="100px"
               width="100px"
             />
-            <div class="sm:group-hover:block -top-3 bg-green-300 p-1  rounded-lg -left-3 absolute hidden">
+            <div class="sm:group-hover:block -top-3 px-2 bg-green-300 p-1  rounded-lg -left-3 absolute hidden">
               Adarsh
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://drive.google.com/drive/folders/127VYuuoG8FNAezy1cutBJ9m0tGy0JguP?usp=drive_link"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div class="group relative mb-5 mt-5">
+            <img
+              src={llv}
+              alt=""
+              class="hover:scale-110 transition-all duration-500"
+              height="100px"
+              width="100px"
+            />
+            <div class="sm:group-hover:block -top-3 px-2 bg-blue-400 p-1  rounded-lg -left-3 absolute hidden">
+              Lecture
             </div>
           </div>
         </a>
