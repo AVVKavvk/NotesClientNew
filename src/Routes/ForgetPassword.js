@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Checkbox, Form, Input } from "antd";
+import {  Form, Input } from "antd";
 
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { axiosClient } from "../utils/axiosClient";
 
 import { useDispatch } from "react-redux";

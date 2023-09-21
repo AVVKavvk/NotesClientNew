@@ -6,6 +6,7 @@ import Notes from "./Routes/Notes";
 import Labs from "./Routes/Labs";
 import Navbar from "./Navbar";
 import Login from "./Routes/Login";
+import Aluminia from "./Routes/Aluminia";
 import Signup from "./Routes/Signup";
 import Sem1 from "../src/Notes/Sem1";
 import Sem2 from "../src/Notes/Sem2";
@@ -38,12 +39,16 @@ import Creator from "./Routes/Creator";
 import Unavaiable from "./Routes/Unavaiable";
 import ForgetPassword from "./Routes/ForgetPassword";
 import Logout from "./Routes/Logout";
+import Resume from "./Routes/Resume";
+import RichText from "./Routes/RichText";
+import ResumePage from "./Routes/ResumePage";
+import Academics from "./Routes/Academics";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
   const a = getItem(Key_Access_Token);
-  const isLoading = useSelector((state) => state.appConfigReducer.isloading);
-  const toastData = useSelector((state) => state.appConfigReducer.toastData);
+  const isLoading = useSelector(state => state.appConfigReducer.isloading);
+  const toastData = useSelector(state => state.appConfigReducer.toastData);
   const loadingRef = useRef(null);
   useEffect(() => {
     if (isLoading) {
@@ -65,14 +70,16 @@ function App() {
   }, [toastData]);
   return (
     <div className="App" class=" overflow-hidden mx-auto   ">
-       <LoadingBar color="#f11946" ref={loadingRef} />
+      <LoadingBar color="#f11946" ref={loadingRef} />
       <div>
         <Toaster />
       </div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/user/academics" element={<Academics />} />
         {
+      
           <Route path="/user/paper" element={<Paper />}>
             <Route path="" element={<Ap />} />
             <Route path="sem1" element={<Semp1 />} />
@@ -102,17 +109,22 @@ function App() {
           {/* <Route path="sem5" element={<Unavaiable />} />
           <Route path="sem6" element={<Unavaiable />} /> */}
           <Route path="sem5" element={<Seml5 />} />
-         <Route path="sem6" element={<Seml6 />} />
+          <Route path="sem6" element={<Seml6 />} />
         </Route>
+
         <Route path="/auth/login" element={<Login />} />
+        <Route path="/aluminia" element={<Aluminia />} />
+        <Route path="/resume" element={<ResumePage />}>
+          <Route path="in-5-min" element={<Resume />} />
+          <Route path="customize" element={<RichText />} />
+        </Route>
+
         <Route path="/auth/forpass" element={<ForgetPassword />} />
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/auth/visitor" element={<Visitor />} />
         <Route path="/user/creator" element={<Creator />} />
         <Route path="/user/unavail" element={<Unavaiable />} />
         <Route path="/user/logout" element={<Logout />} />
-      
-
       </Routes>
     </div>
   );
