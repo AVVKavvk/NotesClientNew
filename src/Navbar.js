@@ -53,7 +53,7 @@ function Navbar() {
   return (
     <div class="font-mullish mt-4 md:mt-1 w-full max-w-[1200px] mx-auto relative rounded-sm text-xl px-3  ">
       {/* //TODO /simple */}
-      <div class="sm:hidden flex justify-between w-full  items-center max-w-[600px] relative ">
+      <div class="sm:hidden z-50 flex justify-between w-full  items-center max-w-[600px] relative ">
         <a href="">
           <img src={logo} alt="" width="180px" height="120px" />
         </a>
@@ -71,7 +71,7 @@ function Navbar() {
               !toggle ? "hidden" : "flex"
             } p-6 bg-[#e5e4e2] absolute text-black  w-[120%] top-7 left-16 transition-all duration-200   my-3  z-10 rounded-xl `}
           >
-            <ul class=" flex flex-col justify-end items-center gap-1 ">
+            <ul class=" flex flex-col z-[100] justify-end items-center gap-1 ">
               {NavbarItem1?.map(item => {
                 return (
                   <li
@@ -199,6 +199,11 @@ function Navbar() {
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
               <Link to="/resume" style={{ textDecoration: "none" }}>
                 Resume
+              </Link>
+            </li>
+            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
+              <Link to="/certificates" style={{ textDecoration: "none" }}>
+              Certificates
               </Link>
             </li>
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">

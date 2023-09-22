@@ -104,7 +104,7 @@ function Home() {
                 to succeed in your academic and professional pursuits.
               </p>
               <Link to="/user/academics" style={{ textDecoration: "none" }}>
-                <h1 class="w-[150px] bg-yellow-400 font-bold hover:bg-yellow-300 rounded-lg px-4 py-3 mt-5 cursor-pointer">
+                <h1 class="w-[150px] hidden md:block bg-yellow-400 font-bold hover:bg-yellow-300 rounded-lg px-4 py-3 mt-5 cursor-pointer">
                   Academics
                 </h1>
               </Link>
