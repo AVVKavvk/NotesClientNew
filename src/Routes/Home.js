@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import hero1 from "../image/hero1.png";
 import hero2 from "../image/hero2.png";
 import hero3 from "../image/hero3.png";
-import upcoming from '../assets/upcoming.json'
+import upcoming from "../assets/upcoming.json";
 function Home() {
   // const count = useSelector((state) => state.appConfigReducer.count);
   // console.log(count);
@@ -33,7 +33,6 @@ function Home() {
   function AA() {
     navigate("/auth/login");
   }
-
 
   return (
     <>
@@ -79,7 +78,11 @@ function Home() {
 
                 <h1 class="text-xl mt-6 font-bold bg-green-400 rounded-lg px-3 py-3 items-center flex  ">
                   {" "}
-                  <span class="text-3xl mr-3"> {count!=undefined?count:"450"}+</span> Students{" "}
+                  <span class="text-3xl mr-3">
+                    {" "}
+                    {count != undefined ? count : "450"}+
+                  </span>{" "}
+                  Students{" "}
                 </h1>
               </div>
             </div>
@@ -97,11 +100,12 @@ function Home() {
             <div class="md:w-[50%] w-full text-xl   text-justify px-3 ">
               <p>
                 Our website offers a rich repository of notes, labs, and
-                previous year's exam papers to boost your academic journey. Dive
-                into comprehensive lecture notes, embark on hands-on learning
-                experiences, and prepare effectively with real exam papers.We're
-                dedicated to providing you with the tools and knowledge you need
-                to succeed in your academic and professional pursuits.
+                previous year's exam papers along with Books to boost your
+                academic journey. Dive into comprehensive lecture notes, embark
+                on hands-on learning experiences, and prepare effectively with
+                real exam papers.We're dedicated to providing you with the tools
+                and knowledge you need to succeed in your academic and
+                professional pursuits.
               </p>
               <Link to="/user/academics" style={{ textDecoration: "none" }}>
                 <h1 class="w-[150px] hidden md:block bg-yellow-400 font-bold hover:bg-yellow-300 rounded-lg px-4 py-3 mt-5 cursor-pointer">
@@ -148,19 +152,19 @@ function Home() {
           />
 
           <div class="md:mt-10 flex flex-col justify-center items-center mx-auto ">
-            <h1 class="text-4xl bg-green-400 rounded-lg px-5 py-2 mb-6 "> Upcoming Features</h1>
+            <h1 class="text-4xl bg-green-400 rounded-lg px-5 py-2 mb-6 ">
+              {" "}
+              Upcoming Features
+            </h1>
             <div class="md:mt-10  grid md:grid-cols-3  gap-5 justify-center items-center mx-auto ">
-              {
-                upcoming?.map((item)=>{
-                  return (
-                    <div class="max-[270px] flex flex-col space-y-4 px-6 rounded-lg text-justify h-[170px] shadow-md hover:scale-105 transition-all duration-200 shadow-slate-400  border border-gray-500 mx-auto justify-center items-center ">
-                       <h1 class="text-2xl font-bold ">{item?.title}</h1>
-                       <p class=" text-gray-600">{item?.desc}</p>
-                    </div>
-                  )
-                })
-              }
-              
+              {upcoming?.map(item => {
+                return (
+                  <div class="max-[270px] flex flex-col space-y-4 px-6 rounded-lg text-justify h-[170px] shadow-md hover:scale-105 transition-all duration-200 shadow-slate-400  border border-gray-500 mx-auto justify-center items-center ">
+                    <h1 class="text-2xl font-bold ">{item?.title}</h1>
+                    <p class=" text-gray-600">{item?.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
