@@ -45,6 +45,7 @@ import ResumePage from "./Routes/ResumePage";
 import Academics from "./Routes/Academics";
 import CertificationPrograms from "./Routes/CertificationPrograms";
 import Book from "./Routes/Book";
+import Feedback from "./Routes/Feedback";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -121,7 +122,7 @@ function App() {
           <Route path="in-5-min" element={<Resume />} />
           <Route path="customize" element={<RichText />} />
         </Route>
-
+        <Route path="/user/feedback" element={<Feedback />} />
         <Route path="/auth/forpass" element={<ForgetPassword />} />
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/auth/visitor" element={<Visitor />} />

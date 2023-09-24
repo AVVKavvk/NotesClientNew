@@ -24,7 +24,7 @@ function Book() {
     },
   ];
   return (
-    <div class="flex flex-col mx-auto justify-center max-w-[14500px] items-center  ">
+    <div class="flex flex-col mx-auto justify-center mb-7 max-w-[14500px] items-center  ">
       <h1 class=" text-3xl text-red-500 mb-10 ">
         When you want to open Books then use your Logged In Email
       </h1>

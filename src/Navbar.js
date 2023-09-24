@@ -90,7 +90,12 @@ function Navbar() {
                 {a ? (
                   <>
                     <Link to="/user/logout" style={{ textDecoration: "none" }}>
-                      <li class="text-[16px] font-josefin font-bold cursor-pointer transition-all duration-200 ">
+                      <li
+                        class="text-[16px] font-josefin font-bold cursor-pointer transition-all duration-200 "
+                        onClick={() => {
+                          setToggle(!toggle);
+                        }}
+                      >
                         {" "}
                         LogOut
                       </li>
@@ -98,12 +103,22 @@ function Navbar() {
                   </>
                 ) : (
                   <>
-                    <li class="  text-[16px] font-josefin font-bold cursor-pointer transition-all duration-200">
+                    <li
+                      class="  text-[16px] font-josefin font-bold cursor-pointer transition-all duration-200"
+                      onClick={() => {
+                        setToggle(!toggle);
+                      }}
+                    >
                       <Link to="/auth/login" style={{ textDecoration: "none" }}>
                         Login
                       </Link>
                     </li>
-                    <li class="   text-[16px] font-josefin font-bold cursor-pointer transition-all duration-200">
+                    <li
+                      class="   text-[16px] font-josefin font-bold cursor-pointer transition-all duration-200"
+                      onClick={() => {
+                        setToggle(!toggle);
+                      }}
+                    >
                       <Link
                         to="/auth/signup"
                         style={{ textDecoration: "none" }}
@@ -203,7 +218,12 @@ function Navbar() {
             </li>
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
               <Link to="/certificates" style={{ textDecoration: "none" }}>
-              Certificates
+                Certificates
+              </Link>
+            </li>
+            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
+              <Link to="/user/feedback" style={{ textDecoration: "none" }}>
+                Feedback
               </Link>
             </li>
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">

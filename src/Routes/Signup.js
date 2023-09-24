@@ -26,10 +26,14 @@ function Signup() {
     } else {
       setError("a");
     }
-    if (number && isValidPhoneNumber(number)) {
+    if (number[0] + number[1] + number[2] !== "+91") {
+      setError1("Ph No start with +91 ");
+      // console.log("vipin");
+    }
+    else if (number && isValidPhoneNumber(number)) {
       setError1("a");
     } else {
-      setError1("Phone No. Not Valid ");
+      setError1("Phone No. wrong ");
     }
     // console.log(err);
     // console.log(err1);
@@ -128,7 +132,7 @@ function Signup() {
           >
             <Input
               placeholder="vipin"
-              onChange={(e) => setname(e.target.value)}
+              onChange={e => setname(e.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -143,7 +147,7 @@ function Signup() {
           >
             <Input
               placeholder="+91810709...."
-              onChange={(e) => setnumber(e.target.value)}
+              onChange={e => setnumber(e.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -160,7 +164,7 @@ function Signup() {
               class=""
               type="email"
               placeholder="vipin...6@gmail.com"
-              onChange={(e) => setemail(e.target.value)}
+              onChange={e => setemail(e.target.value)}
             />
           </Form.Item>
 
@@ -176,7 +180,7 @@ function Signup() {
           >
             <Input.Password
               placeholder="password"
-              onChange={(e) => setpassword(e.target.value)}
+              onChange={e => setpassword(e.target.value)}
             />
           </Form.Item>
 
