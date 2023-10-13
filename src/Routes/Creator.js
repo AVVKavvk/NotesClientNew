@@ -15,6 +15,7 @@ import sk6 from "../image/sk6.svg";
 import sk7 from "../image/sk7.svg";
 import sk8 from "../image/sk8.svg";
 import sk9 from "../image/sk9.svg";
+import mui from "../image/mui.svg";
 
 function Creator() {
   return (
@@ -31,8 +32,12 @@ function Creator() {
             />{" "}
           </a>
           <h1 class="text-center text-2xl mt-2 mb-1 ">Vipin Kumawat</h1>
-
-          <a href="https://vipinkumawatportfolio.netlify.app/" target="_blank">  <h1 class="text-center text-xl text-red-700 hover:bg-red-400 hover:text-red-900 transition-all duration-500 bg-red-300 px-1 py-[1px] rounded-2xl mx-auto max-w-[100px] mb-1">Portfolio</h1> </a>
+          <a href="https://vipinkumawatportfolio.netlify.app/" target="_blank">
+            {" "}
+            <h1 class="text-center text-xl text-red-700 hover:bg-red-400 hover:text-red-900 transition-all duration-500 bg-red-300 px-1 py-[1px] rounded-2xl mx-auto max-w-[100px] mb-1">
+              Portfolio
+            </h1>{" "}
+          </a>
           <hr
             style={{
               height: "1px",
@@ -54,7 +59,6 @@ function Creator() {
             <SiGmail />
             <h1>kumawatvipin066@gmail.com</h1>
           </div>
-        
         </div>
         <div class="flex  flex-col text-2xl space-y-2 mb-3 ">
           <div class="flex  text-center   space-x-4 items-center justify-start">
@@ -132,13 +136,13 @@ function Creator() {
             </h1>
           </div>
         </div>
-        {/* <hr
+        <hr
           style={{
             height: "1px",
             backgroundColor: "#000000",
             border: "none",
           }}
-        /> */}
+        />
 
         <div class="flex flex-col justify-center items-center text-center my-10 mb-18 ">
           <h1 class=" text-3xl">
@@ -160,7 +164,7 @@ function Creator() {
         <hr
           style={{
             height: "1px",
-            backgroundColor: "white",
+            backgroundColor: "black",
             border: "none",
           }}
           class="mt-5"
@@ -168,15 +172,54 @@ function Creator() {
         <div>
           <h1 class="text-2xl m-1 text-center">Skills</h1>
           <div class="mt-3 grid grid-cols-5 space-x-2 sm:space-x-0  justify-evenly items-center space-y-2 mx-auto">
-             <a href="https://html.com/" target="_blank"> <img src={sk1} alt="" width="70px" height="70px" /></a>
-             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> <img src={sk2} alt="" width="70px" height="70px" /></a>
-             <a href="https://tailwindcss.com/" target="_blank"> <img src={sk3} alt="" width="70px" height="70px" /></a>
-             <a href="https://www.javascript.com/" target="_blank"> <img src={sk4} alt="" width="70px" height="70px" /></a>
-             <a href="https://react.dev/" target="_blank"> <img src={sk5} alt="" width="70px" height="70px" /></a>
-             <a href="https://redux.js.org/" target="_blank"> <img src={sk6} alt="" width="70px" height="70px" /></a> 
-             <a href="https://nodejs.org/en" target="_blank"> <img src={sk7} alt="" width="70px" height="70px" /></a>
-             <a href="https://www.mongodb.com/atlas/database" target="_blank"> <img src={sk8} alt="" width="70px" height="70px" /></a>
-             <a href="https://expressjs.com/" target="_blank"> <img src={sk9} alt="" width="70px" height="70px" /></a>
+            <a href="https://html.com/" target="_blank">
+              {" "}
+              <img src={sk1} alt="" width="70px" height="70px" />
+            </a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+            >
+              {" "}
+              <img src={sk2} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://tailwindcss.com/" target="_blank">
+              {" "}
+              <img src={sk3} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://www.javascript.com/" target="_blank">
+              {" "}
+              <img src={sk4} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://mui.com/" target="_blank">
+              {" "}
+              <img
+                src={mui}
+                alt=""
+                width="70px"
+                height="70px"
+              />
+            </a>
+            <a href="https://react.dev/" target="_blank">
+              {" "}
+              <img src={sk5} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://redux.js.org/" target="_blank">
+              {" "}
+              <img src={sk6} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://nodejs.org/en" target="_blank">
+              {" "}
+              <img src={sk7} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://www.mongodb.com/atlas/database" target="_blank">
+              {" "}
+              <img src={sk8} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://expressjs.com/" target="_blank">
+              {" "}
+              <img src={sk9} alt="" width="70px" height="70px" />
+            </a>
           </div>
         </div>
       </div>

@@ -32,6 +32,10 @@
         "tag":"Certificates"
     },
     {
+        "link":"https://vipineditor.netlify.app/",
+        "tag":"Editor"
+    },
+    {
         "link":"/user/feedback",
         "tag":"Feedback"
     },

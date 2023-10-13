@@ -51,7 +51,7 @@ function Navbar() {
   ];
 
   return (
-    <div class="font-mullish mt-4 md:mt-1 w-full max-w-[1200px] mx-auto relative rounded-sm text-xl px-3  ">
+    <div class="font-mullish mt-4 md:mt-1 w-full max-w-[1350px] mx-auto relative rounded-sm text-xl px-3  ">
       {/* //TODO /simple */}
       <div class="sm:hidden z-50 flex justify-between w-full  items-center max-w-[600px] relative ">
         <a href="">
@@ -207,20 +207,16 @@ function Navbar() {
               </Link>
             </li>
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/aluminia" style={{ textDecoration: "none" }}>
-                Alumni
+              <Link to="/placement" style={{ textDecoration: "none" }}>
+                Placement
               </Link>
             </li>
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/resume" style={{ textDecoration: "none" }}>
-                Resume
-              </Link>
+              <a href="https://vipineditor.netlify.app/" style={{ textDecoration: "none" }} target="_blank">
+                Editor
+              </a>
             </li>
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/certificates" style={{ textDecoration: "none" }}>
-                Certificates
-              </Link>
-            </li>
+            
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
               <Link to="/user/feedback" style={{ textDecoration: "none" }}>
                 Feedback

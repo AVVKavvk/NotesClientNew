@@ -46,6 +46,7 @@ import Academics from "./Routes/Academics";
 import CertificationPrograms from "./Routes/CertificationPrograms";
 import Book from "./Routes/Book";
 import Feedback from "./Routes/Feedback";
+import Placement from "./Routes/Placement";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -116,6 +117,7 @@ function App() {
 
         <Route path="/auth/login" element={<Login />} />
         <Route path="/e-book" element={<Book />} />
+        <Route path="/placement" element={<Placement />} />
         <Route path="/certificates" element={<CertificationPrograms />} />
         <Route path="/aluminia" element={<Aluminia />} />
         <Route path="/resume" element={<ResumePage />}>
