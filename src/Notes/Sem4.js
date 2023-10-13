@@ -1,6 +1,8 @@
 import React from "react";
 import ll from "../image/logo1.svg";
 import Notes4 from "../assets/Notes/Notes4.json";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Sem4() {
   return (
     <div class="mx-auto lg:w-[1200px] mt-7 ">

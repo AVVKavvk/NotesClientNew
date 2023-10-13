@@ -6,7 +6,8 @@ import { Key_Access_Token, getItem } from "../utils/localStorage";
 // State to store the search query
 
 // Function to handle search input change
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Aluminia() {
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearchChange = event => {

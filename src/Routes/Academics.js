@@ -7,7 +7,8 @@ import notes from "../image/notes.png";
 import labs from "../image/labs.png";
 import papers from "../image/papers.png";
 import books from "../image/books.png";
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Academics() {
   const content = [
     {

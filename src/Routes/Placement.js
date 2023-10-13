@@ -6,7 +6,8 @@ import { FiExternalLink } from "react-icons/fi";
 import alumni from "../image/alumni.png";
 import resume from "../image/resume.png";
 import certificate from "../image/certificate.png";
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Placement() {
   const content = [
     {

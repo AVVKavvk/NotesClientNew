@@ -7,6 +7,8 @@ import github from "../image/resume/github.png";
 import link from "../image/resume/link.png";
 import { useNavigate } from "react-router-dom";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 const Resume = () => {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");

@@ -3,6 +3,8 @@ import Links from "../assets/NavbarItems1.json";
 import { Key_Access_Token, count_User, getItem } from "../utils/localStorage";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Footer() {
   const a = getItem(Key_Access_Token);
   var b = useSelector(state => state.appConfigReducer.count);

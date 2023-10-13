@@ -2,6 +2,8 @@ import React from "react";
 import ll from "../image/l1.svg";
 import lll from "../image/l1.1.svg";
 import { Link } from "react-router-dom";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Sem1() {
   return (
     <div class="mx-auto sm:w-[500px]  md:max-w-[1000px] mt-7 ">

@@ -1,5 +1,7 @@
 import React from "react";
 import Cerificate from "../assets/certificate.json";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function CertificationPrograms() {
   return (
     <div className=" max-w-[1200px] mb-6 mt-5 flex pb-5  flex-col border rounded-md  justify-center items-center mx-auto px-4">

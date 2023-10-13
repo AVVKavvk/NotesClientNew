@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import JoditEditor from "jodit-react";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
 import { useNavigate } from "react-router-dom";
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 const RichText = ({ placeholder }) => {
   const editor = useRef(null);
   const [content, setContent] = useState("");

@@ -13,6 +13,8 @@ import hero1 from "../image/hero1.png";
 import hero2 from "../image/hero2.png";
 import hero3 from "../image/hero3.png";
 import upcoming from "../assets/upcoming.json";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Home() {
   // const count = useSelector((state) => state.appConfigReducer.count);
   // console.log(count);

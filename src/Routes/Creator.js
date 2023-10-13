@@ -16,7 +16,8 @@ import sk7 from "../image/sk7.svg";
 import sk8 from "../image/sk8.svg";
 import sk9 from "../image/sk9.svg";
 import mui from "../image/mui.svg";
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Creator() {
   return (
     <div class="  flex flex-col sm:flex-row justify-center mb-16 p-5  mt-4 space-x-1 max-w-[1100px] mx-auto shadow-md  shadow-green-500 ">

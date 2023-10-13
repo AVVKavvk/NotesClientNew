@@ -1,6 +1,8 @@
 import React from 'react'
 import ll from "../image/cc.png";
 import lll from "../image/cg.png";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Sem6() {
   return (
     <div class="mx-auto sm:w-[500px]  md:max-w-[1000px] mt-7 ">

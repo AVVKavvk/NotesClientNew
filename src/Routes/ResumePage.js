@@ -6,6 +6,8 @@ import { FiExternalLink } from "react-icons/fi";
 import { showToast } from "../slice/appConfigSlice";
 import { TOAST_SUCCESS } from "../App";
 import { useDispatch } from "react-redux";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function ResumePage() {
   const [A, setA] = useState(false);
   const dispatch = useDispatch();

@@ -2,6 +2,8 @@ import React from "react";
 import ll from "../image/l3.svg";
 import lll from "../image/l3l.png";
 import llll from "../image/l3ll.svg";
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Sem3() {
   return (
     <div class="mx-auto sm:w-[500px]  md:max-w-[1000px] mt-7 ">

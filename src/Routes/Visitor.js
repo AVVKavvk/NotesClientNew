@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
+     crossorigin="anonymous"></script>
 function Visitor() {
   return (
     <div class=" flex flex-col px-3 justify-center items-start mx-auto text-justify  sm:w-[600px] h-[60vh]">
