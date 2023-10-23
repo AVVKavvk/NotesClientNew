@@ -47,6 +47,7 @@ import CertificationPrograms from "./Routes/CertificationPrograms";
 import Book from "./Routes/Book";
 import Feedback from "./Routes/Feedback";
 import Placement from "./Routes/Placement";
+import OTP from "./Routes/OTPVaild";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -127,6 +128,7 @@ function App() {
         <Route path="/user/feedback" element={<Feedback />} />
         <Route path="/auth/forpass" element={<ForgetPassword />} />
         <Route path="/auth/signup" element={<Signup />} />
+        <Route path="/otp/signup" element={<OTP />} />
         <Route path="/auth/visitor" element={<Visitor />} />
         <Route path="/user/creator" element={<Creator />} />
         <Route path="/user/unavail" element={<Unavaiable />} />

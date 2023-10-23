@@ -6,6 +6,8 @@ import { useDispatch } from "react-redux";
 import { showToast } from "../slice/appConfigSlice";
 import { TOAST_ERROR, TOAST_SUCCESS } from "../App";
 import { isValidPhoneNumber } from "react-phone-number-input";
+import { UserName, UserNumber, UserPassword, setItem } from "../utils/localStorage";
+
 
 function Signup() {
   const navigate = useNavigate();
@@ -48,6 +50,7 @@ function Signup() {
           password,
           name,
           number,
+          real:false
         });
         // setItem(Key_Access_Token,result.result.token)
         // console.log(result);
@@ -57,26 +60,34 @@ function Signup() {
             message: `${result.result}`,
           })
         );
-        setTimeout(() => {
-          dispatch(
-            showToast({
-              type: TOAST_SUCCESS,
-              message: "Now Login",
-            })
-          );
-        }, 2000);
+        // setTimeout(() => {
+        //   dispatch(
+        //     showToast({
+        //       type: TOAST_SUCCESS,
+        //       message: "Now Login",
+        //     })
+        //   );
+        // }, 2000);
         if (result) {
           //
-          navigate("/auth/login");
+          setItem(UserPassword, password);
+          setItem(UserName, name);
+          setItem(UserNumber, number);
+          navigate("/otp/signup");
+
+          // console.log(result);
+          
         }
-      } catch (e) {}
+      } catch (e) {
+        dispatch(
+        showToast({
+          type: TOAST_ERROR,
+          message: `${e}`,
+        })
+      );
+      }
       // console.log(process.env.REACT_APP_SERVER_BASE_URL);
-      // dispatch(
-      //   showToast({
-      //     type: TOAST_ERROR,
-      //     message: `${e}`,
-      //   })
-      // );
+      
     } else {
       if (err != "a") {
         dispatch(

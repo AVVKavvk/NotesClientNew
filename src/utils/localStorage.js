@@ -1,5 +1,9 @@
 export const Key_Access_Token="access_token";
 export const count_User="countUser";
+export const UserPassword="UserPassword";
+export const UserName="UserName";
+export const UserNumber="UserNumber";
+
 export function getItem(key){
     return localStorage.getItem(key);
 }
