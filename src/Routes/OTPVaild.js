@@ -114,7 +114,7 @@ function OTP() {
             className="text-2xl px-2 p-1 bg-blue-500 rounded-md "
             onClick={handleSignup}
           >
-            submit
+            Get OTP
           </button>
         </div>
       ) : (
@@ -130,6 +130,7 @@ function OTP() {
             <input
               className="border border-red-500 p-4"
               type="text"
+              
               placeholder="Enter OTP"
               onChange={e => setInputOTP(e.target.value)}
             />

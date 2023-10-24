@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
 function Labs() {
   var a = 10;
 
@@ -11,7 +9,7 @@ function Labs() {
   a = getItem(Key_Access_Token);
   // const a = 10;
   function AA() {
-    console.log("vipin");
+    // console.log("vipin");
     setTimeout(() => {
       navigate("/auth/login");
     }, 100);

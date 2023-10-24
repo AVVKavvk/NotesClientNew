@@ -51,7 +51,7 @@ function Navbar() {
   ];
 
   return (
-    <div class="font-mullish mt-4 md:mt-1 w-full max-w-[1350px] mx-auto relative rounded-sm text-xl px-3  ">
+    <div class="font-mullish mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
       {/* //TODO /simple */}
       <div class="sm:hidden z-50 flex justify-between w-full  items-center max-w-[600px] relative ">
         <a href="">
@@ -69,7 +69,7 @@ function Navbar() {
           <div
             class={`${
               !toggle ? "hidden" : "flex"
-            } p-6 bg-[#e5e4e2] absolute text-black  w-[120%] top-7 left-16 transition-all duration-200   my-3  z-10 rounded-xl `}
+            } p-6 bg-[#e5e4e2] absolute text-black  w-[120%] top-7 left-8 transition-all duration-200   my-3  z-10 rounded-xl `}
           >
             <ul class=" flex flex-col z-[100] justify-end items-center gap-1 ">
               {NavbarItem1?.map(item => {
@@ -174,7 +174,7 @@ function Navbar() {
       </div>
 
       {/* //TODO /sm */}
-      <div class="flex lg:max-w-[1300px] mx-auto  justify-center items-center  rounded-lg">
+      <div class="flex lg:max-w-[1400px] mx-auto  justify-center items-center  rounded-lg">
         <div class="w-[23%]  pb-3 sm:flex hidden  ">
           <a href="#">
             {" "}
@@ -212,10 +212,16 @@ function Navbar() {
               </Link>
             </li>
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <a href="https://vipineditor.netlify.app/" style={{ textDecoration: "none" }} target="_blank">
-                Editor
-              </a>
+              <Link to="/extras" style={{ textDecoration: "none" }}>
+                Extras
+              </Link>
             </li>
+            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
+              <Link to="/coding" style={{ textDecoration: "none" }}>
+                Coding
+              </Link>
+            </li>
+           
             
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
               <Link to="/user/feedback" style={{ textDecoration: "none" }}>

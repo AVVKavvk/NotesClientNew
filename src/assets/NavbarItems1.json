@@ -20,6 +20,10 @@
         "tag":"Books"
     },
     {
+        "link":"/user/cgpa",
+        "tag":"CGPA"
+    },
+    {
         "link":"/aluminia",
         "tag":"Alumni"
     },
@@ -34,6 +38,18 @@
     {
         "link":"https://vipineditor.netlify.app/",
         "tag":"Editor"
+    },
+    {
+        "link":"https://t.me/avvk_bot",
+        "tag":"Coding Bot"
+    },
+    {
+        "link":"/personalblogs",
+        "tag":"PersonalBlogs"
+    },
+    {
+        "link":"/mentalheath",
+        "tag":"MentalHeath"
     },
     {
         "link":"/user/feedback",

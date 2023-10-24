@@ -3,12 +3,11 @@ import Links from "../assets/NavbarItems1.json";
 import { Key_Access_Token, count_User, getItem } from "../utils/localStorage";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
+
 function Footer() {
   const a = getItem(Key_Access_Token);
   var b = useSelector(state => state.appConfigReducer.count);
-  var count = 450;
+  var count = 510;
   if (b === 0) {
     count = getItem(count_User);
   } else {
@@ -65,21 +64,21 @@ function Footer() {
               </div>
             </div>
             <div class="mt-4 text-base text-center border-t border-brColor pt-10">
-              Copyright © 2023 Vipin. All Rights Reserved.
+              Copyright © 2023 Elevate. All Rights Reserved.
             </div>
           </div>
         </div>
       </div>
       <div
-        class="flex flex-col px-4 justify-center
+        class="flex flex-col px-4 mt-4 justify-center
        items-center mx-auto"
       >
-        <h1 class="text-2xl mb-3"> <span>{count!=undefined?count:"450"}+</span> Students</h1>
+        <h1 class="text-2xl mb-3"> <span>{count!=undefined?count:"510"}+</span> Students</h1>
         <hr style={{border:"1px solid gray",width:"300px"}} />
-        <div class="grid grid-cols-2 gap-2 mt-6  text-xl justify-center items-center mx-auto ">
+        <div class="grid grid-cols-2 gap-2 mt-6  text-lg  mx-auto ">
   {Links?.map((item)=>{
     return (
-      <Link to={item?.link} class="mx-10"> {item?.tag}</Link>
+      <Link to={item?.link} class="mx-5"> {item?.tag}</Link>
     )
   })}
         </div>

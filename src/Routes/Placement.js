@@ -6,8 +6,6 @@ import { FiExternalLink } from "react-icons/fi";
 import alumni from "../image/alumni.png";
 import resume from "../image/resume.png";
 import certificate from "../image/certificate.png";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
 function Placement() {
   const content = [
     {
@@ -75,7 +73,6 @@ function Placement() {
             extend a warm welcome to our esteemed alumni. As you step into our
             world, you enter a realm of infinite opportunities to reconnect,
             access invaluable resources, and stay updated on pivotal events.
-            
           </p>
           <img src={alumni} alt="" width="400px" class="rounded-md" />
         </div>

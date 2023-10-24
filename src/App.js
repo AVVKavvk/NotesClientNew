@@ -26,9 +26,18 @@ import Seml2 from "../src/Labs/Sem2";
 import Seml3 from "../src/Labs/Sem3";
 import Seml4 from "../src/Labs/Sem4";
 import Seml6 from "../src/Labs/Sem6";
+import Semc1 from "../src/CGPA/Sem1";
+import Semc2 from "../src/CGPA/Sem2";
+import Semc3 from "../src/CGPA/Sem3";
+import Semc4 from "../src/CGPA/Sem4";
+import Semc5 from "../src/CGPA/Sem5";
+import Semc6 from "../src/CGPA/Sem6";
+import Semc7 from "../src/CGPA/Sem7";
+import Semc8 from "../src/CGPA/Sem8";
 import A from "./Notes/A";
 import Ap from "./Paper/A";
 import Al from "./Labs/A";
+import Ac from "./CGPA/A";
 import toast, { Toaster } from "react-hot-toast";
 import { Key_Access_Token, getItem } from "./utils/localStorage";
 import { useSelector } from "react-redux";
@@ -48,6 +57,11 @@ import Book from "./Routes/Book";
 import Feedback from "./Routes/Feedback";
 import Placement from "./Routes/Placement";
 import OTP from "./Routes/OTPVaild";
+import MentalHealth from "./Routes/MentalHealth";
+import PersonalBlogs from "./Routes/PersonalBlogs";
+import Extra from "./Routes/Extra";
+import Coding from "./Routes/Coding";
+import CGPA from "./Routes/CGPA";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -83,6 +97,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user/academics" element={<Academics />} />
+        {
+          <Route path="/user/cgpa" element={<CGPA />}>
+            <Route path="" element={<Ac />} />
+            <Route path="sem1" element={<Semc1 />} />
+            <Route path="sem2" element={<Semc2 />} />
+            <Route path="sem3" element={<Semc3 />} />
+            <Route path="sem4" element={<Semc4 />} />
+            <Route path="sem5" element={<Semc5 />} />
+            <Route path="sem6" element={<Semc6 />} />
+            <Route path="sem7" element={<Semc7 />} />
+            <Route path="sem8" element={<Semc8 />} />
+          </Route>
+        }
         {
           <Route path="/user/paper" element={<Paper />}>
             <Route path="" element={<Ap />} />
@@ -126,6 +153,11 @@ function App() {
           <Route path="customize" element={<RichText />} />
         </Route>
         <Route path="/user/feedback" element={<Feedback />} />
+        <Route path="/mentalheath" element={<MentalHealth />} />
+        <Route path="/personalblogs" element={<PersonalBlogs />} />
+        <Route path="/extras" element={<Extra />} />
+        <Route path="/coding" element={<Coding />} />
+
         <Route path="/auth/forpass" element={<ForgetPassword />} />
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/otp/signup" element={<OTP />} />

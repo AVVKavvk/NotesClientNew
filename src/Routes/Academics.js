@@ -7,8 +7,8 @@ import notes from "../image/notes.png";
 import labs from "../image/labs.png";
 import papers from "../image/papers.png";
 import books from "../image/books.png";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
+import CGPA from "../image/CGPA.png";
+
 function Academics() {
   const content = [
     {
@@ -34,6 +34,12 @@ function Academics() {
       tag: "Books",
       description:
         " We're excited to offer you access to a wide selection of e-books covering a multitude of subjects and disciplines.",
+    },
+    {
+      link: "/user/cgpa",
+      tag: "CGPA Calculator",
+      description:
+        "Elevate also offers a CGPA Calculator to help you stay on top of your academic progress.",
     },
   ];
   return (
@@ -116,6 +122,19 @@ function Academics() {
             subject, or simply expanding your horizons, our website is your
             go-to destination.
           </p>
+        </div>
+        <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
+          <p>
+            A student's CGPA significantly influences their career prospects. A
+            high CGPA opens doors to prestigious job placements, with many
+            employers equating it to dedication and consistency. It showcases a
+            strong work ethic and the ability to meet deadlines, qualities
+            highly sought after in the professional world. It also acts as a key
+            factor for postgraduate admissions in renowned institutions. In
+            essence, CGPA isn't just a metric; it's a critical factor in
+            realizing one's academic and professional aspirations.
+          </p>
+          <img src={CGPA} alt="" width="400px" class="rounded-md" />
         </div>
       </div>
     </div>
