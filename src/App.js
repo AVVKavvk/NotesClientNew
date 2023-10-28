@@ -62,6 +62,8 @@ import PersonalBlogs from "./Routes/PersonalBlogs";
 import Extra from "./Routes/Extra";
 import Coding from "./Routes/Coding";
 import CGPA from "./Routes/CGPA";
+import { useState } from "react";
+import Loader from "./animation/Loader";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -69,12 +71,18 @@ function App() {
   const isLoading = useSelector(state => state.appConfigReducer.isloading);
   const toastData = useSelector(state => state.appConfigReducer.toastData);
   const loadingRef = useRef(null);
+  const [loader, setLoader] = useState(true);
+  const [app, setApp] = useState(false);
   useEffect(() => {
     if (isLoading) {
       loadingRef.current?.continuousStart();
     } else {
       loadingRef.current?.complete();
     }
+    setTimeout(() => {
+      setApp(true);
+      setLoader(false);
+    }, 3000);
   }, [isLoading]);
   useEffect(() => {
     switch (toastData.type) {
@@ -88,85 +96,100 @@ function App() {
     }
   }, [toastData]);
   return (
-    <div className="App" class=" overflow-hidden mx-auto   ">
-      <LoadingBar color="#f11946" ref={loadingRef} />
-      <div>
-        <Toaster />
+    <>
+      <div
+        className={` ${
+          loader ? "block" : "hidden"
+        } bg-slate-900 h-[100vh] flex justify-center items-center mx-auto `}
+      >
+        {" "}
+        {<Loader />}{" "}
+        {<Loader />}{" "}
+        {<Loader />}{" "}
       </div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/user/academics" element={<Academics />} />
-        {
-          <Route path="/user/cgpa" element={<CGPA />}>
-            <Route path="" element={<Ac />} />
-            <Route path="sem1" element={<Semc1 />} />
-            <Route path="sem2" element={<Semc2 />} />
-            <Route path="sem3" element={<Semc3 />} />
-            <Route path="sem4" element={<Semc4 />} />
-            <Route path="sem5" element={<Semc5 />} />
-            <Route path="sem6" element={<Semc6 />} />
-            <Route path="sem7" element={<Semc7 />} />
-            <Route path="sem8" element={<Semc8 />} />
+      <div
+        className="App"
+        class={` ${app ? "block" : "hidden"} overflow-hidden mx-auto `}
+      >
+        <LoadingBar color="#f11946" ref={loadingRef} />
+        <div>
+          <Toaster />
+        </div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user/academics" element={<Academics />} />
+          {
+            <Route path="/user/cgpa" element={<CGPA />}>
+              <Route path="" element={<Ac />} />
+              <Route path="sem1" element={<Semc1 />} />
+              <Route path="sem2" element={<Semc2 />} />
+              <Route path="sem3" element={<Semc3 />} />
+              <Route path="sem4" element={<Semc4 />} />
+              <Route path="sem5" element={<Semc5 />} />
+              <Route path="sem6" element={<Semc6 />} />
+              <Route path="sem7" element={<Semc7 />} />
+              <Route path="sem8" element={<Semc8 />} />
+            </Route>
+          }
+          {
+            <Route path="/user/paper" element={<Paper />}>
+              <Route path="" element={<Ap />} />
+              <Route path="sem1" element={<Semp1 />} />
+              <Route path="sem2" element={<Semp2 />} />
+              <Route path="sem3" element={<Semp3 />} />
+              <Route path="sem4" element={<Semp4 />} />
+              <Route path="sem5" element={<Semp5 />} />
+              <Route path="sem6" element={<Semp6 />} />
+            </Route>
+          }
+          <Route path="/user/notes" element={<Notes />}>
+            <Route path="" element={<A />} />
+            <Route path="sem1" element={<Sem1 />} />
+            <Route path="sem2" element={<Sem2 />} />
+            <Route path="sem3" element={<Sem3 />} />
+            <Route path="sem4" element={<Sem4 />} />
+            <Route path="sem5" element={<Sem5 />} />
+            <Route path="sem6" element={<Sem6 />} />
           </Route>
-        }
-        {
-          <Route path="/user/paper" element={<Paper />}>
-            <Route path="" element={<Ap />} />
-            <Route path="sem1" element={<Semp1 />} />
-            <Route path="sem2" element={<Semp2 />} />
-            <Route path="sem3" element={<Semp3 />} />
-            <Route path="sem4" element={<Semp4 />} />
-            <Route path="sem5" element={<Semp5 />} />
-            <Route path="sem6" element={<Semp6 />} />
-          </Route>
-        }
-        <Route path="/user/notes" element={<Notes />}>
-          <Route path="" element={<A />} />
-          <Route path="sem1" element={<Sem1 />} />
-          <Route path="sem2" element={<Sem2 />} />
-          <Route path="sem3" element={<Sem3 />} />
-          <Route path="sem4" element={<Sem4 />} />
-          <Route path="sem5" element={<Sem5 />} />
-          <Route path="sem6" element={<Sem6 />} />
-        </Route>
-        {/* <Route path="/labs" element={<Labs />} /> */}
-        <Route path="/user/labs" element={<Labs />}>
-          <Route path="" element={<Al />} />
-          <Route path="sem1" element={<Seml1 />} />
-          <Route path="sem2" element={<Seml2 />} />
-          <Route path="sem3" element={<Seml3 />} />
-          <Route path="sem4" element={<Seml4 />} />
-          {/* <Route path="sem5" element={<Unavaiable />} />
+          {/* <Route path="/labs" element={<Labs />} /> */}
+          <Route path="/user/labs" element={<Labs />}>
+            <Route path="" element={<Al />} />
+            <Route path="sem1" element={<Seml1 />} />
+            <Route path="sem2" element={<Seml2 />} />
+            <Route path="sem3" element={<Seml3 />} />
+            <Route path="sem4" element={<Seml4 />} />
+            {/* <Route path="sem5" element={<Unavaiable />} />
           <Route path="sem6" element={<Unavaiable />} /> */}
-          <Route path="sem5" element={<Seml5 />} />
-          <Route path="sem6" element={<Seml6 />} />
-        </Route>
+            <Route path="sem5" element={<Seml5 />} />
+            <Route path="sem6" element={<Seml6 />} />
+          </Route>
 
-        <Route path="/auth/login" element={<Login />} />
-        <Route path="/e-book" element={<Book />} />
-        <Route path="/placement" element={<Placement />} />
-        <Route path="/certificates" element={<CertificationPrograms />} />
-        <Route path="/aluminia" element={<Aluminia />} />
-        <Route path="/resume" element={<ResumePage />}>
-          <Route path="in-5-min" element={<Resume />} />
-          <Route path="customize" element={<RichText />} />
-        </Route>
-        <Route path="/user/feedback" element={<Feedback />} />
-        <Route path="/mentalheath" element={<MentalHealth />} />
-        <Route path="/personalblogs" element={<PersonalBlogs />} />
-        <Route path="/extras" element={<Extra />} />
-        <Route path="/coding" element={<Coding />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/e-book" element={<Book />} />
+          <Route path="/placement" element={<Placement />} />
+          <Route path="/certificates" element={<CertificationPrograms />} />
+          <Route path="/aluminia" element={<Aluminia />} />
+          <Route path="/resume" element={<ResumePage />}>
+            <Route path="in-5-min" element={<Resume />} />
+            <Route path="customize" element={<RichText />} />
+          </Route>
+          <Route path="/user/feedback" element={<Feedback />} />
+          <Route path="/mentalheath" element={<MentalHealth />} />
+          <Route path="/personalblogs" element={<PersonalBlogs />} />
+          <Route path="/extras" element={<Extra />} />
+          <Route path="/coding" element={<Coding />} />
 
-        <Route path="/auth/forpass" element={<ForgetPassword />} />
-        <Route path="/auth/signup" element={<Signup />} />
-        <Route path="/otp/signup" element={<OTP />} />
-        <Route path="/auth/visitor" element={<Visitor />} />
-        <Route path="/user/creator" element={<Creator />} />
-        <Route path="/user/unavail" element={<Unavaiable />} />
-        <Route path="/user/logout" element={<Logout />} />
-      </Routes>
-    </div>
+          <Route path="/auth/forpass" element={<ForgetPassword />} />
+          <Route path="/auth/signup" element={<Signup />} />
+          <Route path="/otp/signup" element={<OTP />} />
+          <Route path="/auth/visitor" element={<Visitor />} />
+          <Route path="/user/creator" element={<Creator />} />
+          <Route path="/user/unavail" element={<Unavaiable />} />
+          <Route path="/user/logout" element={<Logout />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 

@@ -13,7 +13,8 @@ import hero1 from "../image/hero1.png";
 import hero2 from "../image/hero2.png";
 import hero3 from "../image/hero3.png";
 import upcoming from "../assets/upcoming.json";
-
+import Img1 from "../animation/Img1";
+import Flight from "../animation/Flight";
 function Home() {
   // const count = useSelector((state) => state.appConfigReducer.count);
   // console.log(count);
@@ -37,6 +38,7 @@ function Home() {
 
   return (
     <>
+      {<Flight />}
       <div class="mt-4 mb-24 mx-4 ">
         <div className=" flex-col font-mullish  max-w-[1250px] flex mx-auto gap-2 justify-center items-center ">
           <div>
@@ -55,11 +57,7 @@ function Home() {
           </div>
 
           <div class="w-full flex-col md:flex-row mt-8 md:mt-[4.6rem] flex text-gray-600  justify-between gap-5 items-center mx-auto ">
-            <img
-              src={hero1}
-              alt=""
-              class="md:w-[500px] w-[300px] h-[330px]  rounded-md"
-            />
+            {<Img1 />}
             <div class="md:w-[50%] w-full text-xl   text-justify px-3 ">
               <p>
                 At <span class=" text-2xl font-bold  ">IIIT Pune</span> , we're
