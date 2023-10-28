@@ -19,7 +19,7 @@ function Extra() {
     },
   ];
   return (
-    <div className=" font-mullish hidden md:flex font-mullish mt-4 mb-10 md:mt-5  rounded-md  max-w-[900px] mx-auto relative text-xl">
+    <div className=" font-mullish hidden md:flex  mt-4 mb-10 md:mt-5  rounded-md  max-w-[900px] mx-auto relative text-xl">
       <div className="w-[50%] rounded-md flex flex-col border border-gray-300 justify-between gap-3">
         {content?.map(item => {
           return (
@@ -38,11 +38,11 @@ function Extra() {
                     <p class="font-mullish text-grayText mt-6">
                       {item?.description}
                     </p>
-                    <img
+                    {/* <img
                       src={wave}
                       alt=""
                       class="hidden absolute bottom-0 right-0 group-hover:block transition-all duration-200"
-                    />
+                    /> */}
                   </div>
                   <div class="flex items-center space-x-2 font-mullish font-bold text-lightBlue group">
                     <FiExternalLink

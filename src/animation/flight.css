@@ -3,10 +3,10 @@
   }
   .cloud {
     position: absolute;
-    top: 30px;
+    top: 40px;
     right: -100px;
     opacity: .8;
-     animation: cloud 10s linear 0s infinite reverse;
+     animation: cloud 8s linear 0s infinite reverse;
     z-index: 99;
   }
   @keyframes light {

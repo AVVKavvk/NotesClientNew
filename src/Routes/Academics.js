@@ -8,8 +8,20 @@ import labs from "../image/labs.png";
 import papers from "../image/papers.png";
 import books from "../image/books.png";
 import CGPA from "../image/CGPA.png";
-
+import Loader from "../animation/Loader1";
+import { useState } from "react";
+import { useEffect } from "react";
 function Academics() {
+  const [loader, setLoader] = useState(true);
+  const [app, setApp] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+      setApp(true);
+    }, 1500);
+  }, []);
+
   const content = [
     {
       link: "/user/notes",
@@ -43,101 +55,114 @@ function Academics() {
     },
   ];
   return (
-    <div className=" hidden md:flex font-mullish mt-4 mb-10 md:mt-5  rounded-md  max-w-[1400px] mx-auto relative text-xl">
-      <div className="w-[27%] rounded-md flex flex-col border border-gray-300 justify-between gap-3">
-        {content?.map(item => {
-          return (
-            <Link to={item?.link}>
-              <div class="w-full relative cursor-pointer  min-h-[15rem] group rounded-md">
-                <img
-                  src={i1}
-                  alt=""
-                  class="absolute w-12 h-12 rounded-full bg-lightBlue text-white right-3 top-3 -z-[8] group-hover:bg-gradient-to-r from-cyan-300 to-blue-500 transition-all duration-200"
-                />
-                <div class="z-[100] absolute w-full h-full flex flex-col text-justify justify-between pl-5 py-6 pr-8">
-                  <div>
-                    <h1 class="font-mullish font-bold text-[1.5rem] leading-[1.2] text-deepBlueHead">
-                      {item?.tag}
-                    </h1>
-                    <p class="font-mullish text-grayText mt-6">
-                      {item?.description}
-                    </p>
+    <>
+      <div
+        className={`${
+          loader ? "block" : "hidden"
+        } bg-slate-900 flex justify-center items-center mx-auto h-[120vh] -mt-[200px]`}
+      >
+        {<Loader />}
+      </div>
+      <div className={`${app ? "block" : "hidden"}`}>
+        <div className=" hidden md:flex font-mullish mt-4 mb-10 md:mt-5  rounded-md  max-w-[1400px] mx-auto relative text-xl">
+          <div className="w-[27%] rounded-md flex flex-col border border-gray-300 justify-between gap-3">
+            {content?.map(item => {
+              return (
+                <Link to={item?.link}>
+                  <div class="w-full relative cursor-pointer  min-h-[15rem] group rounded-md">
                     <img
-                      src={wave}
+                      src={i1}
                       alt=""
-                      class="hidden absolute bottom-0 right-0 group-hover:block transition-all duration-200"
+                      class="absolute w-12 h-12 rounded-full bg-lightBlue text-white right-3 top-3 -z-[8] group-hover:bg-gradient-to-r from-cyan-300 to-blue-500 transition-all duration-200"
                     />
+                    <div class="z-[100] absolute w-full h-full flex flex-col text-justify justify-between pl-5 py-6 pr-8">
+                      <div>
+                        <h1 class="font-mullish font-bold text-[1.5rem] leading-[1.2] text-deepBlueHead">
+                          {item?.tag}
+                        </h1>
+                        <p class="font-mullish text-grayText mt-6">
+                          {item?.description}
+                        </p>
+                        {/* <img
+                          src={wave}
+                          alt=""
+                          class="hidden absolute bottom-0 right-0 group-hover:block transition-all duration-200"
+                        /> */}
+                      </div>
+                      <div class="flex items-center space-x-2 font-mullish font-bold text-lightBlue group">
+                        <FiExternalLink
+                          size={40}
+                          class="px-1 mx-1 mt-0 group-hover:text-grayBlue"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div class="flex items-center space-x-2 font-mullish font-bold text-lightBlue group">
-                    <FiExternalLink
-                      size={40}
-                      class="px-1 mx-1 mt-0 group-hover:text-grayBlue"
-                    />
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-5" />
-            </Link>
-          );
-        })}
-      </div>
-      <div className=" w-[69%] ml-[3%] gap-5">
-        <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
-          <p>
-            Our extensive notes repository is designed to be your ultimate study
-            companion. Dive into a wealth of lecture notes, handouts, and study
-            materials, meticulously curated to cover every aspect of your
-            courses. Whether you're revising for an exam, working on an
-            assignment, or simply expanding your knowledge, you'll find these
-            notes invaluable.
-          </p>
-          <img src={notes} alt="" width="400px" class="rounded-md" />
-        </div>
-        <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
-          <img src={labs} alt="" width="400px" class="rounded-md" />
-          <p>
-            Welcome to our interactive labs section, where learning goes beyond
-            textbooks. Here, you can immerse yourself in hands-on learning
-            experiences that bridge the gap between theory and practice. Our
-            labs offer a variety of experiments, simulations, and practical
-            exercises to reinforce your understanding of complex concepts.
-          </p>
-        </div>
-        <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
-          <p>
-            Preparing for exams has never been more effective. Gain a
-            competitive edge with access to previous year's exam papers, a
-            valuable resource for every student. By practicing with real exam
-            questions, you'll not only get a feel for the format but also
-            identify key topics and trends in your curriculum.
-          </p>
-          <img src={papers} alt="" width="400px" class="rounded-md" />
-        </div>
-        <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
-          <img src={books} alt="" width="400px" class="rounded-md" />
-          <p>
-            Books are curated to provide you with in-depth knowledge and
-            insights, making your studies even more enriching. Whether you're
-            preparing for exams, aiming to deepen your understanding of a
-            subject, or simply expanding your horizons, our website is your
-            go-to destination.
-          </p>
-        </div>
-        <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
-          <p>
-            A student's CGPA significantly influences their career prospects. A
-            high CGPA opens doors to prestigious job placements, with many
-            employers equating it to dedication and consistency. It showcases a
-            strong work ethic and the ability to meet deadlines, qualities
-            highly sought after in the professional world. It also acts as a key
-            factor for postgraduate admissions in renowned institutions. In
-            essence, CGPA isn't just a metric; it's a critical factor in
-            realizing one's academic and professional aspirations.
-          </p>
-          <img src={CGPA} alt="" width="400px" class="rounded-md" />
+                  <hr class="mt-5" />
+                </Link>
+              );
+            })}
+          </div>
+          <div className=" w-[69%] ml-[3%] gap-5">
+            <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
+              <p>
+                Our extensive notes repository is designed to be your ultimate
+                study companion. Dive into a wealth of lecture notes, handouts,
+                and study materials, meticulously curated to cover every aspect
+                of your courses. Whether you're revising for an exam, working on
+                an assignment, or simply expanding your knowledge, you'll find
+                these notes invaluable.
+              </p>
+              <img src={notes} alt="" width="400px" class="rounded-md" />
+            </div>
+            <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
+              <img src={labs} alt="" width="400px" class="rounded-md" />
+              <p>
+                Welcome to our interactive labs section, where learning goes
+                beyond textbooks. Here, you can immerse yourself in hands-on
+                learning experiences that bridge the gap between theory and
+                practice. Our labs offer a variety of experiments, simulations,
+                and practical exercises to reinforce your understanding of
+                complex concepts.
+              </p>
+            </div>
+            <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
+              <p>
+                Preparing for exams has never been more effective. Gain a
+                competitive edge with access to previous year's exam papers, a
+                valuable resource for every student. By practicing with real
+                exam questions, you'll not only get a feel for the format but
+                also identify key topics and trends in your curriculum.
+              </p>
+              <img src={papers} alt="" width="400px" class="rounded-md" />
+            </div>
+            <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
+              <img src={books} alt="" width="400px" class="rounded-md" />
+              <p>
+                Books are curated to provide you with in-depth knowledge and
+                insights, making your studies even more enriching. Whether
+                you're preparing for exams, aiming to deepen your understanding
+                of a subject, or simply expanding your horizons, our website is
+                your go-to destination.
+              </p>
+            </div>
+            <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
+              <p>
+                A student's CGPA significantly influences their career
+                prospects. A high CGPA opens doors to prestigious job
+                placements, with many employers equating it to dedication and
+                consistency. It showcases a strong work ethic and the ability to
+                meet deadlines, qualities highly sought after in the
+                professional world. It also acts as a key factor for
+                postgraduate admissions in renowned institutions. In essence,
+                CGPA isn't just a metric; it's a critical factor in realizing
+                one's academic and professional aspirations.
+              </p>
+              <img src={CGPA} alt="" width="400px" class="rounded-md" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

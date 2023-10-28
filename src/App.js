@@ -82,7 +82,7 @@ function App() {
     setTimeout(() => {
       setApp(true);
       setLoader(false);
-    }, 3000);
+    }, 4500);
   }, [isLoading]);
   useEffect(() => {
     switch (toastData.type) {
@@ -103,9 +103,7 @@ function App() {
         } bg-slate-900 h-[100vh] flex justify-center items-center mx-auto `}
       >
         {" "}
-        {<Loader />}{" "}
-        {<Loader />}{" "}
-        {<Loader />}{" "}
+        {<Loader />} {<Loader />} {<Loader />}{" "}
       </div>
       <div
         className="App"
