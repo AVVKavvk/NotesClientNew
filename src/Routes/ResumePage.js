@@ -47,11 +47,11 @@ function ResumePage() {
                   let us handle the formatting. Choose from various template
                   styles to match your preference.
                 </p>
-                <img
+                {/* <img
                   src={wave}
                   alt=""
                   class="hidden absolute bottom-0 right-0 group-hover:block transition-all duration-200"
-                />
+                /> */}
               </div>
               <div class="flex items-center space-x-2 font-mullish font-bold text-lightBlue group">
                 <FiExternalLink
@@ -89,11 +89,11 @@ function ResumePage() {
                   Once you're done, download your professionally designed resume
                   with just a click.
                 </p>
-                <img
+                {/* <img
                   src={wave}
                   alt=""
                   class="hidden absolute bottom-0 right-0 group-hover:block transition-all duration-200"
-                />
+                /> */}
               </div>
               <div class="flex items-center space-x-2 font-mullish font-bold text-lightBlue group">
                 <FiExternalLink
