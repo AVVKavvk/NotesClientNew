@@ -4,7 +4,7 @@ function Loader() {
   // return ;
   return (
     <>
-      <div class="animation01">
+      <div class="animation01 h-[100vh]">
         <div></div>
         <div></div>
         <div></div>

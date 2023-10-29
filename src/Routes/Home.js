@@ -15,6 +15,7 @@ import hero3 from "../image/hero3.png";
 import upcoming from "../assets/upcoming.json";
 import Img1 from "../animation/Img1";
 import Flight from "../animation/Flight";
+import Img2 from "../animation/Img2";
 function Home() {
   // const count = useSelector((state) => state.appConfigReducer.count);
   // console.log(count);
@@ -90,31 +91,7 @@ function Home() {
             class=" flex md:hidden opacity-50 mt-4"
             style={{ border: "1px solid gray", width: "100%" }}
           />
-          <div class="w-full flex-col md:flex-row mt-8 md:mt-[4.6rem] mt flex text-gray-600  justify-between gap-5 items-center mx-auto ">
-            <img
-              src={hero2}
-              alt=""
-              class="md:w-[450px] w-[300px] h-[300px]  rounded-md"
-            />
-            <div class="md:w-[50%] w-full text-xl   text-justify px-3 ">
-              <p>
-                Our website offers a rich repository of notes, labs, and
-                previous year's exam papers along with Books to boost your
-                academic journey. Dive into comprehensive lecture notes, embark
-                on hands-on learning experiences, and prepare effectively with
-                real exam papers.We're dedicated to providing you with the tools
-                and knowledge you need to succeed in your academic and
-                professional pursuits.
-              </p>
-              <Link to="/user/academics" style={{ textDecoration: "none" }}>
-                <h1 class="w-[150px] hidden md:block bg-yellow-400 font-bold hover:bg-yellow-300 rounded-lg px-4 py-3 mt-5 cursor-pointer">
-                  Academics
-                </h1>
-              </Link>
-
-              <div class="flex flex-row justify-between items-center "></div>
-            </div>
-          </div>
+          <Img2 />
           <hr
             class=" flex md:hidden opacity-50 mt-4"
             style={{ border: "1px solid gray", width: "100%" }}

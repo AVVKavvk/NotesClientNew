@@ -4,7 +4,7 @@
   .cloud {
     position: absolute;
     top: 40px;
-    right: -100px;
+    right: -900px;
     opacity: .8;
      animation: cloud 8s linear 0s infinite reverse;
     z-index: 99;
@@ -14,6 +14,6 @@
     100% {opacity: 1;}
   }
   @keyframes cloud {
-    from {right:-100px;}
-    to {right: 120%;}
+    from {right:-900px;}
+    to {right: 130%;}
   }

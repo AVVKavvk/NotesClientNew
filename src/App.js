@@ -82,7 +82,7 @@ function App() {
     setTimeout(() => {
       setApp(true);
       setLoader(false);
-    }, 4500);
+    }, 2500);
   }, [isLoading]);
   useEffect(() => {
     switch (toastData.type) {
