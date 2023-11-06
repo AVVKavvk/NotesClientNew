@@ -2,8 +2,7 @@ import React from "react";
 import ll from "../image/logo3.svg";
 import llv from "../image/videoLOGO.svg";
 import Notes2 from "../assets/Notes/Notes2.json";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
+
 function Sem2() {
   return (
     <div class="mx-auto lg:w-[1200px] mt-7 ">

@@ -3,8 +3,6 @@ import ll from '../image/l4.svg'
 import lll from '../image/l4l.svg'
 import llll from '../image/l4ll.svg'
 import lllll from '../image/l4lll.svg'
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
 function Sem4() {
   return (
     <div >

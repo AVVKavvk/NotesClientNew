@@ -39,8 +39,9 @@ function Home() {
 
   return (
     <>
-      <div className="hidden md:block">{<Flight />}</div>
-      <div class="mt-4 mb-24 mx-4 ">
+      <div className=" App hidden md:block">{<Flight />}</div>
+
+      <div class="mt-4 mb-24 mx-4  ">
         <div className=" flex-col font-mullish  max-w-[1250px] flex mx-auto gap-2 justify-center items-center ">
           <div>
             <h1 class="flex gap-3 text-blue-500 md:text-4xl text-3xl ">

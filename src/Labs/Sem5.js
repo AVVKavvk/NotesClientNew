@@ -1,8 +1,6 @@
 import React from "react";
 import ll from "../image/ml.png";
 import lll from "../image/se.png";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
 
 function Sem5() {
   return (

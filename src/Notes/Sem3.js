@@ -1,8 +1,7 @@
 import React from "react";
 import ll from "../image/logo.svg";
 import Notes3 from "../assets/Notes/Notes3.json";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
+
 function Sem3() {
   return (
     <div class="mx-auto lg:w-[1200px] mt-7 ">

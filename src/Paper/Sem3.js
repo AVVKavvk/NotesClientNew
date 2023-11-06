@@ -1,7 +1,6 @@
 import React from 'react'
 import ll from '../image/p3.svg'
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
+
 function Sem3() {
   return (
     <div class="mx-auto sm:w-[500px]  md:w-[650px] mt-7 ">

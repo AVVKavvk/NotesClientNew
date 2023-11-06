@@ -1,8 +1,7 @@
 import React from "react";
 import ll from "../image/logo4.svg";
 import Notes5 from "../assets/Notes/Notes5.json";
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907813750741424"
-     crossorigin="anonymous"></script>
+
 function Sem5() {
   return (
     <div class="mx-auto lg:w-[1200px] mt-7 ">
