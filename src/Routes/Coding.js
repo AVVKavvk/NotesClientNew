@@ -44,7 +44,7 @@ function Coding() {
                     Elevate's Editor
                   </h1>
                   <p class="font-mullish text-grayText mt-6">
-                    Vipin Editor is like a special online club for people who
+                    Elevate Editor is like a special online club for people who
                     enjoy playing with computer codes for making websites. It's
                     a friendly place where you can try out your own creative
                     ideas in HTML, CSS, and JavaScript.It's a great spot for
