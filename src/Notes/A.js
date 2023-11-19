@@ -26,7 +26,7 @@ function A() {
         class="m-3"
       />
 
-      {/* <div class="mx-auto flex flex-col justify-center items-center mt-5 mb-10 ">
+      <div class="mx-auto flex flex-col justify-center items-center mt-5 mb-10 ">
         <h1 class=" max-w-[500px] p-2 text-xl  sm:text-2xl text-center mb-8">
           {" "}
           <span class="text-2xl sm:text-3xl mx-3">
@@ -92,7 +92,7 @@ function A() {
              </div>
             </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
