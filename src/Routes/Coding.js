@@ -14,7 +14,7 @@ function Coding() {
     setTimeout(() => {
       setLoader(false);
       setApp(true);
-    }, 1500);
+    }, 800);
   }, []);
   return (
     <>
@@ -41,10 +41,10 @@ function Coding() {
               <div class="z-[100] absolute w-full h-full flex flex-col text-justify justify-between pl-5 py-6 pr-8">
                 <div>
                   <h1 class="font-mullish font-bold text-[1.5rem] leading-[1.2] text-deepBlueHead">
-                    Elevate's Editor
+                    Vipin's Editor
                   </h1>
                   <p class="font-mullish text-grayText mt-6">
-                    Elevate Editor is like a special online club for people who
+                    Vipin Editor is like a special online club for people who
                     enjoy playing with computer codes for making websites. It's
                     a friendly place where you can try out your own creative
                     ideas in HTML, CSS, and JavaScript.It's a great spot for

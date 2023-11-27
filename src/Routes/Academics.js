@@ -19,7 +19,7 @@ function Academics() {
     setTimeout(() => {
       setLoader(false);
       setApp(true);
-    }, 1500);
+    }, 700);
   }, []);
 
   const content = [

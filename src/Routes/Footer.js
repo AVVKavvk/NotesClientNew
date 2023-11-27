@@ -64,7 +64,7 @@ function Footer() {
               </div>
             </div>
             <div class="mt-4 text-base text-center border-t border-brColor pt-10">
-              Copyright © 2023 Elevate. All Rights Reserved.
+              Copyright © 2023 Vipin. All Rights Reserved.
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ function Footer() {
         class="flex flex-col px-4 mt-4 justify-center
        items-center mx-auto"
       >
-        <h1 class="text-2xl mb-3"> <span>{count!=undefined?count:"510"}+</span> Students</h1>
+        <h1 class="text-2xl mb-3"> <span>{count!=undefined?count:"580"}+</span> Students</h1>
         <hr style={{border:"1px solid gray",width:"300px"}} />
         <div class="grid grid-cols-2 gap-2 mt-6  text-lg  mx-auto ">
   {Links?.map((item)=>{

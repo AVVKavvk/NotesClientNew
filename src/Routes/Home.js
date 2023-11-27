@@ -49,7 +49,7 @@ function Home() {
               <h1 class=" text-deepBlue ">
                 <Typewriter
                   options={{
-                    strings: ["Elevate", "Quarkic"],
+                    strings: ["Vipin Notes", "Elevate"],
                     autoStart: true,
                     loop: true,
                   }}
@@ -81,7 +81,7 @@ function Home() {
                   {" "}
                   <span class="text-3xl mr-3">
                     {" "}
-                    {count != undefined ? count : "450"}+
+                    {count != undefined ? count : "580"}+
                   </span>{" "}
                   Students{" "}
                 </h1>
@@ -105,8 +105,7 @@ function Home() {
             />
             <div class="md:w-[50%] w-full text-xl   text-justify px-3 ">
               <p>
-                At <span class=" text-2xl font-bold  ">IIIT Pune</span>, we
-                believe in the power of lasting connections. That's why we're
+                We believe in the power of lasting connections. That's why we're
                 excited to introduce our Alumni Directory—a dedicated space on
                 our website where you can explore the incredible journeys and
                 accomplishments of our alumni. Our Alumni Directory is a

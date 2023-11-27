@@ -17,7 +17,7 @@ function Placement() {
     setTimeout(() => {
       setLoader(false);
       setApp(true);
-    }, 1500);
+    }, 800);
   }, []);
   const content = [
     {
