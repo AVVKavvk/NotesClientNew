@@ -20,6 +20,21 @@ function Footer() {
 
   return (
     <div class=" bg-deepBlueHead px-3 text-white flex flex-col md:flex-row mx-auto justify-evenly items-center pb-7 ">
+     <div class="rounded-xl w-[280px] h-[300px] mb-9 mt-2 md:pl-7  ">
+          {" "}
+          <a href="https://i.ibb.co/417cTGP/vipin.png" target="_blank">
+            {" "}
+            <img
+              src="https://i.ibb.co/417cTGP/vipin.png"
+              alt="vipin"
+              class="w-full rounded-xl"
+            />{" "}
+          </a>
+          <h1 class="text-center text-2xl mt-2 mb-1 ">Founder</h1>
+
+         
+        </div>
+     
       <div class=" md:h-[300px]    pb-10  md:pb-20 mx-auto max-w-[1200px] px-5 space-y-10  ">
         <div class="flex flex-col py-8 sm:flex-row items-center ">
           {/* <div class="hidden h-[200px] z-30 w-[1px]  sm:mr-2 md:ml-52 bg-[#fff] lg:block"></div> */}

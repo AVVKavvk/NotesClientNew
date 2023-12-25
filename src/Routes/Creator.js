@@ -5,6 +5,8 @@ import { AiFillPhone } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import {SiLeetcode} from 'react-icons/si'
+import { SiGeeksforgeeks } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 import sk1 from "../image/sk1.svg";
 import sk2 from "../image/sk2.svg";
@@ -57,7 +59,10 @@ function Creator() {
           </div>
         
         </div>
-        <div class="flex  flex-col text-2xl space-y-2 mb-3 ">
+        <div class="flex flex-wrap justify-start items-start gap-4">
+
+        
+        <div class="flex  flex-col text-xl space-y-2 mb-3 ">
           <div class="flex  text-center   space-x-4 items-center justify-start">
             <BsLinkedin style={{ color: "blue" }} />
             <a
@@ -76,12 +81,33 @@ function Creator() {
             </a>
           </div>
           <div class="flex  text-center   space-x-4 items-center justify-start">
-            <FaInstagramSquare />
+            <FaInstagramSquare style={{color:"#C13584"}} />
             <a href="https://www.instagram.com/k.vip_in/" target="_blank">
               {" "}
               <h1>Instagram</h1>{" "}
             </a>
           </div>
+        </div>
+        <div class="flex  flex-col text-xl space-y-2 mb-3 ">
+          <div class="flex  text-center   space-x-4 items-center justify-start">
+            <SiLeetcode style={{ color: "orange" }} />
+            <a
+              href="https://leetcode.com/Avvkvipin/"
+              target="_blank"
+            >
+              {" "}
+              <h1>Leetcode</h1>{" "}
+            </a>
+          </div>
+          <div class="flex  text-center   space-x-4 items-center justify-start">
+            <SiGeeksforgeeks style={{color:"green"}} />
+            <a href="https://auth.geeksforgeeks.org/user/vipinavvk" target="_blank">
+              {" "}
+              <h1>GFG</h1>{" "}
+            </a>
+          </div>
+          
+        </div>
         </div>
       </div>
 
@@ -99,7 +125,7 @@ function Creator() {
             </a>
             <h1 class="text-lg m-1 text-center">BTech pursuing </h1>
             <h1 class="text-lg  text-center">
-              CGPA - <span class="ml-2"> 8.54 </span>{" "}
+              CGPA - <span class="ml-2"> 8.65 </span>{" "}
             </h1>
           </div>
           <div>

@@ -50,7 +50,7 @@ function A() {
           </a>
           <h1 class="text-center text-2xl mt-2 mb-1">Sourish Mittal</h1>
           <h1 class="text-center text-xl flex justify-between  items-center">9953862637 </h1>
-          <h1 class="text-center text-xl flex justify-between  items-center">CGPA 9.49 </h1>
+          <h1 class="text-center text-xl flex justify-between  items-center">CGPA 9.50 </h1>
          
         </div>
             <div class="flex flex-col w-[120px] space-y-3  ">
