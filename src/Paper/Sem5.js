@@ -8,7 +8,7 @@ function Sem5() {
     <div class="relative sm:mt-5 flex flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
       <div>
       <a
-        href="https://drive.google.com/file/d/1SlsU_5dMWCaGrScGYNZUhNJsj5zCLcOR/view?usp=sharing"
+        href="https://drive.google.com/drive/folders/13zDWi1KKtghCaygV8Ofkal30wL9x6GSH?usp=drive_link"
         target="_blank"
       >
         <div>
@@ -25,7 +25,7 @@ function Sem5() {
     <div class="relative flex flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
       <div>
       <a
-        href="https://drive.google.com/file/d/1bYlO2t6Zyc14Ccjo_Fz1aQjMcRESQvrN/view?usp=share_link"
+        href="https://drive.google.com/drive/folders/1-k7z_LvdyjbQCalHSmtz3NOHITDruZmN?usp=drive_link"
         target="_blank"
       >
         <div>
@@ -42,7 +42,7 @@ function Sem5() {
     <div class="relative flex flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
       <div>
       <a
-        href="https://drive.google.com/file/d/1GaBArPYETCgaYSgpg0GLRNSMRf8ibpHq/view?usp=share_link"
+        href="https://drive.google.com/drive/folders/1ZWi-cfLiyWKV24m0euAduZHvODXkeBnw?usp=drive_link"
         target="_blank"
       >
         <div>

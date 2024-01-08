@@ -12,7 +12,7 @@ function Feedback() {
         boxShadow:
           "rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px",
       }}
-      className="max-w-[500px] min-w-[310px] text-gray-600 mx-auto rounded-md  md:text-lg  flex flex-col max-h-[500px] mb-6 py-3 min-h-[300px] gap-4 border justify-center  items-center text-justify m-6 px-4 "
+      className="max-w-[500px]   min-w-[310px] text-gray-600 mx-auto rounded-md  md:text-lg  flex flex-col max-h-[500px] mb-6 py-3 min-h-[700px] gap-4 border justify-center  items-center text-justify m-6 px-4 "
     >
       <p >
         Your insights matter at 'Elevate.' Our platform is committed to
