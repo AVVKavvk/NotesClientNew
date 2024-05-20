@@ -28,17 +28,17 @@ function Sem2() {
         {data?.map(item => {
           if (!item.isVerified) return;
           return (
-            <div class="flex  gap-5 justify-center items-center  mt-10  ">
+            <div class="flex px-2 gap-5 justify-center items-center  mt-10  ">
               <div>
                 <a href={item.link} target="_blank">
-                  <h1 class=" bg-yellow-700  hover:scale-110    text-white rounded-md  w-[150px] h-[150px] text-center flex justify-center items-center transition-all duration-500 text-4xl mt-3 ">
+                  <h1 class=" bg-yellow-700  hover:scale-110    text-white rounded-md  w-[120px] h-[120px] text-center flex justify-center items-center transition-all duration-500 text-4xl mt-3 ">
                     {item.subject}
                   </h1>
                 </a>
               </div>
-              <h1 class=" rounded-md  text-center flex justify-center items-center text-md mt-3 ">
+              <h3 class=" rounded-md  text-center flex justify-center items-center  mt-3 ">
                 shared by {item.studentEmail}
-              </h1>
+              </h3>
             </div>
           );
         })}

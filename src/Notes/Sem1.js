@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ll from "../image/logo2.svg";
 import Notes1 from "../assets/Notes/Notes1.json";
 function Sem1() {
+
+  const [data,setData]=useState([{}]);
   return (
     <div class="mx-auto lg:w-[1200px] mt-7 ">
     {/* <h1 class=" text-2xl text-red-500 ">When you want to open Notes then use your Logged In Email</h1> */}
