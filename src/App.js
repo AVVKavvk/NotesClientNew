@@ -64,8 +64,10 @@ import Coding from "./Routes/Coding";
 import CGPA from "./Routes/CGPA";
 import { useState } from "react";
 import Loader from "./animation/Loader";
+import Loader1 from "./animation/Loader1";
 import UpdateLab from "./Labs/UpdateLabs";
 import UpdatePaper from "./Paper/UpdatePaper";
+import UpdateNotes from "./Notes/UpdateNotes";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -105,11 +107,11 @@ function App() {
         } bg-slate-900 h-[100vh] flex justify-center items-center mx-auto `}
       >
         {" "}
-        {<Loader />} {<Loader />} {<Loader />}{" "}
+        {<Loader />} {" "}
       </div>
       <div
         className="App"
-        class={` ${app ? "block" : "hidden"} overflow-hidden mx-auto `}
+        class={` ${app ? "block" : "hidden"} text-black overflow-hidden mx-auto `}
       >
         <LoadingBar color="#f11946" ref={loadingRef} />
         <div>
@@ -180,9 +182,12 @@ function App() {
           <Route path="/extras" element={<Extra />} />
           <Route path="/coding" element={<Coding />} />
 
-          <Route path="/auth/forpass" element={<ForgetPassword />} />
           <Route path="/uploadlab" element={<UpdateLab />} />
           <Route path="/uploadpaper" element={<UpdatePaper />} />
+          <Route path="/uploadnotes" element={<UpdateNotes />} />
+
+
+          <Route path="/auth/forpass" element={<ForgetPassword />} />
           <Route path="/auth/signup" element={<Signup />} />
           <Route path="/otp/signup" element={<OTP />} />
           <Route path="/auth/visitor" element={<Visitor />} />

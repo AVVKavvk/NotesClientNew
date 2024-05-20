@@ -51,7 +51,7 @@ function Navbar() {
   ];
 
   return (
-    <div class="font-mullish mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
+    <div class="font-mullish  text-black mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
       {/* //TODO /simple */}
       <div class="sm:hidden z-50 flex justify-between w-full  items-center max-w-[600px] relative ">
         <a href="">

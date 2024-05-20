@@ -4,138 +4,69 @@ function Loader() {
   // return ;
   return (
     <>
-      <div class="animation01 h-[100vh]">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="animation02">
-        <div></div>
-        <div></div>
-      </div>
-      <div class="animation03">
-        <div class="circle">
-          <div class="circle_element01"></div>
-        </div>
-        <div class="circle">
-          <div class="circle_element02"></div>
-        </div>
-        <div class="circle">
-          <div class="circle_element03"></div>
-        </div>
-        <div class="animation04">
-          <div class="line_wrapper line_wrapper01">
-            <span class="line line01"></span>
-          </div>
-          <div class="rotate45">
-            <div class="line_wrapper line_wrapper02">
-              <span class="line line02"></span>
-            </div>
-          </div>
-          <div class="line_wrapper line_wrapper03">
-            <span class="line line03"></span>
-          </div>
-          <div class="rotate135">
-            <div class="line_wrapper line_wrapper04">
-              <span class="line line04"></span>
-            </div>
-          </div>
-          <div class="line_wrapper line_wrapper05">
-            <span class="line line05"></span>
-          </div>
-          <div class="rotate-135">
-            <div class="line_wrapper line_wrapper06">
-              <span class="line line06"></span>
-            </div>
-          </div>
-          <div class="line_wrapper line_wrapper07">
-            <span class="line line07"></span>
-          </div>
-          <div class="rotate-45">
-            <div class="line_wrapper line_wrapper08">
-              <span class="line line08"></span>
-            </div>
-          </div>
-        </div>
-        <div class="animation05">
-          <div class="double_wrapper02 green02">
-            <div class="double_wrapper01 green01">
-              <div class="double_block green00"></div>
-            </div>
-          </div>
-          <div class="double_wrapper02 navy02">
-            <div class="double_wrapper01 navy01">
-              <div class="double_block navy00"></div>
-            </div>
-          </div>
-          <div class="double_wrapper02 yellow02">
-            <div class="double_wrapper01 yellow01">
-              <div class="double_block yellow00"></div>
-            </div>
-          </div>
-          <div class="double_wrapper02 blue02">
-            <div class="double_wrapper01 blue01">
-              <div class="double_block blue00"></div>
-            </div>
-          </div>
-          <div class="double_wrapper02 red02">
-            <div class="double_wrapper01 red01">
-              <div class="double_block red00"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="animation06">
-        <div class="rhombus05">
-          <div class="rhombus04">
-            <div class="rhombus03">
-              <div class="rhombus02">
-                <div class="rhombus01"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="animation07">
-        <div class="circle">
-          <div class="circle_element01"></div>
-        </div>
-        <div class="line_wrapper line_wrapper01">
-          <span class="line line01"></span>
-        </div>
-        <div class="rotate60">
-          <div class="line_wrapper line_wrapper02">
-            <span class="line line02"></span>
-          </div>
-        </div>
-        <div class="rotate120">
-          <div class="line_wrapper line_wrapper03">
-            <span class="line line03"></span>
-          </div>
-        </div>
-        <div class="line_wrapper line_wrapper04">
-          <span class="line line04"></span>
-        </div>
-        <div class="rotate-120">
-          <div class="line_wrapper line_wrapper05">
-            <span class="line line05"></span>
-          </div>
-        </div>
-        <div class="rotate-60">
-          <div class="line_wrapper line_wrapper06">
-            <span class="line line06"></span>
-          </div>
-        </div>
-      </div>
-      <div class="animation08">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <svg class="bike" viewBox="0 0 48 30" width="48px" height="30px">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1"
+        >
+          <g transform="translate(9.5,19)">
+            <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+            <g
+              class="bike__spokes-spin"
+              stroke-dasharray="31.416 31.416"
+              stroke-dashoffset="-23.562"
+            >
+              <circle class="bike__spokes" r="5" />
+              <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+            </g>
+          </g>
+          <g transform="translate(24,19)">
+            <g
+              class="bike__pedals-spin"
+              stroke-dasharray="25.133 25.133"
+              stroke-dashoffset="-21.991"
+              transform="rotate(67.5,0,0)"
+            >
+              <circle class="bike__pedals" r="4" />
+              <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
+            </g>
+          </g>
+          <g transform="translate(38.5,19)">
+            <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+            <g
+              class="bike__spokes-spin"
+              stroke-dasharray="31.416 31.416"
+              stroke-dashoffset="-23.562"
+            >
+              <circle class="bike__spokes" r="5" />
+              <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+            </g>
+          </g>
+          <polyline
+            class="bike__seat"
+            points="14 3,18 3"
+            stroke-dasharray="5 5"
+          />
+          <polyline
+            class="bike__body"
+            points="16 3,24 19,9.5 19,18 8,34 7,24 19"
+            stroke-dasharray="79 79"
+          />
+          <path
+            class="bike__handlebars"
+            d="m30,2h6s1,0,1,1-1,1-1,1"
+            stroke-dasharray="10 10"
+          />
+          <polyline
+            class="bike__front"
+            points="32.5 2,38.5 19"
+            stroke-dasharray="19 19"
+          />
+        </g>
+      </svg>
     </>
   );
 }
