@@ -64,6 +64,8 @@ import Coding from "./Routes/Coding";
 import CGPA from "./Routes/CGPA";
 import { useState } from "react";
 import Loader from "./animation/Loader";
+import UpdateLab from "./Labs/UpdateLabs";
+import UpdatePaper from "./Paper/UpdatePaper";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -179,6 +181,8 @@ function App() {
           <Route path="/coding" element={<Coding />} />
 
           <Route path="/auth/forpass" element={<ForgetPassword />} />
+          <Route path="/uploadlab" element={<UpdateLab />} />
+          <Route path="/uploadpaper" element={<UpdatePaper />} />
           <Route path="/auth/signup" element={<Signup />} />
           <Route path="/otp/signup" element={<OTP />} />
           <Route path="/auth/visitor" element={<Visitor />} />

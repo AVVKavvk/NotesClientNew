@@ -1,50 +1,49 @@
-import React from "react";
-import ll from "../image/l1.svg";
-import lll from "../image/l1.1.svg";
+import React, { useState } from "react";
+import { useEffect } from "react";
+
+import { axiosClient } from "../utils/axiosClient";
+import UpdateLab from "./UpdateLabs";
 import { Link } from "react-router-dom";
-
 function Sem1() {
+  const [data, setData] = useState([{}]);
+  const getData = async () => {
+    try {
+      const result = await axiosClient.post("/sem1/get/lab", { sem: 1 });
+      setData(result.result);
+      // console.log(result.result);
+    } catch (err) {}
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <div class="mx-auto sm:w-[500px]  md:max-w-[1000px] mt-7 ">
-      {/* <h1 class=" text-2xl text-red-500 ">When you want to see Labs then use your Logged In Email</h1> */}
-      <div class=" sm:w-[500px]  md:max-w-[1000px] grid grid-cols-1  sm:grid-cols-2 mx-auto relative gap-2 pt-4 space-y-5 mt-8 overflow-hidden">
-        <div class="relative flex flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
-          <div>
-            <Link to="/user/unavail" style={{ textDecoration: "none" }}>
+    <div class="min-h-screen  mb-5   mt-7 overflow-hidden ">
+      <Link
+        className="flex flex-col mt-6 justify-center items-center mx-auto bg-gray-800 text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
+        to="/uploadlab"
+        
+      >
+        Upload Lab
+      </Link>
+      <div class="mx-auto  md:max-w-[800px] flex  justify-evenly items-center  flex-col  mt-8 ">
+        {data?.map(item => {
+          if(!item.isVerified) return;
+          return (
+            <div class="flex gap-5 justify-center items-center  mt-10  ">
               <div>
-                <img
-                  src={ll}
-                  alt=""
-                  class="hover:scale-110 transition-all duration-500"
-                  height="170px"
-                  width="170px"
-                />
+                <a href={item.link} target="_blank">
+                  <h1 class=" bg-gray-600  hover:scale-110    text-white rounded-md  w-[200px] h-[200px] text-center flex justify-center items-center transition-all duration-500 text-4xl mt-3 ">
+                    {item.subject}
+                  </h1>
+                </a>
               </div>
-            </Link>
-
-            <h1 class=" z-10 top-[60px] left-[80px] text-4xl mt-3 ">BEE</h1>
-          </div>
-        </div>
-        <div class="relative flex flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
-          <div>
-            <a
-              href="https://drive.google.com/drive/folders/1KVgNWX8sXUz1_6Gx1BcTPNTVWupOFJsa?usp=share_link"
-              target="_blank"
-            >
-              <div>
-                <img
-                  src={lll}
-                  alt=""
-                  class="hover:scale-110 transition-all duration-500"
-                  height="170px"
-                  width="170px"
-                />
-              </div>
-            </a>
-
-            <h1 class=" z-10 top-[60px] left-[80px] text-4xl mt-3 ">CP</h1>
-          </div>
-        </div>
+              <h1 class=" rounded-md  text-center flex justify-center items-center text-md mt-3 ">
+                shared by {item.studentEmail}
+              </h1>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

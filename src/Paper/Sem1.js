@@ -1,71 +1,92 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ll from "../image/p1.svg";
+import { axiosClient } from "../utils/axiosClient";
+import { Link } from "react-router-dom";
 function Sem1() {
+  const [data, setData] = useState([{}]);
+
+  const getData = async () => {
+    const res = await axiosClient.post("/sem1/get/paper");
+    setData(res.result);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <div class="mx-auto sm:w-[500px]  md:w-[650px] mt-7 ">
+    <div class=" overflow-hidden mt-7 ">
       {/* <h1 class=" text-2xl text-red-500 ">When you want to see PYQ then use your Logged In Email</h1> */}
-    <div class=" sm:w-[500px]  md:w-[650px] md:p-6 grid grid-cols-1  mx-auto sm:grid-cols-3  relative gap-2 pt-4 w-[200px]  space-y-2 sm:space-x-8 sm:space-y-5 mt-8 overflow-hidden">
-      <div class="relative flex sm:mt-5 flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
-        <div>
-          <a
-            href="https://drive.google.com/file/d/1khtnqmu5ZwQNg9g7gWDx1pD0lP3QFZNf/view?usp=share_link"
-            target="_blank"
-          >
-            <div>
-              <img
-                src={ll}
-                alt=""
-                class="hover:scale-110 transition-all duration-500"
-                height="170px"
-                width="170px"
-              />
-            </div>
-          </a>
+      <Link
+        className="flex flex-col mt-6 justify-center items-center mx-auto bg-gray-800 text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
+        to="/uploadpaper"
+      >
+        Upload Paper
+      </Link>
 
-          <h1 class=" z-10 top-[60px] left-[80px] text-4xl  ">T1</h1>
-        </div>
-      </div>
-      <div class="relative flex flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
-        <div>
-          <a
-            href="https://drive.google.com/file/d/1whVpD4Zxy_J_wADdxxDgVyXxAVlr8Y9k/view?usp=share_link"
-            target="_blank"
-          >
+      <div class=" sm:w-[500px]  md:w-[650px] md:p-6 grid grid-cols-1  mx-auto sm:grid-cols-3  relative gap-2 pt-4 w-[200px]  mt-8 ">
+        {data?.map(item => {
+          if (!item.isVerified) return;
+          return (
             <div>
-              <img
-                src={ll}
-                alt=""
-                class="hover:scale-110 transition-all duration-500"
-                height="170px"
-                width="170px"
-              />
-            </div>
-          </a>
+              <div class="relative flex sm:mt-5 flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
+                <div>
+                  <a href={item.T1} target="_blank">
+                    <div>
+                      <img
+                        src={ll}
+                        alt=""
+                        class="hover:scale-110 transition-all duration-500"
+                        height="170px"
+                        width="170px"
+                      />
+                    </div>
+                  </a>
 
-          <h1 class=" z-10 top-[60px] left-[80px] text-4xl  ">T2</h1>
-        </div>
-      </div>
-      <div class="relative flex flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
-        <div>
-          <a
-            href="https://drive.google.com/file/d/1lwEkuOJDQiNHtjwgJQiXfsOiV-xC4UYq/view?usp=sharing"
-            target="_blank"
-          >
-            <div>
-              <img
-                src={ll}
-                alt=""
-                class="hover:scale-110 transition-all duration-500"
-                height="170px"
-                width="170px"
-              />
-            </div>
-          </a>
+                  <h1 class=" z-10 top-[60px] left-[80px] text-4xl  ">T1</h1>
+                </div>
+              </div>
+              <div class="relative flex sm:mt-5 flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
+                <div>
+                  <a href={item.T2} target="_blank">
+                    <div>
+                      <img
+                        src={ll}
+                        alt=""
+                        class="hover:scale-110 transition-all duration-500"
+                        height="170px"
+                        width="170px"
+                      />
+                    </div>
+                  </a>
 
-          <h1 class=" z-10 top-[60px] left-[80px] text-4xl  ">End Sem</h1>
-        </div>
+                  <h1 class=" z-10 top-[60px] left-[80px] text-4xl  ">T2</h1>
+                </div>
+              </div>
+              <div class="relative flex sm:mt-5 flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
+                <div>
+                  <a href={item.T3} target="_blank">
+                    <div>
+                      <img
+                        src={ll}
+                        alt=""
+                        class="hover:scale-110 transition-all duration-500"
+                        height="170px"
+                        width="170px"
+                      />
+                    </div>
+                  </a>
+
+                  <h1 class=" z-10 top-[60px] left-[80px] text-4xl  ">
+                    Endsem
+                  </h1>
+                </div>
+              </div>
+              <h1>shared by {item.studentEmail}</h1>
+            </div>
+          );
+        })}
       </div>
-    </div>
     </div>
   );
 }
