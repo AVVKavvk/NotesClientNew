@@ -40,7 +40,8 @@ axiosClient.interceptors.response.use(
         .create({
           withCredentials: true,
         })
-        .get(`${process.env.REACT_APP_SERVER_BASE_URL}/auth/refresh`);
+        .get(`https://noteswebsiteserver.onrender.com/auth/refresh`);
+        // .get(`${process.env.REACT_APP_SERVER_BASE_URL}/auth/refresh`);
 
       // console.log("respone from backend", response);
       if (response.data.status === "ok") {
