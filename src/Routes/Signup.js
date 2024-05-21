@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { axiosClient } from "../utils/axiosClient";
 import { Form, Input } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { showToast } from "../slice/appConfigSlice";
 import { TOAST_ERROR, TOAST_SUCCESS } from "../App";
@@ -110,7 +110,7 @@ function Signup() {
   }
   return (
     <div class="grid items-center mx-auto ">
-      <div class="flex flex-col  p-15 mx-3 mt-10 max-h-[700px] justify-center items-center sm:mx-auto sm:h-[450px] sm:p-10  border-2 sm:max-w-[600px] mb-5 rounded-lg sm:mt-2  border-green-400">
+      <div class="flex flex-col text-white  p-15 mx-3 mt-10  justify-center items-center sm:mx-auto  sm:p-10  border-2 sm:max-w-[600px] mb-5 rounded-lg sm:mt-2  border-green-400">
         <h1 class="text-xl hidden sm:block  p-2 m-3 text-red-500">
           SignUp for accessing website
         </h1>
@@ -132,7 +132,7 @@ function Signup() {
           autoComplete="off"
         >
           <Form.Item
-            label="Name"
+            label={<span className="text-gray-300">Name</span>}
             name="name"
             rules={[
               {
@@ -147,7 +147,7 @@ function Signup() {
             />
           </Form.Item>
           <Form.Item
-            label="Phone Number"
+            label={<span className="text-gray-300">Ph. Number</span>}
             name="phNo"
             rules={[
               {
@@ -162,7 +162,7 @@ function Signup() {
             />
           </Form.Item>
           <Form.Item
-            label="email"
+            label={<span className="text-gray-300">Email</span>}
             name="email"
             rules={[
               {
@@ -180,7 +180,7 @@ function Signup() {
           </Form.Item>
 
           <Form.Item
-            label="Password"
+            label={<span className="text-gray-300">Password</span>}
             name="password"
             rules={[
               {
@@ -218,6 +218,15 @@ function Signup() {
             </button>
           </Form.Item>
         </Form>
+          <h1 class="m-1 p-2 ">
+            Already have an account{" "}
+            <Link
+              to="/auth/login"
+              class="bg-blue-700  p-2 m-1 px-2 text-xl rounded-md text-white mb-3 hover:bg-blue-600 transition-all duration-200 "
+            >
+              login
+            </Link>
+          </h1>
       </div>
     </div>
   );

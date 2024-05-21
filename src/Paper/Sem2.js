@@ -6,8 +6,12 @@ function Sem2() {
   const [data, setData] = useState([{}]);
 
   const getData = async () => {
-    const res = await axiosClient.post("/sem2/get/paper");
+    try {
+      const res = await axiosClient.post("/sem2/get/paper");
     setData(res.result);
+    } catch (err) {
+      
+    }
   };
 
   useEffect(() => {
@@ -18,7 +22,7 @@ function Sem2() {
     <div class=" overflow-hidden mt-7 ">
       {/* <h1 class=" text-2xl text-red-500 ">When you want to see PYQ then use your Logged In Email</h1> */}
       <Link
-        className="flex flex-col mt-6 justify-center items-center mx-auto bg-gray-800 text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
+        className="flex flex-col mt-6 justify-center items-center mx-auto bg-red-600  text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
         to="/uploadpaper"
         
       >

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "./image/logo.png";
+import logo from "./image/logonotes.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 // import { Dropdown } from "antd";
 import { Key_Access_Token, count_User, getItem } from "./utils/localStorage";
 import { useSelector } from "react-redux";
 import { AiOutlineLogout } from "react-icons/ai";
-import { Dropdown, Space } from "antd";
 import NavbarItem1 from "./assets/NavbarItems1.json";
 function Navbar() {
   const a = getItem(Key_Access_Token);
@@ -51,11 +50,11 @@ function Navbar() {
   ];
 
   return (
-    <div class="font-mullish  text-black mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
+    <div class="font-mullish  text-white mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
       {/* //TODO /simple */}
-      <div class="sm:hidden z-50 flex justify-between w-full  items-center max-w-[600px] relative ">
+      <div class="sm:hidden z-50 flex  justify-between w-full  items-center max-w-[600px] relative ">
         <a href="">
-          <img src={logo} alt="" width="180px" height="120px" />
+          <img src={logo} alt="" width="200px" height="140px"  />
         </a>
 
         <div class="flex relative w-[65%] justify-end pr-3">

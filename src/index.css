@@ -2,31 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* *{
   color-scheme: dark;
 } */
-.moverovers{
+.moverovers {
   animation: 10s infinite linear moveCompany;
 }
-body{
-  background-color: #F8F8FF;
-  /* background-color: #151030; */
-  /* background-image:url('/src/image/herobg.png'); */
-  /* background-image: linear-gradient(to right, #96a6a6, #516572); */
-  /* background-image: #151030; */
-  /* background-image: linear-gradient(to right, #b6fbff, #afdaf9); */
-  /* background-image: linear-gradient(to right top, #5e535b, #6a596c, #73607f, #766995, #7274ac, #617bb5, #4b83bd, #2a8ac1, #008cb3, #078ca3, #288a92, #3f8882); */
-  /* background-image: linear-gradient(to right top, #e8e3e6, #e5dbe4, #dfd4e4, #d5cee5, #c8c9e7, #bfcbeb, #b5cdee, #aad0ef, #a7d9f1, #a7e1f1, #abe8ef, #b3efec); */
-  font-family: 'Ubuntu', sans-serif;
+body {
+  background-color: #f8f8ff;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
- 
-  
+  font-family: "Ubuntu", sans-serif;
 }
 
-.App{
-  cursor:url('./image/ml.png')
-}
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -42,87 +42,76 @@ body{
 }
 
 @keyframes moveCompany {
-  0%{
-    top:0;
+  0% {
+    top: 0;
   }
-  50%{
-    top:10%;
+  50% {
+    top: 10%;
   }
-  100%{
-    top:0%;
+  100% {
+    top: 0%;
   }
 }
-.moveroverss{
+.moveroverss {
   animation: 20s infinite linear moveCompanys;
 }
 
 @keyframes moveCompanys {
-  0%{
-    top:0;
+  0% {
+    top: 0;
   }
-  50%{
-    top:50%;
+  50% {
+    top: 50%;
   }
-  100%{
-    top:0%;
+  100% {
+    top: 0%;
   }
 }
-body{
-  margin:0;
-  padding:0;
+body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-.hei{
+.hei {
   height: 70vh;
 }
-.heig{
+.heig {
   height: 90vh;
 }
 
-.boxSh{
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+.boxSh {
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
-
-
-.tt{
+.tt {
   background-color: #33475b;
 }
 /* .b1{
   background-color: rgb(15, 41, 15);
 } */
 
-.l:hover{
+.l:hover {
   cursor: pointer;
 }
 
-
-
 .container {
-
   .box {
-  
-    animation: openBox 1s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: openBox 1s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
 
     .product__img {
-    
       animation: fadeImg 1s ease-in-out forwards;
       animation-delay: 1s;
     }
 
-     
     .product__disc {
-      
-      animation: showDisc 1s cubic-bezier(.74, .06, .4, .92) forwards;
+      animation: showDisc 1s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
 
       .product__disc--content {
-      
         animation: fadeContent 1s ease-in-out forwards;
         animation-delay: 1s;
         opacity: 0;
-
-       
-
       }
     }
 
@@ -138,7 +127,7 @@ body{
         height: 70%;
         font-size: 16px;
         font-weight: bold;
-       
+
         -webkit-transition: ease-in-out 220ms;
         -moz-transition: ease-in-out 220ms;
         -ms-transition: ease-in-out 220ms;
@@ -148,28 +137,25 @@ body{
       }
 
       .wishlist {
-        border: 2px solid #F71568;
-        background:transparent;
-        color: #F71568;
+        border: 2px solid #f71568;
+        background: transparent;
+        color: #f71568;
         position: absolute;
         bottom: -25px;
         left: 75px;
         opacity: 0;
-        animation: fadeWish 1s cubic-bezier(.74, .06, .4, .92) forwards;
+        animation: fadeWish 1s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
         animation-delay: 1s;
 
         &:hover {
-          background: #F71568;
-          color: #FFF;
-          box-shadow: 0 0 26px #F71568;
+          background: #f71568;
+          color: #fff;
+          box-shadow: 0 0 26px #f71568;
         }
       }
-
-      
     }
   }
 }
-
 
 @keyframes openBox {
   0% {
@@ -190,7 +176,6 @@ body{
     opacity: 1;
   }
 }
-
 
 @keyframes showDisc {
   0% {
@@ -227,8 +212,8 @@ body{
 #window_01,
 #window_02,
 #door {
-	transform: translateY(20px);
-	z-index: 1;
+  transform: translateY(20px);
+  z-index: 1;
 }
 
 #building_top,
@@ -238,79 +223,99 @@ body{
 #balcony_04,
 #balcony_05,
 #balcony_06 {
-	transform: translateY(56px);
-	z-index: -1;
+  transform: translateY(56px);
+  z-index: -1;
 }
 
 #small_tree,
 #big_tree {
-	transform: translateY(28px);
+  transform: translateY(28px);
 }
 
 /* ELEMENTS ANIMATIONS */
 #building_bottom {
-	animation: buildingBottom 1s ease-out forwards;
+  animation: buildingBottom 1s ease-out forwards;
 }
 
 #window_01,
 #window_02,
 #door {
-	animation: buildingBottom 1s 0.1s ease-in forwards;
+  animation: buildingBottom 1s 0.1s ease-in forwards;
 }
 
 #building_top {
-	animation: buildingTop 1s 1.2s ease-out forwards;
+  animation: buildingTop 1s 1.2s ease-out forwards;
 }
 
 #balcony_01,
 #balcony_02,
 #balcony_03 {
-	animation: buildingTop 1s 1.4s ease-out forwards;
+  animation: buildingTop 1s 1.4s ease-out forwards;
 }
 
 #balcony_04,
 #balcony_05,
 #balcony_06 {
-	animation: buildingTop 1s 1.6s ease-out forwards;
+  animation: buildingTop 1s 1.6s ease-out forwards;
 }
 
 #small_tree,
 #big_tree {
-	animation: trees 1s 2s ease-out forwards;
+  animation: trees 1s 2s ease-out forwards;
 }
 
 #cloud_left {
-	transform: translateX(-11px);
-	animation: cloudLeft 20s 2s linear infinite;
+  transform: translateX(-11px);
+  animation: cloudLeft 20s 2s linear infinite;
 }
 
 #cloud_right {
-	transform: translateX(72px);
-	animation: cloudRight 15s 2s linear infinite;
+  transform: translateX(72px);
+  animation: cloudRight 15s 2s linear infinite;
 }
 
 /* ANIMATIONS */
 @keyframes buildingBottom {
-	0% 		{ transform: translateY(20px) }
-	100% 	{ transform: translateY(0) }
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes buildingTop {
-	0% 		{ transform: translateY(56px); }
-	100% 	{ transform: translateY(0); }
+  0% {
+    transform: translateY(56px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes trees {
-	0% 		{ transform: translateY(28px); }
-	100% 	{ transform: translateY(0); }
+  0% {
+    transform: translateY(28px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes cloudLeft {
-		0% 		{ transform: translateX(-11px); }
-	100% 		{ transform: translateX(100px); }
+  0% {
+    transform: translateX(-11px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
 }
 
 @keyframes cloudRight {
-		0% 		{ transform: translateX(72px); }
-	100% 		{ transform: translateX(-100px); }
+  0% {
+    transform: translateX(72px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
 }

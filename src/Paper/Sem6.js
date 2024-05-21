@@ -6,8 +6,10 @@ function Sem6() {
   const [data, setData] = useState([{}]);
 
   const getData = async () => {
-    const res = await axiosClient.post("/sem6/get/paper");
-    setData(res.result);
+    try {
+      const res = await axiosClient.post("/sem6/get/paper");
+      setData(res.result);
+    } catch (err) {}
   };
 
   useEffect(() => {
@@ -17,7 +19,7 @@ function Sem6() {
   return (
     <div class=" overflow-hidden mt-7 ">
       <Link
-        className="flex flex-col mt-6 justify-center items-center mx-auto bg-gray-800 text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
+        className="flex flex-col mt-6 justify-center items-center mx-auto bg-red-600  text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
         to="/uploadpaper"
       >
         Upload Paper

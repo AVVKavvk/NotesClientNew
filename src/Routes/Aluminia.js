@@ -32,7 +32,7 @@ function Aluminia() {
   return (
     <>
       {a != 10 && a != undefined ? (
-        <div className="min-h-[100vh] font-mullish overflow-hidden px-6  ">
+        <div className="min-h-[100vh]  font-mullish overflow-hidden px-6  ">
           {/* <div className="bg-primary min-h-[100vh]  overflow-hidden px-6 "> */}
           <div className="max-w-[1400px] mx-auto mt-5">
             <input
@@ -52,7 +52,7 @@ function Aluminia() {
                   href={temp.linkedin_url}
                   target="_blank"
                   key={temp.name}
-                  className="border shadow-md hover:shadow-lg  bg-slate-300 shadow-blue-400 flex justify-center items-center mx-auto w-[340px] h-[170px] gap-3"
+                  className=" rounded-md shadow-md hover:shadow-lg  bg-[#0a194f77] shadow-blue-400 flex justify-center items-center mx-auto w-[340px] h-[170px] gap-3"
                 >
                   <div className="w-[100px] h-[100px] rounded-full border border-blue-500">
                     <a href={temp.image_url} target="_blank">

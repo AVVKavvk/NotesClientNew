@@ -10,7 +10,7 @@ import {SiLeetcode} from 'react-icons/si'
 
 function A() {
   return (
-    <div class="lg:w-[1200px]  mx-auto text-black  ">
+    <div class="lg:w-[1200px]  mx-auto  ">
       <div class="flex text-center p-4  justify-center rounded-lg w-[300px]  mt-9 bg-green-300  mx-auto sm:w-[500px] md:w-[700px] ">
         <h1 class="text-2xl ">
           Choose any one of the semester
@@ -20,7 +20,7 @@ function A() {
       <hr
         style={{
           height: "1px",
-          backgroundColor: "#000000",
+          backgroundColor: "white",
           border: "none",
         }}
         class="m-3"

@@ -38,7 +38,7 @@ function Sem1() {
   return (
     <>
      {a != 10 && a != undefined ?<div className="max-w-[900px]   flex-col flex  mx-auto pt-5">
-      <div class=" border-4 px-7 mt-8 py-4 rounded-lg   mx-auto flex-col justify-center items-center  min-w-[320px] max-w-[600px] ">
+      <div class=" mb-10 border-4 px-7 mt-8 py-4 rounded-lg   mx-auto flex-col justify-center items-center  min-w-[320px] max-w-[600px] ">
         <Form
           name="basic"
           labelCol={{
@@ -58,7 +58,8 @@ function Sem1() {
                  
 
           <Form.Item
-            label="Target CGPA"
+           
+            label={<span className="text-gray-300">Target CGPA</span>}
             name="Target CGPA"
             rules={[
               {

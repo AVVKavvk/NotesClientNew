@@ -8,7 +8,7 @@ function CertificationPrograms() {
       <div class="grid md:grid-cols-3 mt-8 justify-center gap-5 items-center mx-auto ">
         {Cerificate?.map(item => {
           return (
-            <div class="flex bg-gray-100 justify-center items-center p-4 rounded-md border shadow shadow-blue-400 gap-3 w-[335px] mx-auto ">
+            <div class="flex bg-[#0a194f77] justify-center items-center p-4 rounded-md border shadow shadow-blue-400 gap-3 w-[335px] mx-auto ">
               <div class="flex flex-col w-[40%]  justify-center  items-center mx-auto gap-4 ">
                 <img src={item?.img_url} alt="" width="80px" />
                 <h1>{item?.company_name}</h1>

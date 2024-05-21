@@ -111,7 +111,7 @@ function App() {
       </div>
       <div
         className="App"
-        class={` ${app ? "block" : "hidden"} text-black overflow-hidden mx-auto `}
+        class={` ${app ? "block" : "hidden"} text-white overflow-hidden mx-auto `}
       >
         <LoadingBar color="#f11946" ref={loadingRef} />
         <div>

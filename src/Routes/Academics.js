@@ -77,7 +77,7 @@ function Academics() {
                     />
                     <div class="z-[100] absolute w-full h-full flex flex-col text-justify justify-between pl-5 py-6 pr-8">
                       <div>
-                        <h1 class="font-mullish font-bold text-[1.5rem] leading-[1.2] text-deepBlueHead">
+                        <h1 class="font-mullish font-bold text-[1.5rem] leading-[1.2] text-white">
                           {item?.tag}
                         </h1>
                         <p class="font-mullish text-grayText mt-6">

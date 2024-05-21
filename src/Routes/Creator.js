@@ -21,7 +21,7 @@ import mui from "../image/mui.svg";
 
 function Creator() {
   return (
-    <div class=" bg-[#fffafa] flex flex-col sm:flex-row justify-center mb-16 p-5  mt-4 space-x-1 max-w-[1100px] mx-auto shadow-md  shadow-green-500 ">
+    <div class=" bg-[#fffafa] text-black flex flex-col sm:flex-row justify-center mb-16 p-5  mt-4 space-x-1 max-w-[1100px] mx-auto shadow-lg  shadow-green-500 ">
       <div class="flex flex-col mx-auto  sm:w-[400px]  space-y-16 mb-5">
         <div class="rounded-xl w-[300px] h-[300px] mb-9 mt-2  ">
           {" "}

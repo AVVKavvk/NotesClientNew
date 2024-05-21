@@ -20,19 +20,19 @@ function Sem1() {
   return (
     <div class="min-h-screen  mb-5   mt-7 overflow-hidden ">
       <Link
-        className="flex flex-col mt-6 justify-center items-center mx-auto bg-gray-800 text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
+        className="flex flex-col mt-6 justify-center items-center mx-auto bg-red-600  text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
         to="/uploadlab"
       >
         Upload Lab
       </Link>
-      <div class="mx-auto  md:max-w-[800px] flex  justify-evenly items-center  flex-col  mt-8 ">
+      <div class="mx-auto  md:max-w-[800px] pl-10 flex  justify-evenly items-center  flex-col  mt-8 ">
         {data?.map(item => {
           if (!item.isVerified) return;
           return (
             <div class="flex px-2  gap-5 justify-center items-center  mt-10  ">
               <div>
                 <a href={item.link} target="_blank">
-                  <h1 class=" bg-gray-600  hover:scale-110    text-white rounded-md  w-[120px] h-[120px] text-center flex justify-center items-center transition-all duration-500 text-4xl mt-3 ">
+                  <h1 class=" bg-gray-700  hover:scale-110    text-white rounded-md  w-[120px] h-[120px] text-center flex justify-center items-center transition-all duration-500 text-4xl mt-3 ">
                     {item.subject}
                   </h1>
                 </a>

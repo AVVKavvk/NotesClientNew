@@ -2,7 +2,7 @@ import React from 'react'
 
 function A() {
   return (
-    <div class="lg:w-[1200px]  mx-auto space-y-6 ">
+    <div class="lg:w-[1200px] min-h-screen  mx-auto space-y-6 ">
     <div class="flex t p-4  items-center justify-center rounded-lg w-[300px]  mt-9 bg-green-300 mx-auto sm:w-[500px] md:w-[700px] ">
       <h1 class="text-2xl ">
         Choose any one of the semester

@@ -19,7 +19,7 @@ function Footer() {
   }, [count]);
 
   return (
-    <div class=" bg-deepBlueHead px-3 text-white flex flex-col md:flex-row mx-auto justify-evenly items-center pb-7 ">
+    <div class=" bg-gray-900 px-3 text-white flex flex-col md:flex-row mx-auto justify-evenly items-center pb-7 ">
      <div class="rounded-xl w-[280px] h-[300px] mb-9 mt-2 md:pl-7  ">
           {" "}
           <a href="https://i.ibb.co/417cTGP/vipin.png" target="_blank">
@@ -30,7 +30,7 @@ function Footer() {
               class="w-full rounded-xl"
             />{" "}
           </a>
-          <h1 class="text-center text-2xl mt-2 mb-1 ">Founder</h1>
+          <h1 class="text-center text-2xl mt-2 mb-1 ">Vipin</h1>
 
          
         </div>

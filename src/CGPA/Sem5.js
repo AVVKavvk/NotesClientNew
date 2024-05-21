@@ -67,7 +67,7 @@ function Sem5() {
           autoComplete="off"
         >
           <Form.Item
-            label="Sem1"
+            label={<span className="text-gray-300">Sem1</span>}
             name="Sem1"
             rules={[
               {
@@ -85,7 +85,7 @@ function Sem5() {
             />
           </Form.Item>
           <Form.Item
-            label="Sem2"
+           label={<span className="text-gray-300">Sem2</span>}
             name="Sem2"
             rules={[
               {
@@ -103,7 +103,7 @@ function Sem5() {
             />
           </Form.Item>
           <Form.Item
-            label="Sem3"
+           label={<span className="text-gray-300">Sem3</span>}
             name="Sem3"
             rules={[
               {
@@ -121,7 +121,7 @@ function Sem5() {
             />
           </Form.Item>
           <Form.Item
-            label="Sem4"
+           label={<span className="text-gray-300">Sem4</span>}
             name="Sem4"
             rules={[
               {
@@ -140,7 +140,7 @@ function Sem5() {
           </Form.Item>
         
           <Form.Item
-            label="Target CGPA"
+            label={<span className="text-gray-300">Target CGPA</span>}
             name="Target CGPA"
             rules={[
               {

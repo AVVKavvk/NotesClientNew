@@ -66,7 +66,7 @@ function Sem3() {
           autoComplete="off"
         >
           <Form.Item
-            label="Sem1"
+           label={<span className="text-gray-300">Sem1</span>}
             name="Sem1"
             rules={[
               {
@@ -84,7 +84,7 @@ function Sem3() {
             />
           </Form.Item>
           <Form.Item
-            label="Sem2"
+            label={<span className="text-gray-300">Sem2</span>}
             name="Sem2"
             rules={[
               {
@@ -105,7 +105,7 @@ function Sem3() {
           
         
           <Form.Item
-            label="Target CGPA"
+            label={<span className="text-gray-300">Target CGPA</span>}
             name="Target CGPA"
             rules={[
               {

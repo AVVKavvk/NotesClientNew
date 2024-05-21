@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import ll from '../image/p5.svg'
-import { axiosClient } from '../utils/axiosClient';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import ll from "../image/p5.svg";
+import { axiosClient } from "../utils/axiosClient";
+import { Link } from "react-router-dom";
 function Sem5() {
   const [data, setData] = useState([{}]);
 
   const getData = async () => {
-    const res = await axiosClient.post("/sem5/get/paper");
-    setData(res.result);
+    try {
+      const res = await axiosClient.post("/sem5/get/paper");
+      setData(res.result);
+    } catch (err) {}
   };
 
   useEffect(() => {
@@ -17,17 +19,16 @@ function Sem5() {
   return (
     <div class=" overflow-hidden mt-7 ">
       <Link
-        className="flex flex-col mt-6 justify-center items-center mx-auto bg-gray-800 text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
+        className="flex flex-col mt-6 justify-center items-center mx-auto bg-red-600  text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
         to="/uploadpaper"
-        
       >
         Upload Paper
       </Link>
-      
+
       {/* <h1 class=" text-2xl text-red-500 ">When you want to see PYQ then use your Logged In Email</h1> */}
       <div class=" sm:w-[500px]  md:w-[650px] md:p-6 grid grid-cols-1  mx-auto sm:grid-cols-3  relative gap-2 pt-4 w-[200px]  mt-8 ">
         {data?.map(item => {
-          if(!item.isVerified) return ;
+          if (!item.isVerified) return;
           return (
             <div>
               <div class="relative flex sm:mt-5 flex-col justify-center items-center text-center  w-full h-[250px] space-x-16  px-5 ">
@@ -89,7 +90,7 @@ function Sem5() {
         })}
       </div>
     </div>
-  )
+  );
 }
 
-export default Sem5
+export default Sem5;

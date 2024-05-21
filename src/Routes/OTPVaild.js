@@ -95,7 +95,10 @@ function OTP() {
     }
   }
   return (
-    <div className="max-w-[400px]  justify-center items-center px-6  flex flex-col mx-auto border border-gray-900 bg-gray-400 p-10 rounded-md ">
+    <div className="  min-h-screen ">
+
+    
+    <div className="max-w-[400px] max-h-[200px]  mt-10 text-black justify-center items-center px-6  flex flex-col mx-auto border border-gray-900 bg-gray-400 p-10 rounded-md ">
       {showInput ? (
         <div className="max-w-[400px] gap-4 flex flex-col mx-auto ">
           <div>
@@ -153,6 +156,7 @@ function OTP() {
       ) : (
         ""
       )}
+    </div>
     </div>
   );
 }

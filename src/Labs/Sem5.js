@@ -16,14 +16,14 @@ function Sem5() {
   return (
     <div class="min-h-screen  mb-5  mt-7 overflow-hidden ">
       <Link
-        className="flex flex-col mt-6 justify-center items-center mx-auto bg-gray-800 text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
+        className="flex flex-col mt-6 justify-center items-center mx-auto bg-red-600  text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
         to="/uploadlab"
       >
         Upload Lab
       </Link>
 
       {/* <h1 class=" text-2xl text-red-500 ">When you want to see Labs then use your Logged In Email</h1> */}
-      <div class="mx-auto  md:max-w-[1000px] flex  justify-evenly items-center flex-col  mt-8 ">
+      <div class="mx-auto  md:max-w-[1000px] flex  justify-evenly pl-10 items-center flex-col  mt-8 ">
         {data?.map(item => {
           if (!item.isVerified) return;
           return (
