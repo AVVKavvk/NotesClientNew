@@ -37,7 +37,7 @@ function Home() {
             <motion.h1
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 3.0 }}
+              transition={{ duration: 1, delay: 1.0 }}
               className="text-5xl md:text-7xl font-bold mb-4 text-white"
               style={{
                 textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
@@ -49,7 +49,7 @@ function Home() {
             <motion.p
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 3.5 }}
+              transition={{ duration: 1, delay: 1.5 }}
               className="text-xl md:text-2xl mb-4"
             >
               Ultimate Academic, Career, and Personal Growth <br /> Platform for
@@ -62,7 +62,7 @@ function Home() {
               <motion.p
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 4.5 }}
+                transition={{ duration: 1, delay: .5 }}
                 className="text-xl md:text-2xl mb-4"
               >
                 At <span class=" text-2xl  ">Vipin Notes</span> , I am committed
@@ -76,7 +76,7 @@ function Home() {
                 class="flex flex-col md:flex-row justify-between items-center "
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 5 }}
+                transition={{ duration: 1, delay: 1.5 }}
               >
                 <h1
                   onClick={AA}
@@ -85,25 +85,25 @@ function Home() {
                   Get Started
                 </h1>
                 <Link
-                  to="/uploadnotes"
+                  to="/upload/notes"
                   class="w-[150px]  font-bold bg-pink-600 text-xl hover:bg-pink-500 rounded-lg px-2  py-3 mt-5 cursor-pointer"
                 >
                   Upload Notes
                 </Link>
                 <Link
-                  to="/uploadpaper"
+                  to="/upload/paper"
                   class="w-[150px]  font-bold bg-pink-600 text-xl hover:bg-pink-500 rounded-lg px-2  py-3 mt-5 cursor-pointer"
                 >
                   Upload Paper
                 </Link>
                 <Link
-                  to="/uploadlab"
+                  to="/upload/lab"
                   class="w-[150px]  font-bold bg-pink-600 text-xl hover:bg-pink-500 rounded-lg px-2  py-3 mt-5 cursor-pointer"
                 >
                   Upload Lab
                 </Link>
 
-                <h1 class="text-xl mt-6 font-bold bg-green-400 rounded-lg px-3 py-3 items-center flex  ">
+                <h1 class="text-xl mt-6 font-bold bg-green-700 rounded-lg px-3 py-3 items-center flex  ">
                   {" "}
                   <span class="text-3xl mr-3">
                     {" "}
@@ -125,7 +125,7 @@ function Home() {
           <h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 5.3 }}
+            transition={{ duration: 1, delay: 2.3 }}
             className=" text-4xl font-bold mt-5  bg-slate-900 p-2 px-6 shadow-md mb-6 shadow-yellow-400 rounded-md"
           >
             Features
@@ -134,14 +134,14 @@ function Home() {
             className="grid mb-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-justify gap-9 justify-center items-center mx-auto "
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 5.5 }}
+            transition={{ duration: 1, delay: 2.5 }}
           >
             {Features?.map((item, index) => {
               return (
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 6.5 }}
+                  transition={{ duration: 1, delay: 3 }}
                   className=" shadow-md shadow-slate-400  p-3 rounded-md  bg-[#06173363] "
                 >
                   <h1 className=" text-2xl mb-2">{item.tag} :-</h1>
@@ -166,9 +166,9 @@ function Home() {
             class="mt-8 flex flex-col justify-center items-center mx-auto "
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 5.5 }}
+            transition={{ duration: 1, delay: 4 }}
           >
-            <h1 class="text-4xl bg-green-400 rounded-lg px-5 py-2 mb-6 ">
+            <h1 class="text-4xl bg-green-700 rounded-lg px-5 py-2 mb-6 ">
               {" "}
               Upcoming Features
             </h1>

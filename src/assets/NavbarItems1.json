@@ -16,6 +16,10 @@
         "tag":"Papers"
     },
     {
+        "link":"/upload",
+        "tag":"Upload"
+    },
+    {
         "link":"/e-book",
         "tag":"Books"
     },

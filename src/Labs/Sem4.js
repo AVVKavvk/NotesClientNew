@@ -17,7 +17,7 @@ function Sem4() {
     <div class="mx-auto lg:w-[1200px] min-h-screen mt-7 ">
     <Link
       className="flex flex-col   mt-6 justify-center items-center mx-auto bg-red-600  text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
-      to="/uploadlab"
+      to="/upload/lab"
     >
       Upload Labs
     </Link>

@@ -47,24 +47,21 @@ const UpdateLab = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-gray-400 p-6  text-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-bold mb-6">Submit Form</h2>
+    <div className="max-w-md mx-auto mt-10 shadow-md shadow-gray-400 bg-gray-800 p-6   rounded-lg">
+      <h2 className="text-2xl font-bold mb-6">Upload Papers</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="sem"
-          >
+          <label className="block  text-sm font-bold mb-2" htmlFor="sem">
             Semester
           </label>
           <select
             id="sem"
             value={sem}
             onChange={handleSemChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
           >
             <option value="" disabled>
-              select Sem
+              select sem
             </option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -77,10 +74,7 @@ const UpdateLab = () => {
           </select>
         </div>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="email"
-          >
+          <label className="block  text-sm font-bold mb-2" htmlFor="email">
             Name / MIS / Email
           </label>
           <input
@@ -88,14 +82,12 @@ const UpdateLab = () => {
             id="email"
             value={email}
             onChange={handleEmailChange}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Enter Your MIS / Name / Email"
+            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="link"
-          >
+          <label className="block  text-sm font-bold mb-2" htmlFor="link">
             Drive Link For T1
           </label>
           <input
@@ -103,14 +95,12 @@ const UpdateLab = () => {
             id="Drive link"
             value={linkT1}
             onChange={handleLinkChangeT1}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Drive link for T1"
+            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="link"
-          >
+          <label className="block  text-sm font-bold mb-2" htmlFor="link">
             Drive Link For T2
           </label>
           <input
@@ -118,14 +108,12 @@ const UpdateLab = () => {
             id="Drive link"
             value={linkT2}
             onChange={handleLinkChangeT2}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Drive link for T2"
+            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="link"
-          >
+          <label className="block  text-sm font-bold mb-2" htmlFor="link">
             Drive Link For Endsem
           </label>
           <input
@@ -133,7 +121,8 @@ const UpdateLab = () => {
             id="Drive link"
             value={linkT3}
             onChange={handleLinkChangeT3}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Drive link for Endsem"
+            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
 

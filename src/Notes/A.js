@@ -28,7 +28,7 @@ function A() {
       />
       <Link
         className="flex flex-col mb-10   mt-6 justify-center items-center mx-auto bg-red-600  text-white text-4xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[300px] cursor-pointer"
-        to="/uploadnotes"
+        to="/upload/notes"
       >
         Upload Notes
       </Link>

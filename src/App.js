@@ -68,6 +68,7 @@ import Loader1 from "./animation/Loader1";
 import UpdateLab from "./Labs/UpdateLabs";
 import UpdatePaper from "./Paper/UpdatePaper";
 import UpdateNotes from "./Notes/UpdateNotes";
+import Upload from "./Routes/Upload";
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 function App() {
@@ -107,11 +108,13 @@ function App() {
         } bg-slate-900 h-[100vh] flex justify-center items-center mx-auto `}
       >
         {" "}
-        {<Loader />} {" "}
+        {<Loader />}{" "}
       </div>
       <div
         className="App"
-        class={` ${app ? "block" : "hidden"} text-white overflow-hidden mx-auto `}
+        class={` ${
+          app ? "block" : "hidden"
+        } text-white overflow-hidden mx-auto `}
       >
         <LoadingBar color="#f11946" ref={loadingRef} />
         <div>
@@ -154,6 +157,13 @@ function App() {
             <Route path="sem5" element={<Sem5 />} />
             <Route path="sem6" element={<Sem6 />} />
           </Route>
+
+          <Route path="upload" element={<Upload />}>
+            <Route path="lab" element={<UpdateLab />} />
+            <Route path="paper" element={<UpdatePaper />} />
+            <Route path="notes" element={<UpdateNotes />} />
+          </Route>
+
           {/* <Route path="/labs" element={<Labs />} /> */}
           <Route path="/user/labs" element={<Labs />}>
             <Route path="" element={<Al />} />
@@ -181,11 +191,6 @@ function App() {
           <Route path="/personalblogs" element={<PersonalBlogs />} />
           <Route path="/extras" element={<Extra />} />
           <Route path="/coding" element={<Coding />} />
-
-          <Route path="/uploadlab" element={<UpdateLab />} />
-          <Route path="/uploadpaper" element={<UpdatePaper />} />
-          <Route path="/uploadnotes" element={<UpdateNotes />} />
-
 
           <Route path="/auth/forpass" element={<ForgetPassword />} />
           <Route path="/auth/signup" element={<Signup />} />

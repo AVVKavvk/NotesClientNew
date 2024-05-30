@@ -20,7 +20,7 @@ function A() {
       />
       <Link
         className="flex flex-col   text-4xl  mt-10 justify-center items-center mx-auto bg-red-600  text-white rounded-md hover:scale-105 transition-all duration-500 p-4 w-[300px] cursor-pointer"
-        to="/uploadpaper"
+        to="/upload/paper"
       >
         Upload Papers
       </Link>

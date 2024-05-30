@@ -22,39 +22,12 @@ function Navbar() {
     count = getItem(count_User);
   }, [count]);
 
-  const items = [
-    {
-      label: (
-        <Link to="/user/notes" style={{ textDecoration: "none" }}>
-          Notes
-        </Link>
-      ),
-      key: "0",
-    },
-    {
-      label: (
-        <Link to="/user/labs" style={{ textDecoration: "none" }}>
-          Labs
-        </Link>
-      ),
-      key: "1",
-    },
-    {
-      label: (
-        <Link to="/user/paper" style={{ textDecoration: "none" }}>
-          Paper
-        </Link>
-      ),
-      key: "3",
-    },
-  ];
-
   return (
     <div class="font-mullish  text-white mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
       {/* //TODO /simple */}
       <div class="sm:hidden z-50 flex  justify-between w-full  items-center max-w-[600px] relative ">
         <a href="">
-          <img src={logo} alt="" width="200px" height="140px"  />
+          <img src={logo} alt="" width="200px" height="140px" />
         </a>
 
         <div class="flex relative w-[65%] justify-end pr-3">
@@ -131,45 +104,6 @@ function Navbar() {
             </ul>
           </div>
         </div>
-
-        {/* <div>
-          <ul class="flex sm:hidden justify-center items-center  gap-4 px-3">
-            <>
-              {a ? (
-                <>
-                  <Link to="/auth/visitor" style={{ textDecoration: "none" }}>
-                    <li class=" text-2xl flex justify-center items-center group ">
-                      {" "}
-                      Users{" "}
-                      <span class="text-2xl ml-2 group-hover:scale-125 transition-all duration-300    ">
-                        {count}{" "}
-                      </span>
-                    </li>
-                  </Link>
-                  <Link to="/user/logout" style={{ textDecoration: "none" }}>
-                    <li class=" text-2xl relative  p-1 group rounded-md px-2 transition-all duration-200 flex justify-center items-center group ">
-                      {" "}
-                      <AiOutlineLogout />
-                    </li>
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <li class="   p-2 rounded-md transition-all duration-500">
-                    <Link to="/auth/login" style={{ textDecoration: "none" }}>
-                      Login
-                    </Link>
-                  </li>
-                  <li class="   p-2 rounded-md transition-all duration-500">
-                    <Link to="/auth/signup" style={{ textDecoration: "none" }}>
-                      SignUp
-                    </Link>
-                  </li>
-                </>
-              )}
-            </>
-          </ul>
-        </div> */}
       </div>
 
       {/* //TODO /sm */}
@@ -206,6 +140,11 @@ function Navbar() {
               </Link>
             </li>
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
+              <Link to="/upload" style={{ textDecoration: "none" }}>
+                Upload
+              </Link>
+            </li>
+            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
               <Link to="/placement" style={{ textDecoration: "none" }}>
                 Placement
               </Link>
@@ -220,8 +159,7 @@ function Navbar() {
                 Coding
               </Link>
             </li>
-           
-            
+
             <li class="hover:underline  p-2 rounded-md transition-all duration-500">
               <Link to="/user/feedback" style={{ textDecoration: "none" }}>
                 Feedback

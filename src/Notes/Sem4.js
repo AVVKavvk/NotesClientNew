@@ -20,7 +20,7 @@ function Sem4() {
     <div class="mx-auto min-h-screen lg:w-[1200px] mt-7  text-white">
       <Link
         className="flex flex-col mt-6 justify-center items-center mx-auto bg-red-600  text-white text-2xl rounded-md hover:scale-105 transition-all duration-500 p-4 w-[200px] cursor-pointer"
-        to="/uploadnotes"
+        to="/upload/notes"
       >
         Upload Notes
       </Link>
@@ -43,7 +43,7 @@ function Sem4() {
               <a
                 href={item.pdfUrl}
                 target="_blank"
-                className=" flex-col text-2xl bg-green-500 m-3 rounded-md w-[120px] h-[120px] flex justify-center items-center mx-auto "
+                className=" flex-col text-2xl hover:scale-110 transition-all duration-500 bg-green-500 m-3 rounded-md w-[120px] h-[120px] flex justify-center items-center mx-auto "
               >
                 <h1>{subjectName}</h1>
               </a>
