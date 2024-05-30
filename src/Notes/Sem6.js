@@ -26,18 +26,31 @@ function Sem6() {
       </Link>{" "}
       {/* <h1 class=" text-2xl text-red-500 ">When you want to open Notes then use your Logged In Email</h1> */}
       <div class=" lg:w-[1200px] text-white grid sm:grid-cols-3 grid-cols-2 gap-4 ml-6 lg:mx-auto lg:grid-cols-7 relative  justify-evenly  mt-8 overflow-hidden">
-        {data?.map(item => {
-          if(!item.isVerified) return ;
+      {data?.map(item => {
+          if (!item.isVerified) return;
+          if (item.pdfUrl?.length <= 3) return;
+          let StduentDetails = "";
+          if (item.studentEmail.length > 12) {
+            StduentDetails = item.studentEmail.substring(0, 10) + "...";
+          } else StduentDetails = item.studentEmail;
+          let subjectName = "";
+          if (item.subject_name.length > 7) {
+            subjectName = item.subject_name.substring(0, 7) + "...";
+          } else subjectName = item.subject_name;
           return (
-            item.pdfUrl?.length > 3 && (
+            <div>
               <a
                 href={item.pdfUrl}
                 target="_blank"
-                className=" bg-red-500 m-3 rounded-md w-[100px] h-[100px] flex justify-center items-center mx-auto "
+                className=" flex-col text-2xl bg-red-500 m-3 rounded-md w-[120px] h-[120px] flex justify-center items-center mx-auto "
               >
-                <h1>{item.subject_name}</h1>
+                <h1>{subjectName}</h1>
               </a>
-            )
+              <p className=" text-center">
+                shared by{" "}
+                <span className=" text-green-500">{StduentDetails}</span>
+              </p>
+            </div>
           );
         })}
       </div>

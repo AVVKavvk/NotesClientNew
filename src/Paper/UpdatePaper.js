@@ -81,10 +81,10 @@ const UpdateLab = () => {
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="email"
           >
-            Email
+            Name / MIS / Email
           </label>
           <input
-            type="email"
+            type="text"
             id="email"
             value={email}
             onChange={handleEmailChange}
