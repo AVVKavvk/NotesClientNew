@@ -117,7 +117,7 @@ function Navbar() {
             <img src={logo} alt="" width="250px" />{" "}
           </a>
         </div>
-        <div class="w-[75%] flex flex-row  flex-wrap  justify-evenly items-center mx-auto">
+        <div class="w-[85%] flex flex-row  flex-wrap  justify-evenly items-center mx-auto">
           <ul className="nav_bar sm:flex justify-center  items-center gap-3 hidden   ">
             {NavbarItemLaptop?.map(item => {
               return(
