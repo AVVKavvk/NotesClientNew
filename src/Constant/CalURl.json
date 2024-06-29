@@ -1,0 +1,35 @@
+[
+    {
+      "name": "Semester 1",
+      "url": "/user/cgpa/sem1"
+    },
+    {
+      "name": "Semester 2",
+      "url": "/user/cgpa/sem2"
+    },
+    {
+      "name": "Semester 3",
+      "url": "/user/cgpa/sem3"
+    },
+    {
+      "name": "Semester 4",
+      "url": "/user/cgpa/sem4"
+    },
+    {
+      "name": "Semester 5",
+      "url": "/user/cgpa/sem5"
+    },
+    {
+      "name": "Semester 6",
+      "url": "/user/cgpa/sem6"
+    },
+    {
+      "name": "Semester 7",
+      "url": "/user/cgpa/sem7"
+    },
+    {
+      "name": "Semester 8",
+      "url": "/user/cgpa/sem8"
+    }
+  ]
+  

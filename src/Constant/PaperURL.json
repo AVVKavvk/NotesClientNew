@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Semester 1",
+    "url": "/user/paper/sem1"
+  },
+  {
+    "name": "Semester 2",
+    "url": "/user/paper/sem2"
+  },
+  {
+    "name": "Semester 3",
+    "url": "/user/paper/sem3"
+  },
+  {
+    "name": "Semester 4",
+    "url": "/user/paper/sem4"
+  },
+  {
+    "name": "Semester 5",
+    "url": "/user/paper/sem5"
+  },
+  {
+    "name": "Semester 6",
+    "url": "/user/paper/sem6"
+  }
+]

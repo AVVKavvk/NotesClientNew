@@ -8,9 +8,12 @@ import { Key_Access_Token, count_User, getItem } from "./utils/localStorage";
 import { useSelector } from "react-redux";
 import { AiOutlineLogout } from "react-icons/ai";
 import NavbarItem1 from "./assets/NavbarItems1.json";
+import useOnline from "./Hooks/useOnline";
+import NavbarItemLaptop from "./assets/NavbarItemLaptop.json";
 function Navbar() {
   const a = getItem(Key_Access_Token);
   var b = useSelector(state => state.appConfigReducer.count);
+  const isOnline = useOnline();
   var count = 1;
   if (b === 0) {
     count = getItem(count_User);
@@ -23,7 +26,7 @@ function Navbar() {
   }, [count]);
 
   return (
-    <div class="font-mullish  text-white mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
+    <div class="font-mullish mb-3  text-white mt-4 md:mt-1 w-full max-w-[1420px] mx-auto relative rounded-sm text-xl px-3  ">
       {/* //TODO /simple */}
       <div class="sm:hidden z-50 flex  justify-between w-full  items-center max-w-[600px] relative ">
         <a href="">
@@ -31,12 +34,11 @@ function Navbar() {
         </a>
 
         <div class="flex relative w-[65%] justify-end pr-3">
-          {/* <img
-          src={
-          alt="menu"
-          class="w-[28px] h-[28px] object-contain cursor-pointer bg-black "
-          onClick={() => setToggle(!toggle)}
-          />{" "} */}
+          {isOnline ? (
+            <div className="mr-4"> 🟢</div>
+          ) : (
+            <div className="mr-4">🔴</div>
+          )}
           <RxHamburgerMenu size={30} onClick={() => setToggle(!toggle)} />
           <div
             class={`${
@@ -51,6 +53,7 @@ function Navbar() {
                     onClick={() => {
                       setToggle(!toggle);
                     }}
+                    key={item.tag}
                   >
                     <Link to={item.link} style={{ textDecoration: "none" }}>
                       {item.tag}
@@ -116,62 +119,25 @@ function Navbar() {
         </div>
         <div class="w-[75%] flex flex-row  flex-wrap  justify-evenly items-center mx-auto">
           <ul className="nav_bar sm:flex justify-center  items-center gap-3 hidden   ">
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/" style={{ textDecoration: "none" }}>
-                Home
-              </Link>
-            </li>
-            {/* <li class="hover:underline cursor-pointer    p-2 rounded-md transition-all duration-500">
-              <Dropdown
-                menu={{
-                  items,
-                }}
-                trigger={["click"]}
-              >
-                <a class="l" onClick={e => e.preventDefault()}>
-                  <Space>Academics</Space>
-                </a>
-              </Dropdown>
-            </li> */}
+            {NavbarItemLaptop?.map(item => {
+              return(
+                <li
+                  key={item.tag}
+                  class="hover:underline  p-2 rounded-md transition-all duration-500"
+                >
+                  <Link to={item.link} style={{ textDecoration: "none" }}>
+                    {item.tag}
+                  </Link>
+                </li>
+              );
+            })}
 
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/user/academics" style={{ textDecoration: "none" }}>
-                Academics
-              </Link>
-            </li>
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/upload" style={{ textDecoration: "none" }}>
-                Upload
-              </Link>
-            </li>
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/placement" style={{ textDecoration: "none" }}>
-                Placement
-              </Link>
-            </li>
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/extras" style={{ textDecoration: "none" }}>
-                Extras
-              </Link>
-            </li>
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/coding" style={{ textDecoration: "none" }}>
-                Coding
-              </Link>
-            </li>
-
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/user/feedback" style={{ textDecoration: "none" }}>
-                Feedback
-              </Link>
-            </li>
-            <li class="hover:underline  p-2 rounded-md transition-all duration-500">
-              <Link to="/user/creator" style={{ textDecoration: "none" }}>
-                AboutUs
-              </Link>
-            </li>
+            {isOnline ? (
+              <div className="mr-4"> 🟢</div>
+            ) : (
+              <div className="mr-4">🔴</div>
+            )}
           </ul>
-
           <ul class="sm:flex hidden justify-center items-center gap-4 px-3">
             <>
               {a ? (
@@ -212,26 +178,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-{
-  /* <Link to="/auth/visitor" style={{ textDecoration: "none" }}>
-                    <li class=" text-2xl flex justify-center items-center group ">
-                      {" "}
-                      Users{" "}
-                      <span class="text-2xl ml-2 group-hover:scale-125 transition-all duration-300    ">
-                        {count}{" "}
-                      </span>
-                    </li>
-                  </Link> */
-}
-{
-  /* <Link to="/auth/visitor" style={{ textDecoration: "none" }}>
-                  <li class=" text-2xl flex justify-center items-center hover:underline group ">
-                    {" "}
-                    Users{" "}
-                    <span class="text-2xl ml-4  transition-all duration-300    ">
-                      {count}{" "}
-                    </span>
-                  </li>
-                </Link> */
-}

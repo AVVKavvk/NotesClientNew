@@ -1,0 +1,34 @@
+[
+  {
+    "link": "/",
+    "tag": "Home"
+  },
+  {
+    "link": "/user/academics",
+    "tag": "Academics"
+  },
+  {
+    "link": "/upload",
+    "tag": "Upload"
+  },
+  {
+    "link": "/placement",
+    "tag": "Placement"
+  },
+  {
+    "link": "/extras",
+    "tag": "Extras"
+  },
+  {
+    "link": "/coding",
+    "tag": "Coding"
+  },
+  {
+    "link": "/user/feedback",
+    "tag": "Feedback"
+  },
+  {
+    "link": "/user/creator",
+    "tag": "AboutUs"
+  }
+]
