@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { axiosClient } from "../utils/axiosClient";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
-import Login from "../Components/Login";
 import NotesBlackBox from "./NotesBlackBox";
 import DummyBox from "../Constant/DummyBox";
 

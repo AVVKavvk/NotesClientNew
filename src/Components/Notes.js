@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
 import NotesURL from "../Constant/NotesURL.json";
 import A from "../Notes/A";
-import Login from "./Login";
-
 function Notes() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     const token = getItem(Key_Access_Token);
     if (token && token !== 10) {
       setIsAuthenticated(true);
+    } else {
+      navigate("/auth/login");
     }
   }, []);
 
-  if (!isAuthenticated) return <Login />;
   return (
     <>
       <div class="grid grid-cols-1  justify-center items-center mx-auto mt-6  ">
@@ -34,7 +34,6 @@ function Notes() {
           })}
         </div>
         <A />
-        
       </div>
     </>
   );

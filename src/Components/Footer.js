@@ -19,7 +19,7 @@ function Footer() {
   }, [count]);
 
   return (
-    <div class=" bg-gray-900 px-3 text-white flex flex-col md:flex-row mx-auto justify-evenly items-center pb-7 ">
+    <div class=" bg-gray-800 px-3 w-screen max-w-[1550px] text-white flex flex-col md:flex-row mx-auto justify-evenly items-center pb-7 ">
      <div class="rounded-xl w-[280px] h-[300px] mb-9 mt-2 md:pl-7  ">
           {" "}
           <a href="https://i.ibb.co/417cTGP/vipin.png" target="_blank">

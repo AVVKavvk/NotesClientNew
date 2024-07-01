@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
-import { Link } from "react-router-dom";
-import Login from "./Login";
+import { Link, useNavigate } from "react-router-dom";
 import CalURL from "../Constant/CalURl.json";
 import A from "../CGPA/A";
 function CGPA() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate=useNavigate();
   useEffect(() => {
     const token = getItem(Key_Access_Token);
     if (token && token !== 10) {
       setIsAuthenticated(true);
     }
+    else {
+      navigate("/auth/login");
+    }
   }, []);
-
-  if (!isAuthenticated) return <Login />;
-  // const a = 10;
   return (
     <>
       <div class="grid grid-cols-1 justify-center items-center mt-6 mb-11 mx-auto ">

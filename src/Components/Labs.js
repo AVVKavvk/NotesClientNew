@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
-import Login from "./Login";
 import LabsURL from "../Constant/LabsURL.json";
-import A from '../Labs/A'
+import A from "../Labs/A";
 function Labs() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     const token = getItem(Key_Access_Token);
     if (token && token !== 10) {
       setIsAuthenticated(true);
+    } else {
+      navigate("/auth/login");
     }
   }, []);
-
-  if (!isAuthenticated) return <Login />;
   return (
     <>
       <div class="grid grid-cols-1 justify-center items-center mt-6 mx-auto ">
@@ -34,7 +34,7 @@ function Labs() {
           })}
         </div>
       </div>
-      <A/>
+      <A />
     </>
   );
 }

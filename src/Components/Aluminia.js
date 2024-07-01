@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import AluminiaData from "../assets/Aluminia.json";
 import { AiFillLinkedin } from "react-icons/ai";
 import { Key_Access_Token, getItem } from "../utils/localStorage";
-import Login from './Login'
+import { useNavigate } from "react-router-dom";
 function Aluminia() {
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearchChange = event => {
@@ -14,14 +14,16 @@ function Aluminia() {
     temp.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate=useNavigate();
   useEffect(() => {
     const token = getItem(Key_Access_Token);
     if (token && token !== 10) {
       setIsAuthenticated(true);
     }
+    else {
+      navigate("/auth/login");
+    }
   }, []);
-
-  if (!isAuthenticated) return <Login />;
   return (
     <>
       <div className="min-h-[100vh]  font-mullish overflow-hidden px-6  ">
