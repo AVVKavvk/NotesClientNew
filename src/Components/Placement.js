@@ -12,19 +12,19 @@ function Placement() {
       link: "/aluminia",
       tag: "Alumni",
       description:
-        "Welcome to Elevate, your alumni network connecting past and future success stories. Reconnect, collaborate, and grow together. Join Elevate today!",
+        "Welcome to VipinNotes, your alumni network connecting past and future success stories. Reconnect, collaborate, and grow together. Join VipinNotes today!",
     },
     {
       link: "/resume",
       tag: "Resume",
       description:
-        "Elevate offers a free resume builder to enhance your professional profile. Join us for networking, career growth, and powerful resume-building opportunities.",
+        "VipinNotes offers a free resume builder to enhance your professional profile. Join us for networking, career growth, and powerful resume-building opportunities.",
     },
     {
       link: "/certificates",
       tag: "Certificates",
       description:
-        "Elevate also provides complimentary certificates to enhance your engineering journey. Join us for networking and career growth opportunities today.",
+        "VipinNotes also provides complimentary certificates to enhance your engineering journey. Join us for networking and career growth opportunities today.",
     },
   ];
   return (
@@ -70,7 +70,7 @@ function Placement() {
         <div className=" w-[69%] ml-[3%] gap-5">
           <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
             <p>
-              Elevate, the pinnacle of professional networking, is delighted to
+              VipinNotes, the pinnacle of professional networking, is delighted to
               extend a warm welcome to our esteemed alumni. As you step into our
               world, you enter a realm of infinite opportunities to reconnect,
               access invaluable resources, and stay updated on pivotal events.
@@ -80,10 +80,10 @@ function Placement() {
           <div class="flex from-white justify-center text-grayText font-mullish items-center mx-auto p-2 text-justify gap-4 mt-4 ">
             <img src={resume} alt="" width="400px" class="rounded-md" />
             <p>
-              Elevate offers a powerful resume builder, helping you craft and
+              VipinNotes offers a powerful resume builder, helping you craft and
               showcase your professional journey. Join us in uniting the past
               and future, and become a vital part of this dynamic network.
-              Register with Elevate today to shape your destiny while
+              Register with VipinNotes today to shape your destiny while
               celebrating your academic heritage.
             </p>
           </div>

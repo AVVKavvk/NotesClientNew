@@ -15,12 +15,12 @@ function Feedback() {
       className="max-w-[500px]   min-w-[310px] text-white mx-auto rounded-md  md:text-lg  flex flex-col max-h-[500px] mb-6 py-3 min-h-[400px] gap-4 border justify-center  items-center text-justify m-6 px-4 "
     >
       <p >
-        Your insights matter at 'Elevate.' Our platform is committed to
+        Your insights matter at 'VipinNotes.' Our platform is committed to
         elevating your college experience by providing access to a wealth of
         resources. Your feedback is instrumental in helping us raise the
-        standards and ensure 'Elevate' remains your go-to destination for
+        standards and ensure 'VipinNotes' remains your go-to destination for
         academic support and networking. Share your thoughts, ideas, and
-        suggestions as we work together to make 'Elevate' an even more
+        suggestions as we work together to make 'VipinNotes' an even more
         exceptional platform. Thank you for being a valued part of our
         community.
       </p>

@@ -37,7 +37,7 @@ function Academics() {
       link: "/user/cgpa",
       tag: "CGPA Calculator",
       description:
-        "Elevate also offers a CGPA Calculator to help you stay on top of your academic progress.",
+        "VipinNotes also offers a CGPA Calculator to help you stay on top of your academic progress.",
     },
   ];
   return (
