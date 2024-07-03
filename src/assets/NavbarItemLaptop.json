@@ -28,6 +28,10 @@
     "tag": "Feedback"
   },
   {
+    "link": "/user/rating",
+    "tag": "RateUs"
+  },
+  {
     "link": "/user/creator",
     "tag": "AboutUs"
   }

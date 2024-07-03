@@ -32,8 +32,7 @@ function Login() {
       if (result) {
         navigate("/");
       }
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   async function countU() {
@@ -52,7 +51,6 @@ function Login() {
   // }, []);
   return (
     <>
-      
       <div class="grid  min-h-screen lg:grid-cols-2 mx-auto lg:mx-72 mb-4 items-center ">
         <div class="w-[580px] hidden  lg:block mt-3 rounded-lg ">
           <img src={men} alt="" height="200px" width="400px" style={{}} />
@@ -88,11 +86,12 @@ function Login() {
                 class=""
                 placeholder="email"
                 onChange={e => setemail(e.target.value)}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </Form.Item>
 
             <Form.Item
-             label={<span className="text-gray-300">Password</span>}
+              label={<span className="text-gray-300">Password</span>}
               name="password"
               rules={[
                 {
@@ -104,6 +103,7 @@ function Login() {
               <Input.Password
                 placeholder="password"
                 onChange={e => setpassword(e.target.value)}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </Form.Item>
 

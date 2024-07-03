@@ -116,11 +116,16 @@ function Navbar() {
             {" "}
             <img src={logo} alt="" width="250px" />{" "}
           </a>
+          {isOnline ? (
+            <div className="mr-4"> 🟢</div>
+          ) : (
+            <div className="mr-4">🔴</div>
+          )}
         </div>
         <div class="w-[85%] flex flex-row  flex-wrap  justify-evenly items-center mx-auto">
           <ul className="nav_bar sm:flex justify-center  items-center gap-3 hidden   ">
             {NavbarItemLaptop?.map(item => {
-              return(
+              return (
                 <li
                   key={item.tag}
                   class="hover:underline  p-2 rounded-md transition-all duration-500"
@@ -131,12 +136,6 @@ function Navbar() {
                 </li>
               );
             })}
-
-            {isOnline ? (
-              <div className="mr-4"> 🟢</div>
-            ) : (
-              <div className="mr-4">🔴</div>
-            )}
           </ul>
           <ul class="sm:flex hidden justify-center items-center gap-4 px-3">
             <>
@@ -157,12 +156,12 @@ function Navbar() {
                 </>
               ) : (
                 <>
-                  <li class="hover:underline p-2 rounded-md transition-all duration-500">
+                  <li class="hover:underline p-1 px-2 bg-pink-700 rounded-md transition-all duration-500">
                     <Link to="/auth/login" style={{ textDecoration: "none" }}>
                       Login
                     </Link>
                   </li>
-                  <li class="hover:underline    p-2 rounded-md transition-all duration-500">
+                  <li class="hover:underline    p-1 px-2 bg-pink-700 rounded-md transition-all duration-500">
                     <Link to="/auth/signup" style={{ textDecoration: "none" }}>
                       SignUp
                     </Link>

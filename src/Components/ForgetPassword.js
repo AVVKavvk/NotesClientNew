@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import {  Form, Input } from "antd";
+import { Form, Input } from "antd";
 
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { axiosClient } from "../utils/axiosClient";
 
 import { useDispatch } from "react-redux";
@@ -30,7 +30,7 @@ function ForgetPassword() {
           message: `${result.result}`,
         })
       );
-      
+
       if (result) {
         //
         navigate("/auth/login");
@@ -42,7 +42,6 @@ function ForgetPassword() {
 
   return (
     <div class="flex justify-center   mx-auto  p-4 mb-4 items-center ">
-      
       <div class="flex  flex-col justify-center items-center mx-auto h-[420px] mb-5 lg:h-[400px] lg:p-10 p-6  border-2 max-w-[600px] rounded-lg mt-11  border-green-400">
         <Form
           name="basic"
@@ -61,7 +60,7 @@ function ForgetPassword() {
           autoComplete="off"
         >
           <Form.Item
-            label="email"
+            label={<span className="text-gray-300">Email</span>}
             name="email"
             rules={[
               {
@@ -73,12 +72,12 @@ function ForgetPassword() {
             <Input
               class=""
               placeholder="email"
-              onChange={(e) => setemail(e.target.value)}
+              onChange={e => setemail(e.target.value)}
             />
           </Form.Item>
 
           <Form.Item
-            label="Password"
+            label={<span className="text-gray-300">Password</span>}
             name="password"
             rules={[
               {
@@ -89,11 +88,11 @@ function ForgetPassword() {
           >
             <Input.Password
               placeholder="password"
-              onChange={(e) => setpassword(e.target.value)}
+              onChange={e => setpassword(e.target.value)}
             />
           </Form.Item>
           <Form.Item
-            label="Confirm "
+            label={<span className="text-gray-300">Confirm Pass..</span>}
             name="Confirm password"
             rules={[
               {
@@ -104,11 +103,9 @@ function ForgetPassword() {
           >
             <Input.Password
               placeholder="password"
-              onChange={(e) => setconpassword(e.target.value)}
+              onChange={e => setconpassword(e.target.value)}
             />
           </Form.Item>
-
-          
 
           <Form.Item
             wrapperCol={{
@@ -124,8 +121,6 @@ function ForgetPassword() {
             </button>
           </Form.Item>
         </Form>
-        
-       
       </div>
     </div>
   );

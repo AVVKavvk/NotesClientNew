@@ -44,7 +44,7 @@ const MentalHealth = lazy(() => import("./Components/MentalHealth"));
 const PersonalBlogs = lazy(() => import("./Components/PersonalBlogs"));
 const Extra = lazy(() => import("./Components/Extra"));
 const Coding = lazy(() => import("./Components/Coding"));
-
+const Rating =lazy(()=>import("./Components/Rating"))
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 
@@ -254,6 +254,14 @@ function App() {
             element={
               <Suspense fallback={<Loader />}>
                 <Signup />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/user/rating"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Rating />
               </Suspense>
             }
           />

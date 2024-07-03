@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import upcoming from "../assets/upcoming.json";
 import Features from "../assets/HomeFeatures.json";
+import Card from "../Constant/Card";
 function Home() {
   var b = useSelector(state => state.appConfigReducer.count);
   var count = 730;
@@ -127,26 +128,14 @@ function Home() {
             Features
           </h1>
           <motion.div
-            className="grid mb-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-justify gap-9 justify-center items-center mx-auto "
+            className="grid mb-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-justify gap-5 justify-center items-center mx-auto "
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .5, delay: .4 }}
           >
             {Features?.map((item, index) => {
               return (
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: .7 }}
-                  className=" shadow-md shadow-slate-400  p-3 rounded-md  bg-[#06173363] "
-                >
-                  <h1 className=" text-2xl mb-2">{item.tag} :-</h1>
-                  <hr
-                    style={{ width: "100%", height: "2px" }}
-                    className="bg-gray-700 mb-2"
-                  />
-                  <p>{item.content}</p>
-                </motion.div>
+               <Card key={item.tag} index={index} title={item?.content}  tag={item?.tag} />
               );
             })}
           </motion.div>

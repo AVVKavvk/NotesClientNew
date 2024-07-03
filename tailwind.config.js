@@ -7,6 +7,8 @@ module.exports = {
         mullish: ["Mulish", "sans-serif"],
         josefin: ["Josefin Sans", "sans-serif"],
       },
+      backgroundColor: ['group-hover'],
+      gradientColorStops: ['hover', 'group-hover'],
       colors: {
         deepBlue: "#02042a",
         primary: "#050816",
