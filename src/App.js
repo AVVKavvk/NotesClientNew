@@ -9,6 +9,7 @@ import { useEffect, useRef } from "react";
 import LoadingBar from "react-top-loading-bar";
 import Loader from "./animation/Loader1";
 import ErrorPage from "./Components/ErrorPage";
+import ForgetOtp from "./Components/ForgetOtp";
 
 const Login = lazy(() => import("./Components/Login"));
 const Signup = lazy(() => import("./Components/Signup"));
@@ -25,6 +26,7 @@ const NotesRouter = lazy(() => import("./Routers/NotesRouter"));
 const BookRouter = lazy(() => import("./Components/Book"));
 
 const UploadRouter = lazy(() => import("./Routers/UploadRouter"));
+const AdminRouter = lazy(() => import("./Routers/AdminRouter"));
 
 const Visitor = lazy(() => import("./Components/Visitor"));
 const Creator = lazy(() => import("./Components/Creator"));
@@ -44,7 +46,7 @@ const MentalHealth = lazy(() => import("./Components/MentalHealth"));
 const PersonalBlogs = lazy(() => import("./Components/PersonalBlogs"));
 const Extra = lazy(() => import("./Components/Extra"));
 const Coding = lazy(() => import("./Components/Coding"));
-const Rating =lazy(()=>import("./Components/Rating"))
+const Rating = lazy(() => import("./Components/Rating"));
 export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 
@@ -274,6 +276,14 @@ function App() {
             }
           />
           <Route
+            path="/otp/forget"
+            element={
+              <Suspense fallback={<Loader />}>
+                <ForgetOtp />
+              </Suspense>
+            }
+          />
+          <Route
             path="/auth/visitor"
             element={
               <Suspense fallback={<Loader />}>
@@ -302,6 +312,14 @@ function App() {
             element={
               <Suspense fallback={<Loader />}>
                 <Logout />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/admin/*"
+            element={
+              <Suspense fallback={<Loader />}>
+                <AdminRouter />
               </Suspense>
             }
           />

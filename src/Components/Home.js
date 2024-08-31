@@ -1,16 +1,19 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { count_User, getItem } from "../utils/localStorage";
+import { count_User, getItem, setItem } from "../utils/localStorage";
 import { Key_Access_Token } from "../utils/localStorage";
 import Footer from "./Footer";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import upcoming from "../assets/upcoming.json";
 import Features from "../assets/HomeFeatures.json";
 import Card from "../Constant/Card";
+import { axiosClient } from "../utils/axiosClient";
+import { setcount } from "../slice/appConfigSlice";
 function Home() {
   var b = useSelector(state => state.appConfigReducer.count);
+  const dispatch = useDispatch();
   var count = 730;
   if (b === 0) {
     count = getItem(count_User);
@@ -19,13 +22,21 @@ function Home() {
   }
 
   useEffect(() => {
+    countU();
     count = getItem(count_User);
   }, [count]);
+  
   const navigate = useNavigate();
   function AA() {
     navigate("/auth/login");
   }
-
+  async function countU() {
+    try {
+      const result = await axiosClient.get("/auth/count");
+      dispatch(setcount(result.result));
+      setItem(count_User, result.result);
+    } catch (e) {}
+  }
   return (
     <>
       <div class="mt-4 mb-24 mx-4  ">
@@ -34,7 +45,7 @@ function Home() {
             <motion.h1
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: .2 }}
+              transition={{ duration: 1, delay: 0.2 }}
               className="text-5xl md:text-7xl font-bold mb-4 text-white"
               style={{
                 textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
@@ -46,7 +57,7 @@ function Home() {
             <motion.p
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: .4 }}
+              transition={{ duration: 1, delay: 0.4 }}
               className="text-xl md:text-2xl mb-4"
             >
               Ultimate Academic, Career, and Personal Growth <br /> Platform for
@@ -59,7 +70,7 @@ function Home() {
               <motion.p
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: .2, delay: .1 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
                 className="text-xl md:text-2xl mb-4"
               >
                 At <span class=" text-2xl  ">Vipin Notes</span> , I am committed
@@ -73,7 +84,7 @@ function Home() {
                 class="flex flex-col md:flex-row justify-between items-center "
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: .3, delay: .2 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
               >
                 <h1
                   onClick={AA}
@@ -131,11 +142,16 @@ function Home() {
             className="grid mb-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-justify gap-5 justify-center items-center mx-auto "
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: .5, delay: .4 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             {Features?.map((item, index) => {
               return (
-               <Card key={item.tag} index={index} title={item?.content}  tag={item?.tag} />
+                <Card
+                  key={item.tag}
+                  index={index}
+                  title={item?.content}
+                  tag={item?.tag}
+                />
               );
             })}
           </motion.div>

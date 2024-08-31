@@ -7,6 +7,7 @@ import { axiosClient } from "../utils/axiosClient";
 import { useDispatch } from "react-redux";
 import { showToast } from "../slice/appConfigSlice";
 import { TOAST_SUCCESS } from "../App";
+import { setItem, UserPassword } from "../utils/localStorage";
 
 function ForgetPassword() {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ function ForgetPassword() {
         email,
         password,
         confirmpassword: conpassword,
+        real: false,
       });
       dispatch(
         showToast({
@@ -33,7 +35,8 @@ function ForgetPassword() {
 
       if (result) {
         //
-        navigate("/auth/login");
+        setItem(UserPassword, password);
+        navigate("/otp/forget");
       }
     } catch (e) {
       console.log(e);
