@@ -3,10 +3,10 @@ export const count_User="countUser";
 export const UserPassword="UserPassword";
 export const UserName="UserName";
 export const UserNumber="UserNumber";
-export const adminToken="adminToken";
-export const adminEmail="adminEmail";
-export const adminPassword="adminPassword";
-export const isAdmin="isAdmin";
+export const AdminToken="AdminToken";
+export const AdminEmail="AdminEmail";
+export const AdminPassword="AdminPassword";
+export const IsAdmin="IsAdmin";
 
 export function getItem(key){
     return localStorage.getItem(key);

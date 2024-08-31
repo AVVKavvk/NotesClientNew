@@ -43,7 +43,7 @@ const UpdateNotes = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 shadow-md shadow-gray-400 bg-gray-800 p-6   rounded-lg">
+    <div className="max-w-md mx-auto  mt-10 mb-10 shadow-md shadow-gray-400 bg-gray-800 p-6   rounded-lg">
       <h2 className="text-2xl font-bold mb-6">Upolad Notes</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -65,8 +65,6 @@ const UpdateNotes = () => {
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
           </select>
         </div>
         <div className="mb-4">

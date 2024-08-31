@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Paper from "../Components/Paper";
 import Loader from "../animation/Loader1";
+import ErrorPage from "../Components/ErrorPage";
 
 const Sem1 = lazy(() => import("../Paper/Sem1"));
 const Sem2 = lazy(() => import("../Paper/Sem2"));
@@ -62,6 +63,7 @@ const PaperRouter = () => {
           </Suspense>
         }
       />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 };

@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Labs from "../Components/Labs";
 import Loader from "../animation/Loader1";
+import ErrorPage from "../Components/ErrorPage";
 const Sem1 = lazy(() => import("../Labs/Sem1"));
 const Sem2 = lazy(() => import("../Labs/Sem2"));
 const Sem3 = lazy(() => import("../Labs/Sem3"));
@@ -61,6 +62,7 @@ function LabsRouter() {
           </Suspense>
         }
       />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }

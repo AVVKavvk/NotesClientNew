@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import CGPA from "../Components/CGPA";
 import Loader from "../animation/Loader1";
+import ErrorPage from "../Components/ErrorPage";
 
 const Sem1 = lazy(() => import("../CGPA/Sem1"));
 const Sem2 = lazy(() => import("../CGPA/Sem2"));
@@ -79,6 +80,7 @@ const CGPARouter = () => {
           </Suspense>
         }
       />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 };

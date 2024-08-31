@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Upload from "../Components/Upload";
 import Loader from "../animation/Loader1";
+import ErrorPage from "../Components/ErrorPage";
 
 const UpdateLab = lazy(() => import("../Labs/UpdateLabs"));
 const UpdateNotes = lazy(() => import("../Notes/UpdateNotes"));
@@ -35,6 +36,7 @@ function UploadRouter() {
           </Suspense>
         }
       />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }

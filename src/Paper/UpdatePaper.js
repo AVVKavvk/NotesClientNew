@@ -47,7 +47,7 @@ const UpdateLab = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 shadow-md shadow-gray-400 bg-gray-800 p-6   rounded-lg">
+    <div className="max-w-md mx-auto mb-10 mt-10  shadow-md shadow-gray-400 bg-gray-800 p-6   rounded-lg">
       <h2 className="text-2xl font-bold mb-6">Upload Papers</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -69,8 +69,6 @@ const UpdateLab = () => {
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
           </select>
         </div>
         <div className="mb-4">
@@ -96,7 +94,7 @@ const UpdateLab = () => {
             value={linkT1}
             onChange={handleLinkChangeT1}
             placeholder="Drive link for T1"
-            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none text-black border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="mb-4">
@@ -109,7 +107,7 @@ const UpdateLab = () => {
             value={linkT2}
             onChange={handleLinkChangeT2}
             placeholder="Drive link for T2"
-            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none text-black focus:shadow-outline"
           />
         </div>
         <div className="mb-4">
@@ -122,7 +120,7 @@ const UpdateLab = () => {
             value={linkT3}
             onChange={handleLinkChangeT3}
             placeholder="Drive link for Endsem"
-            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none text-black focus:shadow-outline"
           />
         </div>
 
