@@ -21,7 +21,7 @@ function ForgetOtp() {
         email,
       });
       // setItem(Key_Access_Token,result.result.token)
-    //   console.log(result.result);
+      //   console.log(result.result);
       dispatch(
         showToast({
           type: TOAST_SUCCESS,
@@ -87,7 +87,7 @@ function ForgetOtp() {
   }
   return (
     <div className="  min-h-screen ">
-      <div className="max-w-[400px] max-h-[200px]  mt-10 text-black justify-center items-center px-6  flex flex-col mx-auto border border-gray-900 bg-gray-400 p-10 rounded-md ">
+      <div className="max-w-[400px] max-h-[500px]  mt-10 text-black justify-center items-center px-6  flex flex-col mx-auto border border-gray-900 bg-gray-400 p-10 rounded-md ">
         {showInput ? (
           <div className="max-w-[400px] gap-4 flex flex-col mx-auto ">
             <div>
@@ -113,35 +113,48 @@ function ForgetOtp() {
           ""
         )}
         {showOtpInput ? (
-          <div className="max-w-[400px] gap-4 flex flex-col mx-auto ">
-            <div>
-              <label htmlFor="" className="text-xl  font-bold mr-4 ">
-                {" "}
-                OTP{" "}
-              </label>
-              <input
-                className="border border-red-500 p-4"
-                type="text"
-                placeholder="Enter OTP"
-                onChange={e => setInputOTP(e.target.value)}
-              />
+          <>
+            <div className="max-w-[400px] gap-4 flex flex-col mx-auto ">
+              <div>
+                <label htmlFor="" className="text-xl  font-bold mr-4 ">
+                  {" "}
+                  OTP{" "}
+                </label>
+                <input
+                  className="border border-red-500 p-4"
+                  type="text"
+                  placeholder="Enter OTP"
+                  onChange={e => setInputOTP(e.target.value)}
+                />
+              </div>
+              <button
+                onClick={handleInputOTP}
+                className="text-2xl px-2 p-1 bg-blue-500 rounded-md "
+              >
+                submit
+              </button>
+              <button
+                onClick={() => {
+                  setShowOtpInput(false);
+                  setShowInput(true);
+                }}
+                className="text-xl  "
+              >
+                Resend
+              </button>
             </div>
-            <button
-              onClick={handleInputOTP}
-              className="text-2xl px-2 p-1 bg-blue-500 rounded-md "
-            >
-              submit
-            </button>
-            <button
-              onClick={() => {
-                setShowOtpInput(false);
-                setShowInput(true);
-              }}
-              className="text-xl  "
-            >
-              Resend
-            </button>
-          </div>
+            <div className="flex mt-12 items-center justify-center  bg-gray-100">
+              <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h2 className="text-xl font-semibold text-gray-800">
+                  Check Your Email
+                </h2>
+                <p className="mt-4 text-gray-600">
+                  If you don’t see the email in your inbox, please check your
+                  spam or junk folder.
+                </p>
+              </div>
+            </div>
+          </>
         ) : (
           ""
         )}

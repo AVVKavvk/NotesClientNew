@@ -95,7 +95,7 @@ function OTP() {
   }
   return (
     <div className="  min-h-screen ">
-      <div className="max-w-[400px] max-h-[200px]  mt-10 text-black justify-center items-center px-6  flex flex-col mx-auto border border-gray-900 bg-gray-400 p-10 rounded-md ">
+      <div className="max-w-[400px] max-h-[500px]  mt-10 text-black justify-center items-center px-6  flex flex-col mx-auto border border-gray-900 bg-gray-400 p-10 rounded-md ">
         {showInput ? (
           <div className="max-w-[400px] gap-4 flex flex-col mx-auto ">
             <div>
@@ -149,6 +149,17 @@ function OTP() {
             >
               Resend
             </button>
+            <div className="flex items-center justify-center mt-12 bg-gray-100">
+              <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h2 className="text-xl font-semibold text-gray-800">
+                  Check Your Email
+                </h2>
+                <p className="mt-4 text-gray-600">
+                  If you don’t see the email in your inbox, please check your
+                  spam or junk folder.
+                </p>
+              </div>
+            </div>
           </div>
         ) : (
           ""
