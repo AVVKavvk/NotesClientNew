@@ -35,6 +35,8 @@ const Resume = lazy(() => import("./Components/Resume"));
 const RichText = lazy(() => import("./Components/RichText"));
 const ResumePage = lazy(() => import("./Components/ResumePage"));
 
+const Account = lazy(()=>import("./Account/Account"))
+
 const CertificationPrograms = lazy(() =>
   import("./Components/CertificationPrograms")
 );
@@ -131,6 +133,14 @@ function App() {
             element={
               <Suspense fallback={<Loader />}>
                 <UploadRouter />
+              </Suspense>
+            }
+          ></Route>
+          <Route
+            path="/account/*"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Account />
               </Suspense>
             }
           ></Route>

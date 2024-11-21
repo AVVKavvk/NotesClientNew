@@ -3,7 +3,7 @@ import { Checkbox, Form, Input } from "antd";
 import men from "../image/men.png";
 import { Link, useNavigate } from "react-router-dom";
 import { axiosClient } from "../utils/axiosClient";
-import { Key_Access_Token, count_User, setItem } from "../utils/localStorage";
+import { Key_Access_Token, UserEmail, UserID, UserImage, count_User, setItem } from "../utils/localStorage";
 import { useDispatch } from "react-redux";
 import { setcount, showToast } from "../slice/appConfigSlice";
 import { TOAST_SUCCESS } from "../App";
@@ -21,7 +21,15 @@ function Login() {
         email,
         password,
       });
-      setItem(Key_Access_Token, result.result.token);
+      // console.log(result.result);
+      // // console.log( result.result.token);
+      // console.log( result.result?.user?.email);
+      // console.log( result.result?.user?._id);
+      
+      setItem(Key_Access_Token, result.result?.token);
+      setItem(UserEmail, result.result?.user?.email);
+      setItem(UserID, result.result?.user?._id);
+      setItem(UserImage, result.result?.user?.image);
       countU();
       dispatch(
         showToast({

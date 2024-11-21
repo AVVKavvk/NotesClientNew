@@ -18,6 +18,7 @@ import sk7 from "../image/sk7.svg";
 import sk8 from "../image/sk8.svg";
 import sk9 from "../image/sk9.svg";
 import mui from "../image/mui.svg";
+import vipin from '../image/vipin.jpg'
 
 function Creator() {
   return (
@@ -25,12 +26,12 @@ function Creator() {
       <div class="flex flex-col mx-auto  sm:w-[400px]  space-y-16 mb-5">
         <div class="rounded-xl w-[300px] h-[300px] mb-9 mt-2  ">
           {" "}
-          <a href="https://i.ibb.co/417cTGP/vipin.png" target="_blank">
+          <a href={vipin} target="_blank" className="flex justify-center items-center mx-auto">
             {" "}
             <img
-              src="https://i.ibb.co/417cTGP/vipin.png"
+              src={vipin}
               alt="vipin"
-              class="w-full"
+              width="200px"
             />{" "}
           </a>
           <h1 class="text-center text-2xl mt-2 mb-1 ">Vipin Kumawat</h1>

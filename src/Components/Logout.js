@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import {  useNavigate } from "react-router-dom";
 
-import { Key_Access_Token } from "../utils/localStorage";
+import { Key_Access_Token, UserEmail, UserID } from "../utils/localStorage";
 import { useDispatch } from "react-redux";
 import { showToast } from "../slice/appConfigSlice";
 import { TOAST_SUCCESS } from "../App";
@@ -20,6 +20,8 @@ function Logout() {
 
     try {
       deleteUser(Key_Access_Token);
+      deleteUser(UserEmail);
+      deleteUser(UserID);
 
       dispatch(
         showToast({

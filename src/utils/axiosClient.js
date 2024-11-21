@@ -5,7 +5,6 @@ import { setLoading, showToast } from "../slice/appConfigSlice";
 import { TOAST_ERROR } from "../App";
 export const axiosClient = axios.create({
   baseURL: process.env.REACT_APP_SERVER_BASE_URL,
-  // baseURL: "https://noteswebsiteserver.onrender.com",
   withCredentials: true,
 });
 axiosClient.interceptors.request.use((request) => {
@@ -40,7 +39,6 @@ axiosClient.interceptors.response.use(
         .create({
           withCredentials: true,
         })
-        // .get(`https://noteswebsiteserver.onrender.com/auth/refresh`);
         .get(`${process.env.REACT_APP_SERVER_BASE_URL}/auth/refresh`);
 
       // console.log("respone from backend", response);

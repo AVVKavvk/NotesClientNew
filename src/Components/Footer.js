@@ -3,6 +3,7 @@ import Links from "../assets/NavbarItems1.json";
 import { Key_Access_Token, count_User, getItem } from "../utils/localStorage";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import vipin from '../image/vipin.jpg'
 
 function Footer() {
   const a = getItem(Key_Access_Token);
@@ -19,15 +20,15 @@ function Footer() {
   }, [count]);
 
   return (
-    <div class=" bg-gray-800 px-3 w-screen max-w-[1550px] text-white flex flex-col md:flex-row mx-auto justify-evenly items-center pb-7 ">
+    <div class=" shadow-2xl shadow-black  px-3 w-screen max-w-[1550px] text-white flex flex-col md:flex-row mx-auto justify-evenly items-center pb-7 ">
      <div class="rounded-xl w-[280px] h-[300px] mb-9 mt-2 md:pl-7  ">
           {" "}
-          <a href="https://i.ibb.co/417cTGP/vipin.png" target="_blank">
+          <a href={vipin} target="_blank" className="flex justify-center items-center mx-auto">
             {" "}
             <img
-              src="https://i.ibb.co/417cTGP/vipin.png"
+              src={vipin}
               alt="vipin"
-              class="w-full rounded-xl"
+              width="200px"
             />{" "}
           </a>
           <h1 class="text-center text-2xl mt-2 mb-1 ">Vipin</h1>

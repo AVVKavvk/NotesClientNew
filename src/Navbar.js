@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "./image/logonotes.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 // import { Dropdown } from "antd";
-import { Key_Access_Token, count_User, getItem } from "./utils/localStorage";
+import { Key_Access_Token, UserImage, count_User, getItem } from "./utils/localStorage";
 import { useSelector } from "react-redux";
 import { AiOutlineLogout } from "react-icons/ai";
 import NavbarItem1 from "./assets/NavbarItems1.json";
@@ -12,6 +12,7 @@ import useOnline from "./Hooks/useOnline";
 import NavbarItemLaptop from "./assets/NavbarItemLaptop.json";
 function Navbar() {
   const a = getItem(Key_Access_Token);
+  const Userimage = getItem(UserImage)
   var b = useSelector(state => state.appConfigReducer.count);
   const isOnline = useOnline();
   var count = 1;
@@ -64,17 +65,16 @@ function Navbar() {
               <>
                 {a ? (
                   <>
-                    <Link to="/user/logout" style={{ textDecoration: "none" }}>
-                      <li
-                        class="text-[16px] font-josefin font-bold cursor-pointer transition-all duration-200 "
-                        onClick={() => {
-                          setToggle(!toggle);
-                        }}
-                      >
-                        {" "}
-                        LogOut
-                      </li>
-                    </Link>
+                    <Link 
+                    to="/account" 
+                    style={{ textDecoration: "none" }} 
+                    onClick={() => {
+                      setToggle(!toggle);
+                    }}
+                    className="flex justify-center items-center mx-auto bg-green-500 rounded p-2"
+                  >
+                    Account
+                  </Link>
                   </>
                 ) : (
                   <>
@@ -141,17 +141,19 @@ function Navbar() {
             <>
               {a ? (
                 <>
-                  <Link to="/user/logout" style={{ textDecoration: "none" }}>
-                    <li class=" text-2xl relative group  p-1 hover:underline rounded-md px-2 transition-all duration-200 flex justify-center items-center group ">
-                      {" "}
-                      <AiOutlineLogout />
-                      {/* <span class="text-4xl ml-4 group-hover:scale-125 transition-all duration-300    ">
-                    {count}{" "}
-                  </span> */}
-                      <p class="absolute text-sm hidden group-hover:flex -top-4 ">
-                        Logout{" "}
-                      </p>
-                    </li>
+                  <Link 
+                    to="/account" 
+                    style={{ textDecoration: "none" }} 
+                    className="flex justify-center items-center mx-auto bg-white w-[60px] h-[60px] rounded-full relative group"
+                  >
+                    <img
+                      src={Userimage || "https://res.cloudinary.com/dufi9bxnq/image/upload/v1731948868/VipinNotes%20Users/dummy.png"}
+                      alt="Profile"
+                      className="w-[50px] h-[50px] rounded-full object-cover"
+                    />
+                    <span className="absolute top-full mb-2 hidden group-hover:block bg-gray-800 text-white text-lg rounded py-1 px-2">
+                      Account
+                    </span>
                   </Link>
                 </>
               ) : (

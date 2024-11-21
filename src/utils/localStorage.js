@@ -7,6 +7,9 @@ export const AdminToken="AdminToken";
 export const AdminEmail="AdminEmail";
 export const AdminPassword="AdminPassword";
 export const IsAdmin="IsAdmin";
+export const UserID="UserID";
+export const UserEmail="UserEmail";
+export const UserImage="UserImage";
 
 export function getItem(key){
     return localStorage.getItem(key);
