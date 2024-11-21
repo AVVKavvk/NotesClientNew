@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { axiosClient } from '../utils/axiosClient';
-import { getItem, UserEmail } from '../utils/localStorage';
+import { getItem, setItem, UserEmail, UserImage } from '../utils/localStorage';
 import { Link, useNavigate } from 'react-router-dom'; // Import Link for navigation
 
 function ImageUpload() {
@@ -26,7 +26,10 @@ function ImageUpload() {
         image_url: preview,
         email: email
       });
+      // console.log(res.result.user_image);
+      
       setMessage('Image uploaded successfully!');
+      setItem(UserImage, res.result.user_image)
       navigate('/account')
       window.location.reload()
 
