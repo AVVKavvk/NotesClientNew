@@ -49,13 +49,12 @@ function A() {
         <div class="max-w-[1000px] flex-col  sm:space-y-0 flex mx-auto justify-center gap-6 items-center ">
           <div class="rounded-xl flex-col flex justify-center items-center  w-[250px] h-[260px] mb-9 mt-2  ">
             {" "}
-            <a target="_blank" href="https://i.ibb.co/yPZxNCW/mittak.jpg">
+            <a target="_blank" href="https://res.cloudinary.com/dufi9bxnq/image/upload/v1735736185/VipinNotes%20Users/obod37cmjuwff70mehm2.jpg">
               {" "}
               <img
-                src="https://i.ibb.co/yPZxNCW/mittak.jpg"
+                src="https://res.cloudinary.com/dufi9bxnq/image/upload/v1735736185/VipinNotes%20Users/obod37cmjuwff70mehm2.jpg"
                 alt="Sourish Mittal"
-                width="200px"
-                height="200px"
+                width="150px"
               />{" "}
             </a>
             <h1 class="text-center text-2xl mt-2 mb-1">Sourish Mittal</h1>
@@ -63,7 +62,7 @@ function A() {
               9953862637{" "}
             </h1>
             <h1 class="text-center text-xl flex justify-between  items-center">
-              CGPA 9.48{" "}
+              CGPA 9.50{" "}
             </h1>
           </div>
           <div class="flex flex-col w-[120px] space-y-3  ">

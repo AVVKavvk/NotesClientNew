@@ -14,7 +14,7 @@ import { setcount } from "../slice/appConfigSlice";
 function Home() {
   var b = useSelector(state => state.appConfigReducer.count);
   const dispatch = useDispatch();
-  var count = 730;
+  var count = 1127;
   if (b === 0) {
     count = getItem(count_User);
   } else {
@@ -115,7 +115,7 @@ function Home() {
                   {" "}
                   <span class="text-3xl mr-3">
                     {" "}
-                    {count != undefined ? count : "730"}+
+                    {count != undefined ? count : "1127"}+
                   </span>{" "}
                   Students{" "}
                 </h1>

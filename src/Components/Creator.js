@@ -31,7 +31,7 @@ function Creator() {
             <img
               src={vipin}
               alt="vipin"
-              width="200px"
+              width="180px"
             />{" "}
           </a>
           <h1 class="text-center text-2xl mt-2 mb-1 ">Vipin Kumawat</h1>
@@ -126,7 +126,7 @@ function Creator() {
             </a>
             <h1 class="text-lg m-1 text-center">BTech pursuing </h1>
             <h1 class="text-lg  text-center">
-              CGPA - <span class="ml-2"> 8.69 </span>{" "}
+              CGPA - <span class="ml-2"> 8.82 </span>{" "}
             </h1>
           </div>
           <div>
