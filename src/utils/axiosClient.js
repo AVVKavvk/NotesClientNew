@@ -10,7 +10,9 @@ export const axiosClient = axios.create({
 axiosClient.interceptors.request.use((request) => {
   store.dispatch(setLoading(true));
   const accesstoken = getItem(Key_Access_Token);
-  request.headers["Authorization"] = `Bearer ${accesstoken}`;
+  if (accesstoken) {
+    request.headers["Authorization"] = `Bearer ${accesstoken}`;
+  }
   return request;
 });
 
@@ -24,13 +26,14 @@ axiosClient.interceptors.response.use(
     const statuscode = data.statuscode;
     const OriginalRequest = respone.config;
     const error = data.message;
-    
-    store.dispatch(showToast({
-      type:TOAST_ERROR,
-      message:`${error}`
-    })
+
+    store.dispatch(
+      showToast({
+        type: TOAST_ERROR,
+        message: `${error}`,
+      })
     );
- 
+
     if (statuscode === 401 && !OriginalRequest._retry) {
       // means the access token has expired
       OriginalRequest._retry = true;
