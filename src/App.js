@@ -10,6 +10,7 @@ import LoadingBar from "react-top-loading-bar";
 import Loader from "./animation/Loader1";
 import ErrorPage from "./Components/ErrorPage";
 import ForgetOtp from "./Components/ForgetOtp";
+import AndroidDownloadAlert from "./Components/AppAlert";
 
 const Login = lazy(() => import("./Components/Login"));
 const Signup = lazy(() => import("./Components/Signup"));
@@ -35,7 +36,7 @@ const Resume = lazy(() => import("./Components/Resume"));
 const RichText = lazy(() => import("./Components/RichText"));
 const ResumePage = lazy(() => import("./Components/ResumePage"));
 
-const Account = lazy(()=>import("./Account/Account"))
+const Account = lazy(() => import("./Account/Account"));
 
 const CertificationPrograms = lazy(() =>
   import("./Components/CertificationPrograms")
@@ -53,8 +54,8 @@ export const TOAST_SUCCESS = "toast_success";
 export const TOAST_ERROR = "toast_error";
 
 function App() {
-  const isLoading = useSelector(state => state.appConfigReducer.isloading);
-  const toastData = useSelector(state => state.appConfigReducer.toastData);
+  const isLoading = useSelector((state) => state.appConfigReducer.isloading);
+  const toastData = useSelector((state) => state.appConfigReducer.toastData);
   const loadingRef = useRef(null);
   useEffect(() => {
     if (isLoading) {
@@ -76,11 +77,12 @@ function App() {
   }, [toastData]);
   return (
     <>
-      <div className="App" class={`text-white overflow-hidden mx-auto `}>
+      <div className={`text-white overflow-hidden mx-auto `}>
         <LoadingBar color="#f11946" ref={loadingRef} />
         <div>
           <Toaster />
         </div>
+        <AndroidDownloadAlert />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
