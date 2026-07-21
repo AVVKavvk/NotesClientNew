@@ -5,7 +5,7 @@ import { AiFillPhone } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import {SiLeetcode} from 'react-icons/si'
+import { SiLeetcode } from "react-icons/si";
 import { SiGeeksforgeeks } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 import sk1 from "../image/sk1.svg";
@@ -18,7 +18,7 @@ import sk7 from "../image/sk7.svg";
 import sk8 from "../image/sk8.svg";
 import sk9 from "../image/sk9.svg";
 import mui from "../image/mui.svg";
-import vipin from '../image/vipin.jpg'
+import vipin from "../image/vipin.jpg";
 
 function Creator() {
   return (
@@ -26,17 +26,21 @@ function Creator() {
       <div class="flex flex-col mx-auto  sm:w-[400px]  space-y-16 mb-5">
         <div class="rounded-xl w-[300px] h-[300px] mb-9 mt-2  ">
           {" "}
-          <a href={vipin} target="_blank" className="flex justify-center items-center mx-auto">
+          <a
+            href={vipin}
+            target="_blank"
+            className="flex justify-center items-center mx-auto"
+          >
             {" "}
-            <img
-              src={vipin}
-              alt="vipin"
-              width="180px"
-            />{" "}
+            <img src={vipin} alt="vipin" width="180px" />{" "}
           </a>
           <h1 class="text-center text-2xl mt-2 mb-1 ">Vipin Kumawat</h1>
-
-          <a href="https://vipinkumawatportfolio.netlify.app/" target="_blank">  <h1 class="text-center text-xl text-red-700 hover:bg-red-400 hover:text-red-900 transition-all duration-500 bg-red-300 px-1 py-[1px] rounded-2xl mx-auto max-w-[100px] mb-1">Portfolio</h1> </a>
+          <a href="https://vipinkumawatportfolio.netlify.app/" target="_blank">
+            {" "}
+            <h1 class="text-center text-xl text-red-700 hover:bg-red-400 hover:text-red-900 transition-all duration-500 bg-red-300 px-1 py-[1px] rounded-2xl mx-auto max-w-[100px] mb-1">
+              Portfolio
+            </h1>{" "}
+          </a>
           <hr
             style={{
               height: "1px",
@@ -50,65 +54,57 @@ function Creator() {
             <FcHome />
             <h1>Sikar, Rajasthan</h1>
           </div>
-          <div class="flex  text-center  text-2xl  space-x-4 items-center justify-start">
-            <AiFillPhone />
-            <h1>8107099646</h1>
-          </div>
           <div class="flex  text-center text-lg lg:text-2xl   space-x-4 items-center justify-start">
             <SiGmail />
             <h1>kumawatvipin066@gmail.com</h1>
           </div>
-        
         </div>
         <div class="flex flex-wrap justify-start items-start gap-4">
-
-        
-        <div class="flex  flex-col text-xl space-y-2 mb-3 ">
-          <div class="flex  text-center   space-x-4 items-center justify-start">
-            <BsLinkedin style={{ color: "blue" }} />
-            <a
-              href="https://www.linkedin.com/in/vipin-kumawat-751b9124b/"
-              target="_blank"
-            >
-              {" "}
-              <h1>LinkedIn</h1>{" "}
-            </a>
+          <div class="flex  flex-col text-xl space-y-2 mb-3 ">
+            <div class="flex  text-center   space-x-4 items-center justify-start">
+              <BsLinkedin style={{ color: "blue" }} />
+              <a
+                href="https://www.linkedin.com/in/vipin-kumawat-751b9124b/"
+                target="_blank"
+              >
+                {" "}
+                <h1>LinkedIn</h1>{" "}
+              </a>
+            </div>
+            <div class="flex  text-center   space-x-4 items-center justify-start">
+              <FaGithubSquare />
+              <a href="https://github.com/AVVKavvk" target="_blank">
+                {" "}
+                <h1>Github</h1>{" "}
+              </a>
+            </div>
+            <div class="flex  text-center   space-x-4 items-center justify-start">
+              <FaInstagramSquare style={{ color: "#C13584" }} />
+              <a href="https://www.instagram.com/k.vip_in/" target="_blank">
+                {" "}
+                <h1>Instagram</h1>{" "}
+              </a>
+            </div>
           </div>
-          <div class="flex  text-center   space-x-4 items-center justify-start">
-            <FaGithubSquare />
-            <a href="https://github.com/AVVKavvk" target="_blank">
-              {" "}
-              <h1>Github</h1>{" "}
-            </a>
+          <div class="flex  flex-col text-xl space-y-2 mb-3 ">
+            <div class="flex  text-center   space-x-4 items-center justify-start">
+              <SiLeetcode style={{ color: "orange" }} />
+              <a href="https://leetcode.com/Avvkvipin/" target="_blank">
+                {" "}
+                <h1>Leetcode</h1>{" "}
+              </a>
+            </div>
+            <div class="flex  text-center   space-x-4 items-center justify-start">
+              <SiGeeksforgeeks style={{ color: "green" }} />
+              <a
+                href="https://auth.geeksforgeeks.org/user/vipinavvk"
+                target="_blank"
+              >
+                {" "}
+                <h1>GFG</h1>{" "}
+              </a>
+            </div>
           </div>
-          <div class="flex  text-center   space-x-4 items-center justify-start">
-            <FaInstagramSquare style={{color:"#C13584"}} />
-            <a href="https://www.instagram.com/k.vip_in/" target="_blank">
-              {" "}
-              <h1>Instagram</h1>{" "}
-            </a>
-          </div>
-        </div>
-        <div class="flex  flex-col text-xl space-y-2 mb-3 ">
-          <div class="flex  text-center   space-x-4 items-center justify-start">
-            <SiLeetcode style={{ color: "orange" }} />
-            <a
-              href="https://leetcode.com/Avvkvipin/"
-              target="_blank"
-            >
-              {" "}
-              <h1>Leetcode</h1>{" "}
-            </a>
-          </div>
-          <div class="flex  text-center   space-x-4 items-center justify-start">
-            <SiGeeksforgeeks style={{color:"green"}} />
-            <a href="https://auth.geeksforgeeks.org/user/vipinavvk" target="_blank">
-              {" "}
-              <h1>GFG</h1>{" "}
-            </a>
-          </div>
-          
-        </div>
         </div>
       </div>
 
@@ -196,16 +192,49 @@ function Creator() {
         <div>
           <h1 class="text-2xl m-1 text-center">Skills</h1>
           <div class="mt-3 grid grid-cols-5 space-x-2 sm:space-x-0  justify-evenly items-center space-y-2 mx-auto">
-             <a href="https://html.com/" target="_blank"> <img src={sk1} alt="" width="70px" height="70px" /></a>
-             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> <img src={sk2} alt="" width="70px" height="70px" /></a>
-             <a href="https://tailwindcss.com/" target="_blank"> <img src={sk3} alt="" width="70px" height="70px" /></a>
-             <a href="https://www.javascript.com/" target="_blank"> <img src={sk4} alt="" width="70px" height="70px" /></a>
-             <a href="https://react.dev/" target="_blank"> <img src={sk5} alt="" width="70px" height="70px" /></a>
-             <a href="https://redux.js.org/" target="_blank"> <img src={sk6} alt="" width="70px" height="70px" /></a> 
-             <a href="https://nodejs.org/en" target="_blank"> <img src={sk7} alt="" width="70px" height="70px" /></a>
-             <a href="https://www.mongodb.com/atlas/database" target="_blank"> <img src={sk8} alt="" width="70px" height="70px" /></a>
-             <a href="https://expressjs.com/" target="_blank"> <img src={sk9} alt="" width="70px" height="70px" /></a>
-             <a href="https://mui.com/" target="_blank"> <img src={mui} alt="" width="70px" height="70px" /></a>
+            <a href="https://html.com/" target="_blank">
+              {" "}
+              <img src={sk1} alt="" width="70px" height="70px" />
+            </a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+            >
+              {" "}
+              <img src={sk2} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://tailwindcss.com/" target="_blank">
+              {" "}
+              <img src={sk3} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://www.javascript.com/" target="_blank">
+              {" "}
+              <img src={sk4} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://react.dev/" target="_blank">
+              {" "}
+              <img src={sk5} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://redux.js.org/" target="_blank">
+              {" "}
+              <img src={sk6} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://nodejs.org/en" target="_blank">
+              {" "}
+              <img src={sk7} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://www.mongodb.com/atlas/database" target="_blank">
+              {" "}
+              <img src={sk8} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://expressjs.com/" target="_blank">
+              {" "}
+              <img src={sk9} alt="" width="70px" height="70px" />
+            </a>
+            <a href="https://mui.com/" target="_blank">
+              {" "}
+              <img src={mui} alt="" width="70px" height="70px" />
+            </a>
           </div>
         </div>
       </div>

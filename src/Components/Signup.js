@@ -6,8 +6,12 @@ import { useDispatch } from "react-redux";
 import { showToast } from "../slice/appConfigSlice";
 import { TOAST_ERROR, TOAST_SUCCESS } from "../App";
 import { isValidPhoneNumber } from "react-phone-number-input";
-import { UserName, UserNumber, UserPassword, setItem } from "../utils/localStorage";
-
+import {
+  UserName,
+  UserNumber,
+  UserPassword,
+  setItem,
+} from "../utils/localStorage";
 
 function Signup() {
   const navigate = useNavigate();
@@ -31,8 +35,7 @@ function Signup() {
     if (number[0] + number[1] + number[2] !== "+91") {
       setError1("Ph No start with +91 ");
       // console.log("vipin");
-    }
-    else if (number && isValidPhoneNumber(number)) {
+    } else if (number && isValidPhoneNumber(number)) {
       setError1("a");
     } else {
       setError1("Phone No. wrong ");
@@ -50,7 +53,7 @@ function Signup() {
           password,
           name,
           number,
-          real:false
+          real: false,
         });
         // setItem(Key_Access_Token,result.result.token)
         // console.log(result);
@@ -58,9 +61,9 @@ function Signup() {
           showToast({
             type: TOAST_SUCCESS,
             message: `${result.result}`,
-          })
+          }),
         );
-   
+
         if (result) {
           //
           setItem(UserPassword, password);
@@ -69,25 +72,23 @@ function Signup() {
           navigate("/otp/signup");
 
           // console.log(result);
-          
         }
       } catch (e) {
         dispatch(
-        showToast({
-          type: TOAST_ERROR,
-          message: `${e}`,
-        })
-      );
+          showToast({
+            type: TOAST_ERROR,
+            message: `${e}`,
+          }),
+        );
       }
       // console.log(process.env.REACT_APP_SERVER_BASE_URL);
-      
     } else {
       if (err != "a") {
         dispatch(
           showToast({
             type: TOAST_ERROR,
             message: `${err}`,
-          })
+          }),
         );
       }
       if (err1 != "a") {
@@ -95,7 +96,7 @@ function Signup() {
           showToast({
             type: TOAST_ERROR,
             message: `${err1}`,
-          })
+          }),
         );
       }
     }
@@ -136,7 +137,7 @@ function Signup() {
           >
             <Input
               placeholder="vipin"
-              onChange={e => setname(e.target.value)}
+              onChange={(e) => setname(e.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -150,8 +151,8 @@ function Signup() {
             ]}
           >
             <Input
-              placeholder="+91810709...."
-              onChange={e => setnumber(e.target.value)}
+              placeholder="+919999...."
+              onChange={(e) => setnumber(e.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -168,7 +169,7 @@ function Signup() {
               class=""
               type="email"
               placeholder="vipin...6@gmail.com"
-              onChange={e => setemail(e.target.value)}
+              onChange={(e) => setemail(e.target.value)}
             />
           </Form.Item>
 
@@ -184,7 +185,7 @@ function Signup() {
           >
             <Input.Password
               placeholder="password"
-              onChange={e => setpassword(e.target.value)}
+              onChange={(e) => setpassword(e.target.value)}
             />
           </Form.Item>
 
@@ -211,15 +212,15 @@ function Signup() {
             </button>
           </Form.Item>
         </Form>
-          <h1 class="m-1 p-2 ">
-            Already have an account{" "}
-            <Link
-              to="/auth/login"
-              class="bg-blue-700  p-2 m-1 px-2 text-xl rounded-md text-white mb-3 hover:bg-blue-600 transition-all duration-200 "
-            >
-              login
-            </Link>
-          </h1>
+        <h1 class="m-1 p-2 ">
+          Already have an account{" "}
+          <Link
+            to="/auth/login"
+            class="bg-blue-700  p-2 m-1 px-2 text-xl rounded-md text-white mb-3 hover:bg-blue-600 transition-all duration-200 "
+          >
+            login
+          </Link>
+        </h1>
       </div>
     </div>
   );
